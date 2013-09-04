@@ -8,45 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		E8080DAD17BF84CE006B68EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
-		E8080DB217BF84CE006B68EB /* Core.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = E8080DB117BF84CE006B68EB /* Core.h */; };
+		E8080DB217BF84CE006B68EB /* Core.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080DB117BF84CE006B68EB /* Core.h */; };
 		E8080DB417BF84CE006B68EB /* Core.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080DB317BF84CE006B68EB /* Core.m */; };
-		E8080DBC17BF84CE006B68EB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DBB17BF84CE006B68EB /* SenTestingKit.framework */; };
-		E8080DBE17BF84CE006B68EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DBD17BF84CE006B68EB /* UIKit.framework */; };
-		E8080DBF17BF84CE006B68EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
-		E8080DC217BF84CE006B68EB /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DA917BF84CE006B68EB /* libCore.a */; };
-		E8080DC817BF84CE006B68EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8080DC617BF84CE006B68EB /* InfoPlist.strings */; };
-		E8080DCB17BF84CE006B68EB /* CoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080DCA17BF84CE006B68EB /* CoreTests.m */; };
 		E8080E2617BF8E99006B68EB /* SHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2517BF8E99006B68EB /* SHObject.m */; };
 		E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2817BF8EAD006B68EB /* SHTask.m */; };
 		E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2B17BF907E006B68EB /* SHPostTask.m */; };
+		E8B8413F17D702EA006A0291 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412617D6FB5A006A0291 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
+		E8B8414117D70676006A0291 /* NVSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412317D6FB31006A0291 /* NVSkin.m */; settings = {COMPILER_FLAGS = " -fno-objc-arc"; }; };
+		E8B8415517D70A58006A0291 /* SHObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2417BF8E99006B68EB /* SHObject.h */; };
+		E8B8415617D70A58006A0291 /* NVSkin.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B8412117D6FB26006A0291 /* NVSkin.h */; };
+		E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2717BF8EAD006B68EB /* SHTask.h */; };
+		E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2A17BF907E006B68EB /* SHPostTask.h */; };
+		E8B8415917D70A58006A0291 /* GDataXMLNode.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B8412517D6FB5A006A0291 /* GDataXMLNode.h */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		E8080DC017BF84CE006B68EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8080DA117BF84CE006B68EB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E8080DA817BF84CE006B68EB;
-			remoteInfo = Core;
-		};
-		E8ADEFC517D5828A00CBDBB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E877CEFC17D433F9003ECC10 /* zambon.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = E877CF0F17D434A2003ECC10;
-			remoteInfo = Zambon;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		E8080DA717BF84CE006B68EB /* CopyFiles */ = {
+		E8080DA717BF84CE006B68EB /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
+			dstSubfolderSpec = 10;
 			files = (
-				E8080DB217BF84CE006B68EB /* Core.h in CopyFiles */,
+				E8B8415517D70A58006A0291 /* SHObject.h in Copy Files */,
+				E8B8415617D70A58006A0291 /* NVSkin.h in Copy Files */,
+				E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */,
+				E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */,
+				E8B8415917D70A58006A0291 /* GDataXMLNode.h in Copy Files */,
+				E8080DB217BF84CE006B68EB /* Core.h in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -57,7 +47,6 @@
 		E8080DB017BF84CE006B68EB /* Core-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Core-Prefix.pch"; sourceTree = "<group>"; };
 		E8080DB117BF84CE006B68EB /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		E8080DB317BF84CE006B68EB /* Core.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Core.m; sourceTree = "<group>"; };
-		E8080DBA17BF84CE006B68EB /* CoreTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8080DBB17BF84CE006B68EB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		E8080DBD17BF84CE006B68EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E8080DC517BF84CE006B68EB /* CoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreTests-Info.plist"; sourceTree = "<group>"; };
@@ -70,7 +59,10 @@
 		E8080E2817BF8EAD006B68EB /* SHTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTask.m; sourceTree = "<group>"; };
 		E8080E2A17BF907E006B68EB /* SHPostTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPostTask.h; sourceTree = "<group>"; };
 		E8080E2B17BF907E006B68EB /* SHPostTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPostTask.m; sourceTree = "<group>"; };
-		E877CEFC17D433F9003ECC10 /* zambon.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = zambon.xcodeproj; path = ../../../zambon/zambon.xcodeproj; sourceTree = "<group>"; };
+		E8B8412117D6FB26006A0291 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
+		E8B8412317D6FB31006A0291 /* NVSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSkin.m; sourceTree = "<group>"; };
+		E8B8412517D6FB5A006A0291 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		E8B8412617D6FB5A006A0291 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,17 +71,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8080DAD17BF84CE006B68EB /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8080DB617BF84CE006B68EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8080DBC17BF84CE006B68EB /* SenTestingKit.framework in Frameworks */,
-				E8080DBE17BF84CE006B68EB /* UIKit.framework in Frameworks */,
-				E8080DBF17BF84CE006B68EB /* Foundation.framework in Frameworks */,
-				E8080DC217BF84CE006B68EB /* libCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				E8080DA917BF84CE006B68EB /* libCore.a */,
-				E8080DBA17BF84CE006B68EB /* CoreTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,7 +108,6 @@
 		E8080DAE17BF84CE006B68EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				E8ADEFC317D5828A00CBDBB6 /* component */,
 				E8080E2317BF8E74006B68EB /* obj */,
 				E8080E2017BF8E5C006B68EB /* extra */,
 				E8080E2117BF8E5C006B68EB /* net */,
@@ -170,6 +149,8 @@
 		E8080E2017BF8E5C006B68EB /* extra */ = {
 			isa = PBXGroup;
 			children = (
+				E8B8412317D6FB31006A0291 /* NVSkin.m */,
+				E8B8412117D6FB26006A0291 /* NVSkin.h */,
 			);
 			path = extra;
 			sourceTree = "<group>";
@@ -177,7 +158,6 @@
 		E8080E2117BF8E5C006B68EB /* net */ = {
 			isa = PBXGroup;
 			children = (
-				E877CEFC17D433F9003ECC10 /* zambon.xcodeproj */,
 				E8080E2717BF8EAD006B68EB /* SHTask.h */,
 				E8080E2817BF8EAD006B68EB /* SHTask.m */,
 				E8080E2A17BF907E006B68EB /* SHPostTask.h */,
@@ -189,6 +169,8 @@
 		E8080E2217BF8E5C006B68EB /* tool */ = {
 			isa = PBXGroup;
 			children = (
+				E8B8412517D6FB5A006A0291 /* GDataXMLNode.h */,
+				E8B8412617D6FB5A006A0291 /* GDataXMLNode.m */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -202,22 +184,17 @@
 			path = obj;
 			sourceTree = "<group>";
 		};
-		E877CEFD17D433F9003ECC10 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E8ADEFC617D5828A00CBDBB6 /* Zambon.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		E8ADEFC317D5828A00CBDBB6 /* component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = component;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E804CEC717D60EF600184538 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		E8080DA817BF84CE006B68EB /* Core */ = {
@@ -226,7 +203,8 @@
 			buildPhases = (
 				E8080DA517BF84CE006B68EB /* Sources */,
 				E8080DA617BF84CE006B68EB /* Frameworks */,
-				E8080DA717BF84CE006B68EB /* CopyFiles */,
+				E8080DA717BF84CE006B68EB /* Copy Files */,
+				E804CEC717D60EF600184538 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -236,25 +214,6 @@
 			productName = Core;
 			productReference = E8080DA917BF84CE006B68EB /* libCore.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		E8080DB917BF84CE006B68EB /* CoreTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E8080DD117BF84CE006B68EB /* Build configuration list for PBXNativeTarget "CoreTests" */;
-			buildPhases = (
-				E8080DB517BF84CE006B68EB /* Sources */,
-				E8080DB617BF84CE006B68EB /* Frameworks */,
-				E8080DB717BF84CE006B68EB /* Resources */,
-				E8080DB817BF84CE006B68EB /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E8080DC117BF84CE006B68EB /* PBXTargetDependency */,
-			);
-			name = CoreTests;
-			productName = CoreTests;
-			productReference = E8080DBA17BF84CE006B68EB /* CoreTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -275,56 +234,12 @@
 			mainGroup = E8080DA017BF84CE006B68EB;
 			productRefGroup = E8080DAA17BF84CE006B68EB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = E877CEFD17D433F9003ECC10 /* Products */;
-					ProjectRef = E877CEFC17D433F9003ECC10 /* zambon.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				E8080DA817BF84CE006B68EB /* Core */,
-				E8080DB917BF84CE006B68EB /* CoreTests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		E8ADEFC617D5828A00CBDBB6 /* Zambon.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Zambon.app;
-			remoteRef = E8ADEFC517D5828A00CBDBB6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
-/* Begin PBXResourcesBuildPhase section */
-		E8080DB717BF84CE006B68EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8080DC817BF84CE006B68EB /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		E8080DB817BF84CE006B68EB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E8080DA517BF84CE006B68EB /* Sources */ = {
@@ -335,26 +250,12 @@
 				E8080E2617BF8E99006B68EB /* SHObject.m in Sources */,
 				E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */,
 				E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E8080DB517BF84CE006B68EB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8080DCB17BF84CE006B68EB /* CoreTests.m in Sources */,
+				E8B8413F17D702EA006A0291 /* GDataXMLNode.m in Sources */,
+				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E8080DC117BF84CE006B68EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E8080DA817BF84CE006B68EB /* Core */;
-			targetProxy = E8080DC017BF84CE006B68EB /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E8080DC617BF84CE006B68EB /* InfoPlist.strings */ = {
@@ -427,9 +328,12 @@
 				DSTROOT = /tmp/Core.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = Core;
 			};
 			name = Debug;
 		};
@@ -439,39 +343,12 @@
 				DSTROOT = /tmp/Core.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
-				OTHER_LDFLAGS = "-ObjC";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				LINK_WITH_STANDARD_LIBRARIES = YES;
+				MACH_O_TYPE = staticlib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		E8080DD217BF84CE006B68EB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
-				INFOPLIST_FILE = "CoreTests/CoreTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		E8080DD317BF84CE006B68EB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
-				INFOPLIST_FILE = "CoreTests/CoreTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
+				WRAPPER_EXTENSION = Core;
 			};
 			name = Release;
 		};
@@ -492,15 +369,6 @@
 			buildConfigurations = (
 				E8080DCF17BF84CE006B68EB /* Debug */,
 				E8080DD017BF84CE006B68EB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E8080DD117BF84CE006B68EB /* Build configuration list for PBXNativeTarget "CoreTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E8080DD217BF84CE006B68EB /* Debug */,
-				E8080DD317BF84CE006B68EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

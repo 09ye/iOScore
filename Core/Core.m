@@ -9,5 +9,12 @@
 #import "Core.h"
 
 @implementation Core
-
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 @end

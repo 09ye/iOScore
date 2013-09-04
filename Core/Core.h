@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NVSkin.h"
+
 
 @interface Core : NSObject
 

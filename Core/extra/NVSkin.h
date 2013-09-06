@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-
-#define  CELL_DEFAULT_HEIGHT 44
-#define  CELL_HEIGHT 72
-#define  CELL_HEIGHT2 51
+#define RECT_RIGHTSHOW CGRectMake(87, 10, 930, 730)
+#define RECT_RIGHTNAVIGATION CGRectMake(0, 0, 930, 44)
+#define RECT_RIGHTLIST CGRectMake(5, 45, 240, 680)
+#define CELL_GENERAL_HEIGHT 72
 
 @protocol NVSkinloading <NSObject>
 

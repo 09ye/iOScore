@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-#define RECT_RIGHTSHOW CGRectMake(87, 10, 930, 730)
+#define RECT_RIGHTSHOW CGRectMake(87, 11, 930, 730)
 #define RECT_RIGHTNAVIGATION CGRectMake(0, 0, 930, 44)
-#define RECT_RIGHTLIST CGRectMake(5, 45, 240, 680)
+#define RECT_RIGHTLIST CGRectMake(0, 44, 240, 678)
+#define RECT_RIGHTCONTENT CGRectMake(240, 0, (930-240)  , 600)
 #define CELL_GENERAL_HEIGHT 72
+#define CELL_GENERAL_HEIGHT2 62
+#define CELL_GENERAL_HEIGHT3 44
+#define CELL_SECTION_HEADER_GENERAL_HEIGHT 38
+
 
 @protocol NVSkinloading <NSObject>
 

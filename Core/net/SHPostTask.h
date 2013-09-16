@@ -10,5 +10,5 @@
 #import "SHTask.h"
 
 @interface SHPostTask : SHTask
-
+@property (nonatomic,strong)NSData *postData;
 @end

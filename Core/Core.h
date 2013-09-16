@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "NVSkin.h"
-
+#import "SHPostTaskM.h"
+#import "Entironment.h"
+#import "SHTask.h"
 
 @interface Core : NSObject
 

@@ -18,8 +18,11 @@
 @end
 
 @interface SHTask : NSObject
-
-@property (nonatomic,strong) SHObject* result;
+ 
+@property (nonatomic,strong) NSObject* result;
 @property (nonatomic,assign) id<SHTaskDelegate>delegate;
+@property (nonatomic,strong) NSString* URL;
+- (void)start;
+- (void)cancel;
 
 @end

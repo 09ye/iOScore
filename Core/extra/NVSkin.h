@@ -18,6 +18,7 @@
 #define CELL_SECTION_HEADER_GENERAL_HEIGHT 38
 
 
+
 @protocol NVSkinloading <NSObject>
 
 - (void)loadSkin;
@@ -72,6 +73,8 @@ typedef  enum
 //颜色样式
 -(UIColor*)colorOfStyle:(NSString*)syle;
 //实例
+-(UIFont*)fontOfStyle:(NSString*)style;
+
 +(NVSkin*)instance;
 //
 - (id)resource: (NSString*)type  key:(NSString *) key;

@@ -12,5 +12,16 @@
 
 @synthesize result;
 @synthesize delegate = _delegate;
+@synthesize URL;
+
+- (void)start
+{
+    
+}
+
+- (void)cancel
+{
+    
+}
 
 @end

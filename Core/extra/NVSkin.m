@@ -146,6 +146,10 @@ static NVSkin* _instance = nil;
     }
 
 }
+-(UIColor*)fontOfStyle:(NSString*)style
+{
+    return [self resource:@"UIFont" key:style];
+}
 -(UIColor*)colorOfStyle:(NSString*)style
 {
      return [self resource:@"UIColor" key:style];

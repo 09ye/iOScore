@@ -19,6 +19,9 @@
     if (self != nil) {
         if ([self openOrCreateDatabase:dbname]) {
            // [self closeDatabase];
+            if(pthread_rwlock_init(&rwlock, NULL)) {
+                return nil;
+            }
         }
     }
     return self;
@@ -55,6 +58,18 @@
     return YES;
 }
 //------------------创建表----------------------
+-(BOOL)exec:(NSString*)sqlstr
+{
+    char *errorMsg;
+    if (sqlite3_exec (self.m_sql, [sqlstr UTF8String],NULL,NULL, &errorMsg) != SQLITE_OK)
+    {
+        NSLog(@"exec:%s",errorMsg);
+        return NO;
+    }
+    //[self closeDatabase];
+    return YES;
+
+}
 
 -(BOOL)createTable:(NSString*)sqlCreateTable
 
@@ -70,7 +85,7 @@
         NSLog(@"创建数据表失败:%s",errorMsg);
         return NO;
     }
-    [self closeDatabase];
+    //[self closeDatabase];
     return YES;
     
 }
@@ -78,14 +93,14 @@
 
 //----------------------关闭数据库-----------------
 
--(void)closeDatabase
-{
-    //sqlite3_close(self.m_sql);
-}
+//-(void)closeDatabase
+//{
+//    //sqlite3_close(self.m_sql);
+//}
 
 //------------------insert-------------------
 
--(BOOL)InsertTable:(NSString*)sqlInsert
+-(BOOL)insertTable:(NSString*)sqlInsert
 
 {
 //    if (![self openOrCreateDatabase:self.m_dbName]) {
@@ -93,13 +108,14 @@
 //    }
     char* errorMsg = NULL;
     if(sqlite3_exec(self.m_sql, [sqlInsert UTF8String],0,NULL, &errorMsg) ==SQLITE_OK)
-    {  [self closeDatabase];
+    {
+        //[self closeDatabase];
         return YES;
     }
     
     else {
         printf("更新表失败:%s",errorMsg);
-        [self closeDatabase];
+        //[self closeDatabase];
         return NO;
     }
 
@@ -108,7 +124,7 @@
 }
 //--------------updata-------------
 
--(BOOL)UpdataTable:(NSString*)sqlUpdata{
+-(BOOL)updataTable:(NSString*)sqlUpdata{
     
 //    if (![self openOrCreateDatabase:self.m_dbName]) {
 //        return NO;
@@ -116,7 +132,7 @@
     char *errorMsg;
     if (sqlite3_exec (self.m_sql, [sqlUpdata UTF8String],0,NULL, &errorMsg) !=SQLITE_OK)
     {
-        [self closeDatabase];
+        //[self closeDatabase];
         return YES;
         
     }else {
@@ -132,10 +148,7 @@
 -(NSArray*)querryTable:(NSString*)sqlQuerry
 
 {
-//    if (![self openOrCreateDatabase:self.m_dbName]) {
-//        return nil;
-//        
-//    }
+
     int row = 0;
     int column = 0;
     char*    errorMsg = NULL;
@@ -144,7 +157,7 @@
     if(sqlite3_get_table(m_sql, [sqlQuerry UTF8String], &dbResult, &row,&column,&errorMsg ) ==SQLITE_OK)
     {
         if (0 == row) {
-            [self closeDatabase];
+            //[self closeDatabase];
             return nil;
         }
         int index = column;
@@ -162,66 +175,150 @@
         }   
     }else {
         printf("%s",errorMsg);
-        [self closeDatabase];
+        //[self closeDatabase];
         return nil;
     }
-    [self closeDatabase];
+    //[self closeDatabase];
     return array;
     
 }
 
-- (BOOL)push:(NSData *)data forKey:(NSString *)url {
-	NSString *sqlstr = [NSString stringWithFormat:@"INSERT OR REPLACE INTO %@ (url, content, size) VALUES(?, ?, ?);", @"cache"];
-	const char *sql = [sqlstr UTF8String];
-    //[self openOrCreateDatabase:self.m_dbName];
-	sqlite3_stmt *stmt = NULL;
-    //char* errorMsg ;
-	if(sqlite3_prepare_v2(self.m_sql, sql, -1, &stmt, NULL) != SQLITE_OK) {
-		//pthread_rwlock_unlock(&rwlock);
+- (BOOL)oprationTableByStms:(NSString *)sqlStr args:(NSArray * )args
+{
+    if(pthread_rwlock_rdlock(&rwlock))
+		return NO;
+	const char *sql = [sqlStr UTF8String];
+    sqlite3_stmt *stmt = NULL;
+    if(sqlite3_prepare_v2(self.m_sql, sql, -1, &stmt, NULL) != SQLITE_OK) {
+		pthread_rwlock_unlock(&rwlock);
 		return NO;
 	}
-	
-	sqlite3_bind_text(stmt, 1, [url UTF8String], [url length], NULL);
-	
-	if(sqlite3_bind_blob(stmt, 2, [data bytes], [data length], NULL) != SQLITE_OK) {
-		sqlite3_finalize(stmt);
-		//pthread_rwlock_unlock(&rwlock);
-		return NO;
-	}
-	
-	sqlite3_bind_int(stmt, 3, [data length]);
-	
+    for (int i = 0 ;i<args.count ;i++) {
+        NSObject* obj = [args objectAtIndex:i];
+        if([[obj class]isSubclassOfClass:[NSNumber class]]){
+            sqlite3_bind_double(stmt, i+1, [(NSNumber*)obj floatValue]);
+            continue;
+        }else if ( [[obj class] isSubclassOfClass:[NSData class]]){
+            sqlite3_bind_blob(stmt, i+1, [(NSData*)obj bytes], [(NSData*)obj length], NULL);
+            continue;
+        }else if ( [[obj class] isSubclassOfClass:[NSString class]]){
+            sqlite3_bind_text(stmt, i+1, [(NSString*)obj UTF8String], [(NSString*)obj length], NULL);
+            continue;
+        }
+    }
+   	
 	BOOL result = (SQLITE_DONE == sqlite3_step(stmt));
 	sqlite3_finalize(stmt);
-	[self closeDatabase];
-	//pthread_rwlock_unlock(&rwlock);
-	return result;
+    pthread_rwlock_unlock(&rwlock);
+    return result;
 }
-- (NSData *)fetch:(NSString *)url timestamp:(time_t *)ti {
-	NSString *sql = [NSString stringWithFormat:@"SELECT DATA, TIME FROM %@ WHERE URL = ?;", @"cache"];
+- (NSArray * )fetchRowByStms:(NSString *)sqlStr whereargs:(NSArray * )args selectargs:(NSArray * )type
+{
+    NSString *sql = sqlStr;
 	if(pthread_rwlock_rdlock(&rwlock))
 		return nil;
 	sqlite3_stmt *stmt = NULL;
-	NSData *data = nil;
 	if(sqlite3_prepare_v2(self.m_sql, [sql UTF8String], -1, &stmt, NULL) != SQLITE_OK) {
 		pthread_rwlock_unlock(&rwlock);
 		return nil;
 	}
-	
-	sqlite3_bind_text(stmt, 1, [url UTF8String], [url length], NULL);
-	
-	if(SQLITE_ROW == sqlite3_step(stmt)) {
-		time_t t = sqlite3_column_int(stmt, 1);
-		if(ti) {
-			*ti = t;
-		}
-        data = [[NSData alloc] initWithBytes:sqlite3_column_blob(stmt, 0) length:sqlite3_column_bytes(stmt, 0)];
-	}
-	
-	sqlite3_finalize(stmt);
-	pthread_rwlock_unlock(&rwlock);
-	return data;
+    for (int i = 0 ;i<args.count ;i++) {
+        NSObject* obj = [args objectAtIndex:i];
+        if([[obj class]isSubclassOfClass:[NSNumber class]]){
+            sqlite3_bind_double(stmt, i+1, [(NSNumber*)obj floatValue]);
+            continue;
+        }else if ( [[obj class] isSubclassOfClass:[NSData class]]){
+            sqlite3_bind_blob(stmt, i+1, [(NSData*)obj bytes], [(NSData*)obj length], NULL);
+            continue;
+        }else if ( [[obj class] isSubclassOfClass:[NSString class]]){
+            sqlite3_bind_text(stmt, i+1, [(NSString*)obj UTF8String], [(NSString*)obj length], NULL);
+            continue;
+        }
+    }
+    
+    NSMutableArray * array = nil;
+    if(SQLITE_ROW == sqlite3_step(stmt)) {
+        array = [[NSMutableArray alloc]init];
+        for (int i = 0 ;i<type.count ;i++) {
+            NSObject* obj = [type objectAtIndex:i];
+            if([[obj class]isSubclassOfClass:[NSNumber class]]){
+                NSNumber * number = [[NSNumber alloc]initWithDouble:sqlite3_column_double(stmt, i)];
+                [array addObject:number];
+                continue;
+            }else if ( [[obj class] isSubclassOfClass:[NSData class]]){
+                NSData * data = [[NSData alloc] initWithBytes:sqlite3_column_blob(stmt, i) length:sqlite3_column_bytes(stmt, i)];
+                [array addObject:data];
+                continue;
+            }else if ( [[obj class] isSubclassOfClass:[NSString class]]){
+                NSString* str = [[NSString alloc] initWithUTF8String: sqlite3_column_text(stmt, i)];
+                [array addObject:str];
+                continue;
+            }
+        }
+    }
+    pthread_rwlock_unlock(&rwlock);
+    return array;
+
 }
+- (NSArray * )fetchRowByStms:(NSString *)sqlStr args:(NSArray * )type
+{
+    NSString *sql = sqlStr;
+	if(pthread_rwlock_rdlock(&rwlock))
+		return nil;
+	sqlite3_stmt *stmt = NULL;
+	if(sqlite3_prepare_v2(self.m_sql, [sql UTF8String], -1, &stmt, NULL) != SQLITE_OK) {
+		pthread_rwlock_unlock(&rwlock);
+		return nil;
+	}
+    NSMutableArray * array = nil;
+    if(SQLITE_ROW == sqlite3_step(stmt)) {
+        array = [[NSMutableArray alloc]init];
+        for (int i = 0 ;i<type.count ;i++) {
+            NSObject* obj = [type objectAtIndex:i];
+            if([[obj class]isSubclassOfClass:[NSNumber class]]){
+                NSNumber * number = [[NSNumber alloc]initWithDouble:sqlite3_column_double(stmt, i)];
+                [array addObject:number];
+                break;
+            }else if ( [[obj class] isSubclassOfClass:[NSData class]]){
+                NSData * data = [[NSData alloc] initWithBytes:sqlite3_column_blob(stmt, i) length:sqlite3_column_bytes(stmt, i)];
+                [array addObject:data];
+                break;
+            }else if ( [[obj class] isSubclassOfClass:[NSString class]]){
+                NSString* str = [[NSString alloc] initWithUTF8String: sqlite3_column_text(stmt, i)];
+                [array addObject:str];
+                break;
+            }
+        }
+    }
+    pthread_rwlock_unlock(&rwlock);
+    return array;
+}
+
+//- (NSData *)fetch:(NSString *)url timestamp:(time_t *)ti {
+//	NSString *sql = [NSString stringWithFormat:@"SELECT DATA, TIME FROM %@ WHERE URL = ?;", @"cache"];
+//	if(pthread_rwlock_rdlock(&rwlock))
+//		return nil;
+//	sqlite3_stmt *stmt = NULL;
+//	NSData *data = nil;
+//	if(sqlite3_prepare_v2(self.m_sql, [sql UTF8String], -1, &stmt, NULL) != SQLITE_OK) {
+//		pthread_rwlock_unlock(&rwlock);
+//		return nil;
+//	}
+//	
+//	sqlite3_bind_text(stmt, 1, [url UTF8String], [url length], NULL);
+//	
+//	if(SQLITE_ROW == sqlite3_step(stmt)) {
+//		time_t t = sqlite3_column_int(stmt, 1);
+//		if(ti) {
+//			*ti = t;
+//		}
+//        data = [[NSData alloc] initWithBytes:sqlite3_column_blob(stmt, 0) length:sqlite3_column_bytes(stmt, 0)];
+//	}
+//	
+//	sqlite3_finalize(stmt);
+//	pthread_rwlock_unlock(&rwlock);
+//	return data;
+//}
 //----------------------select--------------------
 
 int processData(void* arrayResult,int columnCount,char** columnValue,char** columnName)
@@ -294,7 +391,7 @@ int processData(void* arrayResult,int columnCount,char** columnValue,char** colu
     if (sqlite3_exec(self.m_sql,[sqlQuerry UTF8String],processData,(__bridge void*)arrayResult,&errorMsg) !=SQLITE_OK) {
         printf("查询出错:%s",errorMsg);
     }
-    [self closeDatabase];
+   //[self closeDatabase];
     return arrayResult ;
     
 }

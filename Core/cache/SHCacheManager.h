@@ -14,5 +14,7 @@
 
 - (BOOL)push:(NSData *)data forKey:(NSString *)url;
 
-- (NSArray * )querryTable:(NSString*) url;
+//- (NSArray * )querryTable:(NSString*) url;
+
+- (NSData * )fetch:(NSString*)url;
 @end

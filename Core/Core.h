@@ -11,6 +11,7 @@
 #import "SHPostTaskM.h"
 #import "Entironment.h"
 #import "SHTask.h"
+#import "SHIIOSVersion.h"
 
 @interface Core : NSObject
 

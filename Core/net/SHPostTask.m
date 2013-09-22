@@ -15,12 +15,12 @@
 {
     [self doRequest];
 }
+
 -(void)doRequest
 {
-
     NSString *postLength = [NSString stringWithFormat:@"%d", [self.postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:self.URL]];
+    [request setURL:[NSURL URLWithString:_realURL]];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -30,13 +30,7 @@
     {
         NSLog(@"Connection success");
         //[conn start];
-        
     }
-    else
-    {
-        // inform the user that the download could not be made
-    }
-   
 }
 @end
 

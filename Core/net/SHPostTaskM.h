@@ -17,4 +17,5 @@
 }
 @property (nonatomic,strong) NSDictionary* postArgs;
 @property (nonatomic,strong,readonly) Respinfo * respinfo;
+
 @end

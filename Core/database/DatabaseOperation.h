@@ -12,44 +12,27 @@
 
 
 @interface DatabaseOperation : NSObject {
-    
-    
     sqlite3 *m_sql;
-    
     NSString *m_dbName;
-    
 }
 
-@property(nonatomic)sqlite3*    m_sql;
+@property(nonatomic)sqlite3* m_sql;
 
-@property(nonatomic,retain)NSString*    m_dbName;
+@property(nonatomic,retain)NSString* m_dbName;
 
+- (BOOL)oprationTableByStms:(NSString *)sqlStr args:(NSArray * )args;
 
+- (id)initWithDbName:(NSString*)dbname;
 
--(id)initWithDbName:(NSString*)dbname;
+- (BOOL)openOrCreateDatabase:(NSString*)DbName;
 
+- (BOOL)createTable:(NSString*)sqlCreateTable;
 
--(BOOL)openOrCreateDatabase:(NSString*)DbName;
+- (BOOL)push:(NSData *)data forKey:(NSString *)url;
 
+- (NSArray * )fetchRowByStms:(NSString *)sqlStr args:(NSArray * )type;
 
--(BOOL)createTable:(NSString*)sqlCreateTable;
+- (NSArray * )fetchRowByStms:(NSString *)sqlStr whereargs:(NSArray * )args selectargs:(NSArray * )type;
 
-
--(void)closeDatabase;
-
-
--(BOOL)InsertTable:(NSString*)sqlInsert;
-
-
--(BOOL)UpdataTable:(NSString*)sqlUpdata;
-
-
--(NSArray*)querryTable:(NSString*)sqlQuerry;
-
-
--(NSArray*)querryTableByCallBack:(NSString*)sqlQuerry;
-
-
--(BOOL)push:(NSData *)data forKey:(NSString *)url;
-
+- (BOOL) exec:(NSString*)sqlStr;
 @end

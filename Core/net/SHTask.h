@@ -43,4 +43,5 @@ typedef enum
 - (void)start;
 - (void)cancel;
 
++ (void)pull:(NSString*)url newUrl:(NSString*)newurl;
 @end

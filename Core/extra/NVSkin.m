@@ -21,6 +21,7 @@ static NVSkin* _instance = nil;
     }
     return _instance;
 }
+
 - (id)init{
     if(self = [super init]){
         [self initColor];

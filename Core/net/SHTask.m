@@ -30,10 +30,8 @@ static const NSMutableDictionary * urlReplace;
     _URL = URL;
     _realURL = URL;
     for (NSString * url in urlReplace.keyEnumerator) {
-        
         NSRange substr=[_URL rangeOfString:url];
-        
-        if (substr.location!=NSNotFound) {
+        if (substr.location != NSNotFound) {
             _realURL = [_URL stringByReplacingCharactersInRange:substr withString:[urlReplace valueForKey:url]];
         }
     }

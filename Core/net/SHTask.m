@@ -42,7 +42,12 @@ static const NSMutableDictionary * urlReplace;
     if(urlReplace == Nil){
         urlReplace = [[NSMutableDictionary alloc] init];
     }
-    [urlReplace setValue:newurl forKey:url];
+    if([newurl isEqualToString:url] ){
+        [urlReplace removeObjectForKey:url];
+    }else{
+        [urlReplace setValue:newurl forKey:url];
+
+    }
 }
 
 - (void)start

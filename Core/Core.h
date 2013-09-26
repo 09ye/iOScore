@@ -12,6 +12,9 @@
 #import "Entironment.h"
 #import "SHTask.h"
 #import "SHIIOSVersion.h"
+#import "Base64.h"
+//#import "SHCacheManager.h"
+#import "SHCrashManager.h"
 
 @interface Core : NSObject
 

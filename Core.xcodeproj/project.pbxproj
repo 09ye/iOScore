@@ -26,6 +26,17 @@
 		E87F0A1A17E2A3DC009E57E8 /* Respinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E87F0A1817E2A3DB009E57E8 /* Respinfo.m */; };
 		E87F0A1B17E2A448009E57E8 /* Respinfo.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E87F0A1717E2A3DB009E57E8 /* Respinfo.h */; };
 		E87F0A1E17E2A623009E57E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F0A1D17E2A623009E57E8 /* UIKit.framework */; };
+		E887F78717F1C88B00871292 /* Identication.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F78517F1C88B00871292 /* Identication.h */; };
+		E887F78817F1C88B00871292 /* Identication.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F78617F1C88B00871292 /* Identication.m */; };
+		E887F78D17F284EE00871292 /* SHCrashManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F78B17F284EE00871292 /* SHCrashManager.h */; };
+		E887F78E17F284EE00871292 /* SHCrashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F78C17F284EE00871292 /* SHCrashManager.m */; };
+		E887F78F17F287F300871292 /* SHCrashManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F78B17F284EE00871292 /* SHCrashManager.h */; };
+		E887F79317F2AD8500871292 /* FileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F79117F2AD8500871292 /* FileManager.h */; };
+		E887F79417F2AD8500871292 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F79217F2AD8500871292 /* FileManager.m */; };
+		E887F79517F2AE8900871292 /* FileManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F79117F2AD8500871292 /* FileManager.h */; };
+		E887F79917F422A000871292 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
+		E887F79A17F422A000871292 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F79817F422A000871292 /* Base64.m */; };
+		E887F79B17F422AC00871292 /* Base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
 		E8B8413F17D702EA006A0291 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412617D6FB5A006A0291 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E8B8414117D70676006A0291 /* NVSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412317D6FB31006A0291 /* NVSkin.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E8B8415517D70A58006A0291 /* SHObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2417BF8E99006B68EB /* SHObject.h */; };
@@ -47,6 +58,9 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				E887F79B17F422AC00871292 /* Base64.h in Copy Files */,
+				E887F79517F2AE8900871292 /* FileManager.h in Copy Files */,
+				E887F78F17F287F300871292 /* SHCrashManager.h in Copy Files */,
 				E876E9EE17EEACA3005D8361 /* SHIIOSVersion.h in Copy Files */,
 				E87F0A1B17E2A448009E57E8 /* Respinfo.h in Copy Files */,
 				E87F0A1117E203D2009E57E8 /* Entironment.h in Copy Files */,
@@ -90,6 +104,14 @@
 		E87F0A1717E2A3DB009E57E8 /* Respinfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Respinfo.h; sourceTree = "<group>"; };
 		E87F0A1817E2A3DB009E57E8 /* Respinfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Respinfo.m; sourceTree = "<group>"; };
 		E87F0A1D17E2A623009E57E8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E887F78517F1C88B00871292 /* Identication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Identication.h; sourceTree = "<group>"; };
+		E887F78617F1C88B00871292 /* Identication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Identication.m; sourceTree = "<group>"; };
+		E887F78B17F284EE00871292 /* SHCrashManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCrashManager.h; sourceTree = "<group>"; };
+		E887F78C17F284EE00871292 /* SHCrashManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCrashManager.m; sourceTree = "<group>"; };
+		E887F79117F2AD8500871292 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
+		E887F79217F2AD8500871292 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		E887F79717F422A000871292 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		E887F79817F422A000871292 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		E8B8412117D6FB26006A0291 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
 		E8B8412317D6FB31006A0291 /* NVSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSkin.m; sourceTree = "<group>"; };
 		E8B8412517D6FB5A006A0291 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
@@ -148,6 +170,8 @@
 		E8080DAE17BF84CE006B68EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E887F78917F284CF00871292 /* crash */,
+				E887F78A17F284CF00871292 /* log */,
 				E8E03BD617E6B183002546C3 /* cache */,
 				E8E03BD117E34A87002546C3 /* database */,
 				E8080E2317BF8E74006B68EB /* obj */,
@@ -191,14 +215,20 @@
 		E8080E2017BF8E5C006B68EB /* extra */ = {
 			isa = PBXGroup;
 			children = (
+				E887F79717F422A000871292 /* Base64.h */,
+				E887F79817F422A000871292 /* Base64.m */,
 				E87F0A1717E2A3DB009E57E8 /* Respinfo.h */,
 				E87F0A1817E2A3DB009E57E8 /* Respinfo.m */,
+				E887F79117F2AD8500871292 /* FileManager.h */,
+				E887F79217F2AD8500871292 /* FileManager.m */,
 				E8B8412317D6FB31006A0291 /* NVSkin.m */,
 				E8B8412117D6FB26006A0291 /* NVSkin.h */,
 				E87F0A0D17E1FEF3009E57E8 /* Entironment.h */,
 				E87F0A0E17E1FEF3009E57E8 /* Entironment.m */,
 				E85F008F17EE9A2200F9F02C /* SHIIOSVersion.h */,
 				E85F009017EE9A2200F9F02C /* SHIIOSVersion.m */,
+				E887F78517F1C88B00871292 /* Identication.h */,
+				E887F78617F1C88B00871292 /* Identication.m */,
 			);
 			path = extra;
 			sourceTree = "<group>";
@@ -234,6 +264,22 @@
 			path = obj;
 			sourceTree = "<group>";
 		};
+		E887F78917F284CF00871292 /* crash */ = {
+			isa = PBXGroup;
+			children = (
+				E887F78B17F284EE00871292 /* SHCrashManager.h */,
+				E887F78C17F284EE00871292 /* SHCrashManager.m */,
+			);
+			path = crash;
+			sourceTree = "<group>";
+		};
+		E887F78A17F284CF00871292 /* log */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
 		E8E03BD117E34A87002546C3 /* database */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,10 +306,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E87F0A0917E16757009E57E8 /* SHPostTaskM.h in Headers */,
+				E887F79917F422A000871292 /* Base64.h in Headers */,
 				E87F0A0F17E1FEF4009E57E8 /* Entironment.h in Headers */,
+				E887F79317F2AD8500871292 /* FileManager.h in Headers */,
 				E85F009117EE9A2200F9F02C /* SHIIOSVersion.h in Headers */,
 				E87F0A1917E2A3DC009E57E8 /* Respinfo.h in Headers */,
 				E8E03BD417E34A98002546C3 /* DatabaseOperation.h in Headers */,
+				E887F78D17F284EE00871292 /* SHCrashManager.h in Headers */,
+				E887F78717F1C88B00871292 /* Identication.h in Headers */,
 				E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,14 +371,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8080DB417BF84CE006B68EB /* Core.m in Sources */,
+				E887F78817F1C88B00871292 /* Identication.m in Sources */,
 				E8080E2617BF8E99006B68EB /* SHObject.m in Sources */,
 				E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */,
 				E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */,
 				E8B8413F17D702EA006A0291 /* GDataXMLNode.m in Sources */,
 				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,
 				E87F0A0A17E16757009E57E8 /* SHPostTaskM.m in Sources */,
+				E887F79A17F422A000871292 /* Base64.m in Sources */,
+				E887F79417F2AD8500871292 /* FileManager.m in Sources */,
 				E87F0A1017E1FEF4009E57E8 /* Entironment.m in Sources */,
 				E87F0A1A17E2A3DC009E57E8 /* Respinfo.m in Sources */,
+				E887F78E17F284EE00871292 /* SHCrashManager.m in Sources */,
 				E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */,
 				E8E03BDA17E6B1AB002546C3 /* SHCacheManager.m in Sources */,
 				E85F009217EE9A2200F9F02C /* SHIIOSVersion.m in Sources */,

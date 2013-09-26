@@ -21,11 +21,14 @@
     NSString *postLength = [NSString stringWithFormat:@"%d", [self.postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:_realURL]];
+    [request setTimeoutInterval:10];
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
     NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self];
+    NSLog(@"URL:%@",_realURL);
     if (conn)
     {
         NSLog(@"Connection success");

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SHObject.h"
-
+#import "Respinfo.h"
 
 
 
@@ -31,9 +31,10 @@ typedef enum
 @interface SHTask : NSObject
 {
     @protected NSString * _realURL;
+@protected Respinfo * _respinfo;
 }
 
-
+@property (nonatomic,strong,readonly) Respinfo * respinfo;
 @property (nonatomic,strong) NSObject* result;
 @property (nonatomic,assign) id<SHTaskDelegate>delegate;
 @property (nonatomic,strong) NSString* URL;

@@ -12,6 +12,9 @@ static Entironment * _instance;
 @implementation Entironment
 @synthesize loginName;
 @synthesize password;
+@synthesize userId;
+@synthesize deviceid;
+@synthesize sessionid;
 
 + (Entironment* )instance
 {

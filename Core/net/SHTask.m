@@ -22,6 +22,7 @@
 @synthesize URL = _URL;
 @synthesize cachetype;
 @synthesize isCache;
+@synthesize respinfo = _respinfo;
 
 static const NSMutableDictionary * urlReplace;
 
@@ -59,5 +60,8 @@ static const NSMutableDictionary * urlReplace;
 {
     
 }
-
+-(NSString*)description
+{
+    return [self.result description];
+}
 @end

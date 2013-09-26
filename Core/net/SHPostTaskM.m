@@ -9,24 +9,37 @@
 #import "SHPostTaskM.h"
 #import "Entironment.h"
 #import "SHCacheManager.h"
+#import "Identication.h"
+
+@interface SHPostTaskM ()
+{
+    NSMutableData *__data;
+}
+@end
 
 @implementation SHPostTaskM
 
-@synthesize postArgs;
-@synthesize respinfo = _respinfo;
+@synthesize postArgs = _postArgs;
+
+-(NSMutableDictionary*)postArgs
+{
+    if(_postArgs == nil){
+        _postArgs = [[NSMutableDictionary alloc]init];
+    }
+    return _postArgs;
+}
 
 - (void)start
 {
     NSMutableDictionary * data = [[NSMutableDictionary alloc]init];
-
+    
     if(self.postArgs.count > 0){
         [data setObject:self.postArgs forKey:@"data"];
     }
-    NSMutableDictionary * identication = [[NSMutableDictionary alloc]init];
-    [identication setObject:@"basic" forKey:@"type"];
-    [identication setObject:Entironment.instance.loginName forKey:@"name"];
-    [identication setObject:Entironment.instance.password forKey:@"password"];
+    NSDictionary * identication = Identication.identication;
     [data setObject:identication forKey:@"identication"];
+   // [NSString stringWithUTF8String:  [data description]];
+    NSLog(@"%@",[data description]);
     if([NSJSONSerialization isValidJSONObject:data] == YES){
         self.postData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:nil];
     }
@@ -35,11 +48,16 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    [self processData:data];
+    if(__data == nil){
+        __data = [[NSMutableData alloc]init];
+    }
+    [__data appendData:data];
+    
 }
 
 - (void)processData:(NSData *)data
@@ -68,6 +86,7 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
+    [self processData:__data];
 }
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

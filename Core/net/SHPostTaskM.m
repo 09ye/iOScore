@@ -69,8 +69,9 @@
     if(code == 0){
         if(self.isCache == NO){//不是缓存模式时添加缓存
             if(self.cachetype == CacheTypeKey ){//缓存
-                 NSString * args = [[NSString alloc]initWithData:self.postData encoding:(NSStringEncoding)NSUTF8StringEncoding];
-                [SHCacheManager.instance push:data forKey:[NSString stringWithFormat:@"%@/%@",_realURL,args]];
+                if([NSJSONSerialization isValidJSONObject:self.postArgs] == YES){
+                    [SHCacheManager.instance push:data forKey:[NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
+                }
             }
         }
         self.result  = [netreutrn objectForKey:@"data"];
@@ -92,11 +93,13 @@
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
     if(self.cachetype == CacheTypeKey){
-        NSString * args = [[NSString alloc]initWithData:self.postData encoding:(NSStringEncoding)NSUTF8StringEncoding];
-        NSData * data = [SHCacheManager.instance fetch: [NSString stringWithFormat:@"%@/%@",_realURL,args]];
-        if(data){//缓存存在
+        NSData * cachedata;
+        if([NSJSONSerialization isValidJSONObject:self.postArgs] == YES){
+            cachedata = [SHCacheManager.instance fetch: [NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
+        }
+        if(cachedata){//缓存存在
             self.isCache = YES;
-            [self processData:data];
+            [self processData:cachedata];
             return;
         }
     }

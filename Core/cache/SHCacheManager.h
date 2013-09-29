@@ -17,4 +17,6 @@
 //- (NSArray * )querryTable:(NSString*) url;
 
 - (NSData * )fetch:(NSString*)url;
+
+- (NSArray * )fetchOdTime:(NSString*)url;
 @end

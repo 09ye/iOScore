@@ -78,7 +78,14 @@ static SHCacheManager* mCache;
     }
     return nil;
 }
-
+- (NSArray * )fetchOdTime:(NSString*)url
+{
+    NSString * sql = [NSString stringWithFormat:@"SELECT CONTENT,TIME FROM  %@  WHERE  (url = ?) ", @"cache"];
+    NSArray * args = [NSArray arrayWithObject:url];
+    NSArray * array = [NSArray arrayWithObjects:[NSData class],[NSString class],nil];
+    NSArray * result = [mDo fetchRowByStms:sql whereargs:args selectargs:array];
+    return result;
+}
 //- (NSArray * )querryTable:(NSString*) url
 //{
 //    NSArray * array = [mDo querryTable:url];

@@ -16,6 +16,8 @@ typedef enum
 {
     CacheTypeNone,
     CacheTypeKey,
+    CacheTimes//时间缓存
+    
 }CacheType;
 
 @class SHTask;

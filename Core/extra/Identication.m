@@ -21,7 +21,11 @@
         [identication setObject:@"basic" forKey:@"type"];
         [identication setObject:Entironment.instance.loginName forKey:@"username"];
         [identication setObject:Entironment.instance.password forKey:@"password"];
+#if DEBUG
         [identication setObject:@"111111" forKey:@"imei"];
+#else
+        [identication setObject:Entironment.instance.deviceid forKey:@"imei"];
+#endif
     }
     
     return identication;

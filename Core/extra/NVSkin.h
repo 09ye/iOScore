@@ -79,6 +79,6 @@ typedef  enum
 //
 - (id)resource: (NSString*)type  key:(NSString *) key;
 -(NSString *)resourceString:(NSString*)key;
-- (void)accommodate:(UIView*) view:(NSString*) key;
+- (void)accommodate:(UIView*) view_:(NSString*) key;
 @end
  

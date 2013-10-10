@@ -15,7 +15,7 @@
 #import "Base64.h"
 #import "SHVersion.h"
 #import "SHCrashManager.h"
+#import "SHConfigManager.h"
+#import "SHVersion.h"
 
-@interface Core : NSObject
-
-@end
+#define CORE_NOTIFICATION_CONFIG_STATUS_CHANGED @"core_notification_config_status_changed"

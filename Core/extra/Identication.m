@@ -16,11 +16,15 @@
     NSMutableDictionary * identication = [[NSMutableDictionary alloc]init];
     if(Entironment.instance.sessionid){
         [identication setObject:@"session" forKey:@"type"];
-        [identication setObject:Entironment.instance.sessionid forKey:@"session_id"];
+        if(Entironment.instance.sessionid){
+            [identication setObject:Entironment.instance.sessionid forKey:@"session_id"];
+        }
     }else{
         [identication setObject:@"basic" forKey:@"type"];
-        [identication setObject:Entironment.instance.loginName forKey:@"username"];
-        [identication setObject:Entironment.instance.password forKey:@"password"];
+        if(Entironment.instance.loginName && Entironment.instance.password){
+            [identication setObject:Entironment.instance.loginName forKey:@"username"];
+            [identication setObject:Entironment.instance.password forKey:@"password"];
+        }
 #if DEBUG
         [identication setObject:@"111111" forKey:@"imei"];
 #else

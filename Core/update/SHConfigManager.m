@@ -8,14 +8,21 @@
 
 #import "SHConfigManager.h"
 
+static SHConfigManager * __instance;
+
 @implementation SHConfigManager
 
 @synthesize URL = _url;
-@synthesize update;
-
-
+@synthesize updateDate = _updateDate;
+@synthesize newversion = _newversion;
+@synthesize minversion = _minversion;
+@synthesize content = _content;
+@synthesize listupdateurls = _listupdateurls;
+@synthesize result = _result;
+@synthesize status = _status;
 - (void)setURL:(NSString *)url_
 {
+    
     _url = url_;
     if(_url){
         [self refresh];
@@ -27,20 +34,37 @@
     SHPostTaskM * task = [[SHPostTaskM alloc]init];
     task.cachetype = CacheTypeKey;
     task.URL= self.URL;
+    task.delegate = self;
+    [task start];
     //demo
-    NSString * json = @"{\"root\":{\"update\":{\"newVersion\":\"1.1.0\",\"content\":\"重大版本更新\",\"minVersion\":\"1.0.0\",\"updateDate\":\"2012-11-30\",\"updateURL\":{\"url1\":\"http://img.yingyonghuiss.com/apk/7171/com.aide.ui.1348731562275.apk\",\"url2\":\"http://img.yingyonghui.com/apk/7171/com.aide.ui.1348731562275.apk\",\"url3\":\"http://img.yingyonghui.com/apk/7171/com.aide.ui.1348731562275.apk\"}}}}}";
+
     
 }
 
 - (void)dealUpdate:(NSDictionary*)dic
 {
-    self.content = [dic valueForKey:@"content"];
-    self.newVersion = [[SHVersion  alloc]initWithString: [dic valueForKey:@"newVersion"]];
-    self.minVersion = [[SHVersion alloc]initWithString:[dic valueForKey:@"minVersion" ]];
-    
+    _content = [dic valueForKey:@"content"];
+    _newversion = [[SHVersion  alloc]initWithString: [dic valueForKey:@"newVersion"]];
+    _minversion = [[SHVersion alloc]initWithString:[dic valueForKey:@"minVersion" ]];
+    _updateDate = [dic valueForKey:@"updateDate"];
+    _isMaintenanceMode = ((NSNumber*)[dic valueForKey:@"isMaintenanceMode"]).boolValue;
+    _hasPushNotice = ((NSNumber*)[dic valueForKey:@"hasPushNotice"]).boolValue;
+    _pushNotice = [dic valueForKey:@"pushNotice"];
 }
 
-static SHConfigManager * __instance;
+- (void)taskDidFinished:(SHTask*) task
+{
+    _result = (NSDictionary*)task.result;
+    [self dealUpdate :[self.result valueForKey:@"update"]];
+    _status = SHConfigStatusSuccess;
+     [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:self];
+}
+
+- (void)taskDidFailed:(SHTask *)task
+{
+    _status = SHConfigStatusFaile;
+    [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:self];
+}
 
 + (SHConfigManager*)instance
 {
@@ -49,4 +73,5 @@ static SHConfigManager * __instance;
     }
     return __instance;
 }
+
 @end

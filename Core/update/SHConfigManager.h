@@ -8,16 +8,26 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SHConfigManager : NSObject
+
+typedef enum  {
+    SHConfigStatusSuccess,
+    SHConfigStatusFaile
+    }SHConfigStatus;
+
+@interface SHConfigManager : NSObject <SHTaskDelegate>
 
 @property (nonatomic,copy) NSString * URL;
-@property (nonatomic,copy) NSString * update;
-@property (nonatomic,strong) SHVersion * newVersion;
-@property (nonatomic,strong) SHVersion * minVersion;
-@property (nonatomic,copy)   NSString * content;
-@property (nonatomic,strong) NSArray* listupdateurls
-@property (nonatomic,strong) NSDictionary * result;
-
+@property (nonatomic,copy,readonly) NSString * updateDate;
+//@property (nonatomic,strong) SHVersion * newVersion;
+@property (nonatomic,strong,readonly) SHVersion * newversion;
+@property (nonatomic,strong,readonly) SHVersion * minversion;
+@property (nonatomic,copy,readonly)   NSString * content;
+@property (nonatomic,strong,readonly) NSArray* listupdateurls;
+@property (nonatomic,strong,readonly) NSDictionary * result;
+@property (nonatomic,assign,readonly) BOOL hasPushNotice;
+@property (nonatomic,assign,readonly) BOOL isMaintenanceMode;
+@property (nonatomic,copy,readonly) NSString * pushNotice;
+@property (nonatomic,assign,readonly) SHConfigStatus status;
 - (void) refresh;
 
 + (SHConfigManager*)instance;

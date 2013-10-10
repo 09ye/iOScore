@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SHVersion.h"
 
 @interface Entironment : NSObject
 {
@@ -16,6 +17,6 @@
 @property (nonatomic,strong) NSString* userId;
 @property (nonatomic,strong) NSString* deviceid;
 @property (nonatomic,strong) NSString* sessionid;
-
+@property (nonatomic,readonly) SHVersion * version;
 + (Entironment* )instance;
 @end

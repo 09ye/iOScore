@@ -12,6 +12,8 @@
 		E8080E2617BF8E99006B68EB /* SHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2517BF8E99006B68EB /* SHObject.m */; };
 		E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2817BF8EAD006B68EB /* SHTask.m */; };
 		E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2B17BF907E006B68EB /* SHPostTask.m */; };
+		E81A41B01808F62200D9B399 /* GDataXMLNode.h in Headers */ = {isa = PBXBuildFile; fileRef = E81A41AE1808F62200D9B399 /* GDataXMLNode.h */; };
+		E81A41B11808F62200D9B399 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E81A41AF1808F62200D9B399 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6621803B28F0071DA24 /* SHConfigManager.h */; };
 		E858D6681803B28F0071DA24 /* SHVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6641803B28F0071DA24 /* SHVersion.h */; };
 		E858D6691803B28F0071DA24 /* SHVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E858D6651803B28F0071DA24 /* SHVersion.m */; };
@@ -42,13 +44,11 @@
 		E887F79917F422A000871292 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
 		E887F79A17F422A000871292 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F79817F422A000871292 /* Base64.m */; };
 		E887F79B17F422AC00871292 /* Base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
-		E8B8413F17D702EA006A0291 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412617D6FB5A006A0291 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E8B8414117D70676006A0291 /* NVSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412317D6FB31006A0291 /* NVSkin.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E8B8415517D70A58006A0291 /* SHObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2417BF8E99006B68EB /* SHObject.h */; };
 		E8B8415617D70A58006A0291 /* NVSkin.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B8412117D6FB26006A0291 /* NVSkin.h */; };
 		E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2717BF8EAD006B68EB /* SHTask.h */; };
 		E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2A17BF907E006B68EB /* SHPostTask.h */; };
-		E8B8415917D70A58006A0291 /* GDataXMLNode.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B8412517D6FB5A006A0291 /* GDataXMLNode.h */; };
 		E8E03BD417E34A98002546C3 /* DatabaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD217E34A98002546C3 /* DatabaseOperation.h */; };
 		E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E03BD317E34A98002546C3 /* DatabaseOperation.m */; };
 		E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
@@ -76,7 +76,6 @@
 				E8B8415617D70A58006A0291 /* NVSkin.h in Copy Files */,
 				E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */,
 				E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */,
-				E8B8415917D70A58006A0291 /* GDataXMLNode.h in Copy Files */,
 				E8080DB217BF84CE006B68EB /* Core.h in Copy Files */,
 			);
 			name = "Copy Files";
@@ -101,6 +100,12 @@
 		E8080E2817BF8EAD006B68EB /* SHTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTask.m; sourceTree = "<group>"; };
 		E8080E2A17BF907E006B68EB /* SHPostTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPostTask.h; sourceTree = "<group>"; };
 		E8080E2B17BF907E006B68EB /* SHPostTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPostTask.m; sourceTree = "<group>"; };
+		E81A41AE1808F62200D9B399 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		E81A41AF1808F62200D9B399 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		E81A41B31808F62B00D9B399 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		E81A41B41808F62B00D9B399 /* JSONKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		E81A41B51808F62B00D9B399 /* JSONKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		E81A41B61808F62B00D9B399 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		E858D6621803B28F0071DA24 /* SHConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHConfigManager.h; sourceTree = "<group>"; };
 		E858D6631803B28F0071DA24 /* SHConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHConfigManager.m; sourceTree = "<group>"; };
 		E858D6641803B28F0071DA24 /* SHVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHVersion.h; sourceTree = "<group>"; };
@@ -124,8 +129,6 @@
 		E887F79817F422A000871292 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		E8B8412117D6FB26006A0291 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
 		E8B8412317D6FB31006A0291 /* NVSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSkin.m; sourceTree = "<group>"; };
-		E8B8412517D6FB5A006A0291 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		E8B8412617D6FB5A006A0291 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		E8E03BD217E34A98002546C3 /* DatabaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseOperation.h; sourceTree = "<group>"; };
 		E8E03BD317E34A98002546C3 /* DatabaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseOperation.m; sourceTree = "<group>"; };
 		E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCacheManager.h; sourceTree = "<group>"; };
@@ -259,8 +262,8 @@
 		E8080E2217BF8E5C006B68EB /* tool */ = {
 			isa = PBXGroup;
 			children = (
-				E8B8412517D6FB5A006A0291 /* GDataXMLNode.h */,
-				E8B8412617D6FB5A006A0291 /* GDataXMLNode.m */,
+				E81A41B21808F62B00D9B399 /* JSONKit */,
+				E81A41AD1808F60900D9B399 /* xml */,
 			);
 			path = tool;
 			sourceTree = "<group>";
@@ -272,6 +275,26 @@
 				E8080E2517BF8E99006B68EB /* SHObject.m */,
 			);
 			path = obj;
+			sourceTree = "<group>";
+		};
+		E81A41AD1808F60900D9B399 /* xml */ = {
+			isa = PBXGroup;
+			children = (
+				E81A41AE1808F62200D9B399 /* GDataXMLNode.h */,
+				E81A41AF1808F62200D9B399 /* GDataXMLNode.m */,
+			);
+			path = xml;
+			sourceTree = "<group>";
+		};
+		E81A41B21808F62B00D9B399 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				E81A41B31808F62B00D9B399 /* CHANGELOG.md */,
+				E81A41B41808F62B00D9B399 /* JSONKit.h */,
+				E81A41B51808F62B00D9B399 /* JSONKit.m */,
+				E81A41B61808F62B00D9B399 /* README.md */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 		E858D6611803B28F0071DA24 /* update */ = {
@@ -331,6 +354,7 @@
 				E87F0A0F17E1FEF4009E57E8 /* Entironment.h in Headers */,
 				E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */,
 				E887F79317F2AD8500871292 /* FileManager.h in Headers */,
+				E81A41B01808F62200D9B399 /* GDataXMLNode.h in Headers */,
 				E85F009117EE9A2200F9F02C /* SHIIOSVersion.h in Headers */,
 				E87F0A1917E2A3DC009E57E8 /* Respinfo.h in Headers */,
 				E8E03BD417E34A98002546C3 /* DatabaseOperation.h in Headers */,
@@ -397,7 +421,6 @@
 				E8080E2617BF8E99006B68EB /* SHObject.m in Sources */,
 				E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */,
 				E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */,
-				E8B8413F17D702EA006A0291 /* GDataXMLNode.m in Sources */,
 				E858D6711803B6120071DA24 /* SHConfigManager.m in Sources */,
 				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,
 				E87F0A0A17E16757009E57E8 /* SHPostTaskM.m in Sources */,
@@ -405,6 +428,7 @@
 				E887F79417F2AD8500871292 /* FileManager.m in Sources */,
 				E87F0A1017E1FEF4009E57E8 /* Entironment.m in Sources */,
 				E87F0A1A17E2A3DC009E57E8 /* Respinfo.m in Sources */,
+				E81A41B11808F62200D9B399 /* GDataXMLNode.m in Sources */,
 				E858D6691803B28F0071DA24 /* SHVersion.m in Sources */,
 				E887F78E17F284EE00871292 /* SHCrashManager.m in Sources */,
 				E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */,

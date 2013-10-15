@@ -10,8 +10,6 @@
 #import "SHObject.h"
 #import "Respinfo.h"
 
-
-
 typedef enum 
 {
     CacheTypeNone,
@@ -35,15 +33,16 @@ typedef enum
 @interface SHTask : NSObject
 {
     @protected NSString * _realURL;
-@protected Respinfo * _respinfo;
+    Respinfo * _respinfo;
 }
 
 @property (nonatomic,strong,readonly) Respinfo * respinfo;
-@property (nonatomic,strong) NSObject* result;
+@property (nonatomic,strong,readonly) NSObject* result;
 @property (nonatomic,assign) id<SHTaskDelegate>delegate;
 @property (nonatomic,strong) NSString* URL;
 @property (nonatomic,assign) CacheType cachetype;
 @property (nonatomic,assign) BOOL  isCache;
+@property (nonatomic,strong,readonly) NSDictionary* extra;
 
 - (void)start;
 - (void)cancel;

@@ -10,6 +10,7 @@
 #import "Entironment.h"
 #import "SHCacheManager.h"
 #import "Identication.h"
+#import "SHAnalyzeFactory.h"
 
 @interface SHPostTaskM ()
 {
@@ -52,7 +53,8 @@
                 NSTimeInterval times = [currentdate timeIntervalSinceDate:date];
                 if(times < 60 * 60 * 24){
                     self.isCache = YES;
-                    [self processData:[array objectAtIndex:0]];
+                    __data = [array objectAtIndex:0];
+                    [self processData];
                     return;
                 }
             }
@@ -79,19 +81,22 @@
     
    }
 
-- (void)processData:(NSData *)data
+- (void)processData
 {
-    NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:nil];
-    int code = [[netreutrn objectForKey:@"code"] integerValue];
-    NSString * message = [netreutrn objectForKey:@"message"];
-    _respinfo = [[Respinfo alloc]initWithCode:(int)code message:message];
-    if(code == 0){
+//    NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:nil];
+//    int code = [[netreutrn objectForKey:@"code"] integerValue];
+//    NSString * message = [netreutrn objectForKey:@"message"];
+//    _respinfo = [[Respinfo alloc]initWithCode:(int)code message:message];
+    if(!self.result){
+        [SHAnalyzeFactory analyze:self Data:__data];
+    }
+    if(self.respinfo.code == 0){
         if(self.isCache == NO){//不是缓存模式时添加缓存
                 if([NSJSONSerialization isValidJSONObject:self.postArgs] == YES){
-                    [SHCacheManager.instance push:data forKey:[NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
+                    [SHCacheManager.instance push:__data forKey:[NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
                 }
         }
-        self.result  = [netreutrn objectForKey:@"data"];
+        //_result  = [netreutrn objectForKey:@"data"];
         //NSLog(@"data:%@",[self.result description]);
         if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFinished:)]){
             [self.delegate taskDidFinished:self];
@@ -105,28 +110,30 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    
+    [SHAnalyzeFactory analyze:self Data:__data];
     if(self.cachetype == CacheTimes){
-        NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:__data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:nil];
-        int code = [[netreutrn objectForKey:@"code"] integerValue];
-        NSDictionary * dicdata = [netreutrn objectForKey:@"data"];
-        if(code == 0){
-            if(dicdata && dicdata.allKeys.count > 0){
-                [self processData:__data];
+        //NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:__data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:nil];
+        //int code = [[netreutrn objectForKey:@"code"] integerValue];
+        //NSDictionary * dicdata = [netreutrn objectForKey:@"data"];
+        if(self.respinfo.code == 0){
+            if(self.result){
+                [self processData];
             }
             else{
                 NSData * cache = [SHCacheManager.instance fetch:[NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
-                [self processData:cache];
+                __data = [cache mutableCopy];
+                [self processData];
             }
         }
     }else{
-        [self processData:__data];
+        [self processData];
     }
 
 }
 
--(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
+    
     if(self.cachetype == CacheTypeKey){
         NSData * cachedata;
         if([NSJSONSerialization isValidJSONObject:self.postArgs] == YES){
@@ -134,7 +141,8 @@
         }
         if(cachedata){//缓存存在
             self.isCache = YES;
-            [self processData:cachedata];
+            __data = [cachedata mutableCopy];
+            [self processData];
             return;
         }
     }
@@ -143,4 +151,6 @@
         [self.delegate taskDidFailed:self];
     }
 }
+
+
 @end

@@ -44,11 +44,17 @@
 		E887F79917F422A000871292 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
 		E887F79A17F422A000871292 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F79817F422A000871292 /* Base64.m */; };
 		E887F79B17F422AC00871292 /* Base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
+		E8B41BAF180CE7A500069506 /* SHAnalyzeFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B41BAD180CE7A500069506 /* SHAnalyzeFactory.h */; };
+		E8B41BB0180CE7A500069506 /* SHAnalyzeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BAE180CE7A500069506 /* SHAnalyzeFactory.m */; };
+		E8B41BB3180D0B1700069506 /* SHFuck.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
+		E8B41BB4180D0B1700069506 /* SHFuck.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BB2180D0B1700069506 /* SHFuck.m */; };
 		E8B8414117D70676006A0291 /* NVSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412317D6FB31006A0291 /* NVSkin.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E8B8415517D70A58006A0291 /* SHObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2417BF8E99006B68EB /* SHObject.h */; };
 		E8B8415617D70A58006A0291 /* NVSkin.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B8412117D6FB26006A0291 /* NVSkin.h */; };
 		E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2717BF8EAD006B68EB /* SHTask.h */; };
 		E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2A17BF907E006B68EB /* SHPostTask.h */; };
+		E8C835B1180D0F8600F88A3E /* SHFuck.h in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
+		E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
 		E8E03BD417E34A98002546C3 /* DatabaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD217E34A98002546C3 /* DatabaseOperation.h */; };
 		E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E03BD317E34A98002546C3 /* DatabaseOperation.m */; };
 		E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
@@ -63,6 +69,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files */,
 				E858D66F1803B43D0071DA24 /* SHConfigManager.h in Copy Files */,
 				E858D6701803B43D0071DA24 /* SHVersion.h in Copy Files */,
 				E887F79B17F422AC00871292 /* Base64.h in Copy Files */,
@@ -127,6 +134,10 @@
 		E887F79217F2AD8500871292 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
 		E887F79717F422A000871292 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
 		E887F79817F422A000871292 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		E8B41BAD180CE7A500069506 /* SHAnalyzeFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAnalyzeFactory.h; sourceTree = "<group>"; };
+		E8B41BAE180CE7A500069506 /* SHAnalyzeFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAnalyzeFactory.m; sourceTree = "<group>"; };
+		E8B41BB1180D0B1700069506 /* SHFuck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHFuck.h; sourceTree = "<group>"; };
+		E8B41BB2180D0B1700069506 /* SHFuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFuck.m; sourceTree = "<group>"; };
 		E8B8412117D6FB26006A0291 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
 		E8B8412317D6FB31006A0291 /* NVSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSkin.m; sourceTree = "<group>"; };
 		E8E03BD217E34A98002546C3 /* DatabaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseOperation.h; sourceTree = "<group>"; };
@@ -183,6 +194,7 @@
 		E8080DAE17BF84CE006B68EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E8080DB117BF84CE006B68EB /* Core.h */,
 				E858D6611803B28F0071DA24 /* update */,
 				E887F78917F284CF00871292 /* crash */,
 				E887F78A17F284CF00871292 /* log */,
@@ -192,7 +204,6 @@
 				E8080E2017BF8E5C006B68EB /* extra */,
 				E8080E2117BF8E5C006B68EB /* net */,
 				E8080E2217BF8E5C006B68EB /* tool */,
-				E8080DB117BF84CE006B68EB /* Core.h */,
 				E8080DAF17BF84CE006B68EB /* Supporting Files */,
 			);
 			path = Core;
@@ -249,6 +260,8 @@
 		E8080E2117BF8E5C006B68EB /* net */ = {
 			isa = PBXGroup;
 			children = (
+				E8B41BAD180CE7A500069506 /* SHAnalyzeFactory.h */,
+				E8B41BAE180CE7A500069506 /* SHAnalyzeFactory.m */,
 				E8080E2717BF8EAD006B68EB /* SHTask.h */,
 				E8080E2817BF8EAD006B68EB /* SHTask.m */,
 				E8080E2A17BF907E006B68EB /* SHPostTask.h */,
@@ -273,6 +286,8 @@
 			children = (
 				E8080E2417BF8E99006B68EB /* SHObject.h */,
 				E8080E2517BF8E99006B68EB /* SHObject.m */,
+				E8B41BB1180D0B1700069506 /* SHFuck.h */,
+				E8B41BB2180D0B1700069506 /* SHFuck.m */,
 			);
 			path = obj;
 			sourceTree = "<group>";
@@ -352,6 +367,7 @@
 				E87F0A0917E16757009E57E8 /* SHPostTaskM.h in Headers */,
 				E887F79917F422A000871292 /* Base64.h in Headers */,
 				E87F0A0F17E1FEF4009E57E8 /* Entironment.h in Headers */,
+				E8B41BAF180CE7A500069506 /* SHAnalyzeFactory.h in Headers */,
 				E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */,
 				E887F79317F2AD8500871292 /* FileManager.h in Headers */,
 				E81A41B01808F62200D9B399 /* GDataXMLNode.h in Headers */,
@@ -359,6 +375,7 @@
 				E87F0A1917E2A3DC009E57E8 /* Respinfo.h in Headers */,
 				E8E03BD417E34A98002546C3 /* DatabaseOperation.h in Headers */,
 				E887F78D17F284EE00871292 /* SHCrashManager.h in Headers */,
+				E8B41BB3180D0B1700069506 /* SHFuck.h in Headers */,
 				E887F78717F1C88B00871292 /* Identication.h in Headers */,
 				E858D6681803B28F0071DA24 /* SHVersion.h in Headers */,
 				E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */,
@@ -417,13 +434,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C835B1180D0F8600F88A3E /* SHFuck.h in Sources */,
 				E887F78817F1C88B00871292 /* Identication.m in Sources */,
 				E8080E2617BF8E99006B68EB /* SHObject.m in Sources */,
 				E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */,
 				E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */,
 				E858D6711803B6120071DA24 /* SHConfigManager.m in Sources */,
 				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,
+				E8B41BB0180CE7A500069506 /* SHAnalyzeFactory.m in Sources */,
 				E87F0A0A17E16757009E57E8 /* SHPostTaskM.m in Sources */,
+				E8B41BB4180D0B1700069506 /* SHFuck.m in Sources */,
 				E887F79A17F422A000871292 /* Base64.m in Sources */,
 				E887F79417F2AD8500871292 /* FileManager.m in Sources */,
 				E87F0A1017E1FEF4009E57E8 /* Entironment.m in Sources */,

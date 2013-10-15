@@ -17,14 +17,15 @@
 
 @implementation SHTask
 
-@synthesize result;
+@synthesize result = _result;
 @synthesize delegate = _delegate;
 @synthesize URL = _URL;
 @synthesize cachetype;
 @synthesize isCache;
 @synthesize respinfo = _respinfo;
-
+@synthesize extra = _extra;
 static const NSMutableDictionary * urlReplace;
+
 
 - (void)setURL:(NSString *)URL
 {
@@ -49,6 +50,21 @@ static const NSMutableDictionary * urlReplace;
         [urlReplace setValue:newurl forKey:url];
 
     }
+}
+
+- (void)setRespinfo:(Respinfo *)respinfo
+{
+    _respinfo = respinfo;
+}
+
+- (void)setExtra:(NSDictionary *)extra
+{
+    _extra = extra;
+}
+
+- (void)setResult:(NSObject *)result
+{
+    _result = result;
 }
 
 - (void)start

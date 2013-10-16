@@ -24,7 +24,7 @@
         p (task,resSel,res);
     }
     SEL resData = @selector(setResult:);
-    if([task respondsToSelector:resData]){
+    if([task respondsToSelector:resData] &&  [netreutrn objectForKey:@"data"] && code >= 0){
         IMP p = [task methodForSelector:resData];
         p (task,resData, [netreutrn objectForKey:@"data"]);
     }
@@ -34,9 +34,7 @@
            SEL resExtra = @selector(setExtra:);
         IMP p = [task methodForSelector:resExtra];
         p (task,resExtra, mete);
-        
     }
- 
 }
 
 @end

@@ -33,7 +33,7 @@
 - (void)start
 {
     NSMutableDictionary * data = [[NSMutableDictionary alloc]init];
-    NSMutableDictionary *  pargs = [self.postArgs mutableCopy];
+    NSMutableDictionary * pargs = [self.postArgs mutableCopy];
     if(self.postArgs.count > 0){
         [data setObject:pargs forKey:@"data"];
     }

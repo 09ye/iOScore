@@ -83,10 +83,6 @@
 
 - (void)processData
 {
-//    NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:nil];
-//    int code = [[netreutrn objectForKey:@"code"] integerValue];
-//    NSString * message = [netreutrn objectForKey:@"message"];
-//    _respinfo = [[Respinfo alloc]initWithCode:(int)code message:message];
     if(!self.result){
         [SHAnalyzeFactory analyze:self Data:__data];
     }

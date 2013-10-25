@@ -26,7 +26,9 @@
     SEL resData = @selector(setResult:);
     if([task respondsToSelector:resData] &&  [netreutrn objectForKey:@"data"] && code >= 0){
         IMP p = [task methodForSelector:resData];
-        p (task,resData, [netreutrn objectForKey:@"data"]);
+        NSObject * obj = [netreutrn valueForKey:@"data"];
+        p (task,resData, obj);
+        
     }
     NSDictionary * mete = [netreutrn valueForKey:@"meta"];
     if(mete){

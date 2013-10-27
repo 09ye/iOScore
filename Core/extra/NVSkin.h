@@ -8,16 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define RECT_RIGHTSHOW CGRectMake(87, 23, 930, 730)
-#define RECT_RIGHTNAVIGATION CGRectMake(0, 0, 930, 44)
-#define RECT_RIGHTLIST CGRectMake(0, 44, 240, 678)
-#define RECT_RIGHTCONTENT CGRectMake(240, 0, 690  , 730)
-#define CELL_GENERAL_HEIGHT 72
-#define CELL_GENERAL_HEIGHT2 62
-#define CELL_GENERAL_HEIGHT3 44
-#define CELL_SECTION_HEADER_GENERAL_HEIGHT 38
-#define RECT_MAIN_LANDSCAPE_RIGHT CGRectMake(-20, 0, 768, 1004)
-#define RECT_MAIN_LANDSCAPE_LEFT CGRectMake(20, 0, 768, 1004)
 
 @protocol NVSkinloading <NSObject>
 
@@ -79,6 +69,6 @@ typedef  enum
 //
 - (id)resource: (NSString*)type  key:(NSString *) key;
 -(NSString *)resourceString:(NSString*)key;
-- (void)accommodate:(UIView*) view_:(NSString*) key;
+- (void)accommodate:(UIView *) view :(NSString*) key;
 @end
  

@@ -17,5 +17,8 @@
 #import "SHCrashManager.h"
 #import "SHConfigManager.h"
 #import "SHVersion.h"
+#import "SHFuck.h"
+#import "NSData+AES.h"
+#import "NSString+MD5.h"
 
 #define CORE_NOTIFICATION_CONFIG_STATUS_CHANGED @"core_notification_config_status_changed"

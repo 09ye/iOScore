@@ -20,6 +20,9 @@
 		E81E443718179A1000EA9090 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E81E442E18179A1000EA9090 /* NSString+MD5.m */; };
 		E81E443D18179B2C00EA9090 /* NSData+AES.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E81E442B18179A1000EA9090 /* NSData+AES.h */; };
 		E81E443E18179B2C00EA9090 /* NSString+MD5.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E81E442D18179A1000EA9090 /* NSString+MD5.h */; };
+		E827F8E9181F8B7000389134 /* SHUser.h in Headers */ = {isa = PBXBuildFile; fileRef = E827F8E7181F8B7000389134 /* SHUser.h */; };
+		E827F8EA181F8B7000389134 /* SHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E827F8E8181F8B7000389134 /* SHUser.m */; };
+		E827F8EB181F8CE000389134 /* SHUser.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E827F8E7181F8B7000389134 /* SHUser.h */; };
 		E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6621803B28F0071DA24 /* SHConfigManager.h */; };
 		E858D6681803B28F0071DA24 /* SHVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6641803B28F0071DA24 /* SHVersion.h */; };
 		E858D6691803B28F0071DA24 /* SHVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E858D6651803B28F0071DA24 /* SHVersion.m */; };
@@ -75,6 +78,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				E827F8EB181F8CE000389134 /* SHUser.h in Copy Files */,
 				E81E443D18179B2C00EA9090 /* NSData+AES.h in Copy Files */,
 				E81E443E18179B2C00EA9090 /* NSString+MD5.h in Copy Files */,
 				E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files */,
@@ -125,6 +129,8 @@
 		E81E442C18179A1000EA9090 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
 		E81E442D18179A1000EA9090 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		E81E442E18179A1000EA9090 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		E827F8E7181F8B7000389134 /* SHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUser.h; sourceTree = "<group>"; };
+		E827F8E8181F8B7000389134 /* SHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUser.m; sourceTree = "<group>"; };
 		E858D6621803B28F0071DA24 /* SHConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHConfigManager.h; sourceTree = "<group>"; };
 		E858D6631803B28F0071DA24 /* SHConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHConfigManager.m; sourceTree = "<group>"; };
 		E858D6641803B28F0071DA24 /* SHVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHVersion.h; sourceTree = "<group>"; };
@@ -206,6 +212,7 @@
 		E8080DAE17BF84CE006B68EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E827F8E6181F8B5D00389134 /* user */,
 				E8080DB117BF84CE006B68EB /* Core.h */,
 				E858D6611803B28F0071DA24 /* update */,
 				E887F78917F284CF00871292 /* crash */,
@@ -328,6 +335,15 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		E827F8E6181F8B5D00389134 /* user */ = {
+			isa = PBXGroup;
+			children = (
+				E827F8E7181F8B7000389134 /* SHUser.h */,
+				E827F8E8181F8B7000389134 /* SHUser.m */,
+			);
+			path = user;
+			sourceTree = "<group>";
+		};
 		E858D6611803B28F0071DA24 /* update */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E87F0A0917E16757009E57E8 /* SHPostTaskM.h in Headers */,
+				E827F8E9181F8B7000389134 /* SHUser.h in Headers */,
 				E81E443418179A1000EA9090 /* NSData+AES.h in Headers */,
 				E81E443618179A1000EA9090 /* NSString+MD5.h in Headers */,
 				E887F79917F422A000871292 /* Base64.h in Headers */,
@@ -464,6 +481,7 @@
 				E87F0A0A17E16757009E57E8 /* SHPostTaskM.m in Sources */,
 				E8B41BB4180D0B1700069506 /* SHFuck.m in Sources */,
 				E887F79A17F422A000871292 /* Base64.m in Sources */,
+				E827F8EA181F8B7000389134 /* SHUser.m in Sources */,
 				E887F79417F2AD8500871292 /* FileManager.m in Sources */,
 				E87F0A1017E1FEF4009E57E8 /* Entironment.m in Sources */,
 				E87F0A1A17E2A3DC009E57E8 /* Respinfo.m in Sources */,

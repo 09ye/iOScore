@@ -20,5 +20,6 @@
 #import "SHFuck.h"
 #import "NSData+AES.h"
 #import "NSString+MD5.h"
+#import "SHUser.h"
 
 #define CORE_NOTIFICATION_CONFIG_STATUS_CHANGED @"core_notification_config_status_changed"

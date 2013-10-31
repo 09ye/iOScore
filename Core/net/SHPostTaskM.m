@@ -36,6 +36,8 @@
     NSMutableDictionary * pargs = [self.postArgs mutableCopy];
     if(self.postArgs.count > 0){
         [data setObject:pargs forKey:@"data"];
+    }else{
+        [data setObject:[[NSDictionary alloc]init] forKey:@"data"];
     }
     NSDictionary * identication = Identication.identication;
     [data setObject:identication forKey:@"identication"];

@@ -14,7 +14,7 @@ typedef enum  {
     SHConfigStatusFaile
     }SHConfigStatus;
 
-@interface SHConfigManager : NSObject <SHTaskDelegate>
+@interface SHConfigManager : NSObject <SHTaskDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,copy) NSString * URL;
 @property (nonatomic,copy,readonly) NSString * updateDate;
@@ -28,7 +28,10 @@ typedef enum  {
 @property (nonatomic,assign,readonly) BOOL isMaintenanceMode;
 @property (nonatomic,copy,readonly) NSString * pushNotice;
 @property (nonatomic,assign,readonly) SHConfigStatus status;
+
 - (void) refresh;
+
+- (void) show;
 
 + (SHConfigManager*)instance;
 @end

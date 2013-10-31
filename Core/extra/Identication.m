@@ -31,6 +31,7 @@
         [identication setObject:Entironment.instance.deviceid forKey:@"imei"];
 #endif
     }
+    [identication setObject:Entironment.instance.deviceInfo forKey:@"info"];
     
     return identication;
 }

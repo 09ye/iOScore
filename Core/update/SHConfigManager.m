@@ -20,6 +20,7 @@ static SHConfigManager * __instance;
 @synthesize listupdateurls = _listupdateurls;
 @synthesize result = _result;
 @synthesize status = _status;
+
 - (void)setURL:(NSString *)url_
 {
     
@@ -50,6 +51,7 @@ static SHConfigManager * __instance;
     _isMaintenanceMode = ((NSNumber*)[dic valueForKey:@"isMaintenanceMode"]).boolValue;
     _hasPushNotice = ((NSNumber*)[dic valueForKey:@"hasPushNotice"]).boolValue;
     _pushNotice = [dic valueForKey:@"pushNotice"];
+    _listupdateurls = [dic valueForKey:@"updateURL"];
 }
 
 - (void)taskDidFinished:(SHTask*) task
@@ -63,7 +65,43 @@ static SHConfigManager * __instance;
 - (void)taskDidFailed:(SHTask *)task
 {
     _status = SHConfigStatusFaile;
+    [[task respinfo] show];
     [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:self];
+}
+
+- (void) show
+{
+    if(_status == SHConfigStatusSuccess){
+        if([Entironment.instance.version compare :self.newversion] == NSOrderedAscending){
+            if(_isMaintenanceMode){
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:nil];
+                alert.delegate = self;
+                [alert show];
+                
+            }else if ([Entironment.instance.version compare :self.minversion] == NSOrderedAscending){
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:@"取消",nil];
+                alert.delegate = self;
+                [alert show];
+            }
+            else{
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:@"取消",nil];
+                alert.delegate = self;
+                [alert show];
+            }
+        }
+        
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0){
+        if(self.listupdateurls.count > 0){
+            NSString * url = [self.listupdateurls objectAtIndex:0];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+        }
+        exit(0);
+    }
 }
 
 + (SHConfigManager*)instance

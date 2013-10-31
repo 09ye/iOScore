@@ -21,7 +21,12 @@
     NSString *postLength = [NSString stringWithFormat:@"%d", [self.postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:[NSURL URLWithString:_realURL]];
-    [request setTimeoutInterval:10];
+#ifdef DEBUG
+      [request setTimeoutInterval:120];
+#else
+      [request setTimeoutInterval:30];
+#endif
+  
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     

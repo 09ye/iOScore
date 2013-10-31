@@ -13,13 +13,15 @@
 
 + (void) analyze:(SHTask*) task Data:(NSData*)data
 {
-  
-    NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:nil];
+    NSError * error ;
+    NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:&error];
+    
     int code = [[netreutrn objectForKey:@"code"] integerValue];
+    //NSLog("%@",netreutrn);
     NSString * message = [netreutrn objectForKey:@"message"];
     Respinfo* res  = [[Respinfo alloc]initWithCode:(int)code message:message];
     SEL resSel = @selector(setRespinfo:);
-    if([task respondsToSelector:resSel]){
+    if([task respondsToSelector:resSel] && res){
         IMP p = [task methodForSelector:resSel];
         p (task,resSel,res);
     }

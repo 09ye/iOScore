@@ -65,7 +65,7 @@ static SHConfigManager * __instance;
 - (void)taskDidFailed:(SHTask *)task
 {
     _status = SHConfigStatusFaile;
-    [[task respinfo] show];
+    //[[task respinfo] show];
     [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:self];
 }
 

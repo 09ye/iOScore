@@ -13,6 +13,8 @@
 
 + (void) analyze:(SHTask*) task Data:(NSData*)data
 {
+    NSString* msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"%@",msg);
     NSError * error ;
     NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:&error];
     
@@ -26,10 +28,14 @@
         p (task,resSel,res);
     }
     SEL resData = @selector(setResult:);
-    if([task respondsToSelector:resData] &&  [netreutrn objectForKey:@"data"] && code >= 0){
+    if([task respondsToSelector:resData]){
         IMP p = [task methodForSelector:resData];
         NSObject * obj = [netreutrn valueForKey:@"data"];
-        p (task,resData, obj);
+        if( [netreutrn objectForKey:@"data"] && code >= 0){
+            p (task,resData, obj);
+        }else{
+            p (task,resData,[[NSObject alloc]init]);
+        }
         
     }
     NSDictionary * mete = [netreutrn valueForKey:@"meta"];

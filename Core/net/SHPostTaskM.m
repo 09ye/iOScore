@@ -62,7 +62,9 @@
             }
         }
     }
+#ifdef DEBUG
     NSLog(@"%@",[data description]);
+#endif
     if([NSJSONSerialization isValidJSONObject:data] == YES){
         self.postData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:nil];
     }

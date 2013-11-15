@@ -26,13 +26,18 @@
             [identication setObject:Entironment.instance.password forKey:@"password"];
         }
 #if DEBUG
-        [identication setObject:@"111111" forKey:@"imei"];
+        if(Entironment.instance.deviceid.length == 0){
+            [identication setObject:@"111111" forKey:@"imei"];
+        }else{
+            [identication setObject:Entironment.instance.deviceid forKey:@"imei"];
+        }
+       
 #else
         [identication setObject:Entironment.instance.deviceid forKey:@"imei"];
 #endif
     }
     [identication setObject:Entironment.instance.deviceInfo forKey:@"info"];
-    
+    [identication setObject:Entironment.instance.version.description forKey:@"version"];
     return identication;
 }
 @end

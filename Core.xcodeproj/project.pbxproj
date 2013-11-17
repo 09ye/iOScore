@@ -31,9 +31,9 @@
 		E858D6711803B6120071DA24 /* SHConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E858D6631803B28F0071DA24 /* SHConfigManager.m */; };
 		E85F009117EE9A2200F9F02C /* SHIIOSVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E85F008F17EE9A2200F9F02C /* SHIIOSVersion.h */; };
 		E85F009217EE9A2200F9F02C /* SHIIOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E85F009017EE9A2200F9F02C /* SHIIOSVersion.m */; };
-		E86840231823530C00938464 /* SHTool.h in Headers */ = {isa = PBXBuildFile; fileRef = E86840211823530C00938464 /* SHTool.h */; };
-		E86840241823530C00938464 /* SHTool.m in Sources */ = {isa = PBXBuildFile; fileRef = E86840221823530C00938464 /* SHTool.m */; };
-		E86840251823535200938464 /* SHTool.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E86840211823530C00938464 /* SHTool.h */; };
+		E86840231823530C00938464 /* SHTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E86840211823530C00938464 /* SHTools.h */; };
+		E86840241823530C00938464 /* SHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E86840221823530C00938464 /* SHTools.m */; };
+		E86840251823535200938464 /* SHTools.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E86840211823530C00938464 /* SHTools.h */; };
 		E86840281823810B00938464 /* IPAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = E86840261823810B00938464 /* IPAddress.h */; };
 		E86840291823810B00938464 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = E86840271823810B00938464 /* IPAddress.m */; };
 		E868402A1823818F00938464 /* IPAddress.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E86840261823810B00938464 /* IPAddress.h */; };
@@ -85,7 +85,7 @@
 			dstSubfolderSpec = 11;
 			files = (
 				E868402A1823818F00938464 /* IPAddress.h in Copy Files */,
-				E86840251823535200938464 /* SHTool.h in Copy Files */,
+				E86840251823535200938464 /* SHTools.h in Copy Files */,
 				E827F8EB181F8CE000389134 /* SHUser.h in Copy Files */,
 				E81E443D18179B2C00EA9090 /* NSData+AES.h in Copy Files */,
 				E81E443E18179B2C00EA9090 /* NSString+MD5.h in Copy Files */,
@@ -145,8 +145,8 @@
 		E858D6651803B28F0071DA24 /* SHVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHVersion.m; sourceTree = "<group>"; };
 		E85F008F17EE9A2200F9F02C /* SHIIOSVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHIIOSVersion.h; sourceTree = "<group>"; };
 		E85F009017EE9A2200F9F02C /* SHIIOSVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHIIOSVersion.m; sourceTree = "<group>"; };
-		E86840211823530C00938464 /* SHTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTool.h; sourceTree = "<group>"; };
-		E86840221823530C00938464 /* SHTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTool.m; sourceTree = "<group>"; };
+		E86840211823530C00938464 /* SHTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTools.h; sourceTree = "<group>"; };
+		E86840221823530C00938464 /* SHTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHTools.m; sourceTree = "<group>"; };
 		E86840261823810B00938464 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
 		E86840271823810B00938464 /* IPAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPAddress.m; sourceTree = "<group>"; };
 		E87F0A0717E16757009E57E8 /* SHPostTaskM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPostTaskM.h; sourceTree = "<group>"; };
@@ -312,8 +312,8 @@
 			children = (
 				E81A41B21808F62B00D9B399 /* JSONKit */,
 				E81A41AD1808F60900D9B399 /* xml */,
-				E86840211823530C00938464 /* SHTool.h */,
-				E86840221823530C00938464 /* SHTool.m */,
+				E86840211823530C00938464 /* SHTools.h */,
+				E86840221823530C00938464 /* SHTools.m */,
 				E86840261823810B00938464 /* IPAddress.h */,
 				E86840271823810B00938464 /* IPAddress.m */,
 			);
@@ -416,7 +416,7 @@
 				E827F8E9181F8B7000389134 /* SHUser.h in Headers */,
 				E81E443418179A1000EA9090 /* NSData+AES.h in Headers */,
 				E81E443618179A1000EA9090 /* NSString+MD5.h in Headers */,
-				E86840231823530C00938464 /* SHTool.h in Headers */,
+				E86840231823530C00938464 /* SHTools.h in Headers */,
 				E887F79917F422A000871292 /* Base64.h in Headers */,
 				E87F0A0F17E1FEF4009E57E8 /* Entironment.h in Headers */,
 				E8B41BAF180CE7A500069506 /* SHAnalyzeFactory.h in Headers */,
@@ -508,7 +508,7 @@
 				E81A41B11808F62200D9B399 /* GDataXMLNode.m in Sources */,
 				E858D6691803B28F0071DA24 /* SHVersion.m in Sources */,
 				E887F78E17F284EE00871292 /* SHCrashManager.m in Sources */,
-				E86840241823530C00938464 /* SHTool.m in Sources */,
+				E86840241823530C00938464 /* SHTools.m in Sources */,
 				E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */,
 				E8E03BDA17E6B1AB002546C3 /* SHCacheManager.m in Sources */,
 				E85F009217EE9A2200F9F02C /* SHIIOSVersion.m in Sources */,

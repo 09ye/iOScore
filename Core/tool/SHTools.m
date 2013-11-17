@@ -6,9 +6,9 @@
 //  Copyright (c) 2013年 zywang. All rights reserved.
 //
 
-#import "SHTool.h"
+#import "SHTools.h"
 
-@implementation SHTool
+@implementation SHTools
 
 + (BOOL)isJailbroken {
     BOOL jailbroken = NO;

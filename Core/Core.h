@@ -21,7 +21,7 @@
 #import "NSData+AES.h"
 #import "NSString+MD5.h"
 #import "SHUser.h"
-#import "SHTool.h"
+#import "SHTools.h"
 #import "IPAddress.h"
 
 #define CORE_NOTIFICATION_CONFIG_STATUS_CHANGED @"core_notification_config_status_changed"

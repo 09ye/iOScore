@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SHTool : NSObject
+@interface SHTools : NSObject
 
 @end

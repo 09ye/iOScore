@@ -24,6 +24,8 @@
 @synthesize isCache;
 @synthesize respinfo = _respinfo;
 @synthesize extra = _extra;
+@synthesize tag = _tag;
+
 static const NSMutableDictionary * urlReplace;
 
 

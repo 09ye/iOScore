@@ -38,11 +38,12 @@ typedef enum
 
 @property (nonatomic,strong,readonly) Respinfo * respinfo;
 @property (nonatomic,strong,readonly) NSObject* result;
-@property (nonatomic,assign) id<SHTaskDelegate>delegate;
+@property (nonatomic,weak) id<SHTaskDelegate>delegate;
 @property (nonatomic,strong) NSString* URL;
 @property (nonatomic,assign) CacheType cachetype;
 @property (nonatomic,assign) BOOL  isCache;
 @property (nonatomic,strong,readonly) NSDictionary* extra;
+@property (nonatomic,assign) int tag;
 
 - (void)start;
 - (void)cancel;

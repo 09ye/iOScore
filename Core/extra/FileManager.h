@@ -9,5 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface FileManager : NSObject
-+(void)writeFile:(NSString*)file  data:(NSData *)data;
+
++ (void)writeFile:(NSString*)file  data:(NSData *)data;
+
++ (NSString*)readFile:(NSString*)file ;
+
++ (BOOL)deleteFile:(NSString*) file;
 @end

@@ -41,6 +41,34 @@ static int  count = 0;
     return mInstance;
 }
 
+//- (void) postToService : (SHTask * )task
+//{
+//    NSString * data = [FileManager readFile:@"crash.txt"];
+//    task.
+//}
+
+- (void)setURL:(NSString *)URL_
+{
+    SHPostTaskM* task = [[SHPostTaskM alloc]init];
+    task.URL = URL_;
+    NSString* data = [FileManager readFile:@"crash.txt"];
+    if(data.length > 0){
+        [task.postArgs setValue:@"" forKey:@"crash"];
+        task.delegate = self;
+        [task start];
+    }
+}
+
+- (void)taskDidFinish:(SHTask* )task
+{
+    [FileManager deleteFile:@"crash.txt"];
+}
+
+- (void)taskDidFailed:(SHTask *)task
+{
+    //[FileManager deleteFile:@"crash.txt"];
+}
+
 void signalHandler(int signal)
 {
     if(count >0){
@@ -75,7 +103,7 @@ void exceptionHandler(NSException *exception)
     NSArray *callStack = [SHCrashManager backtrace];
     NSMutableDictionary *userInfo =[NSMutableDictionary dictionaryWithDictionary:[exception userInfo]];
     [userInfo setObject:callStack forKey:ExceptionHandlerAddressesKey];
-    [FileManager writeFile:@"crash.txt" data:[[SHCrashManager backtraceStr] dataUsingEncoding:NSUTF8StringEncoding]];
+    [FileManager writeFile:@"crash.txt" data:[[NSString stringWithFormat:@"\n%@--------\n%@\n%@\n",[[NSDate date] description],[exception reason],[[exception callStackSymbols] description]]dataUsingEncoding:NSUTF8StringEncoding]];
 
     // 现在就可以保存信息到本地［］
 }

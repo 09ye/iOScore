@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SHTask.h"
 
-@interface SHCrashManager : NSObject
+@interface SHCrashManager : NSObject <SHTaskDelegate>
+
+@property (nonatomic,copy) NSString* URL;
 
 + (SHCrashManager*)instance;
+
 +(void)writeFile:(NSString *)file;
+
 @end

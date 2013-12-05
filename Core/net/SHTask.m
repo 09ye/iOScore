@@ -25,6 +25,7 @@
 @synthesize respinfo = _respinfo;
 @synthesize extra = _extra;
 @synthesize tag = _tag;
+@synthesize isworking = _isworking;
 
 static const NSMutableDictionary * urlReplace;
 
@@ -71,13 +72,14 @@ static const NSMutableDictionary * urlReplace;
 
 - (void)start
 {
-    
+    _isworking = YES;
 }
 
 - (void)cancel
 {
-    
+    _isworking = NO;
 }
+
 -(NSString*)description
 {
     return [self.result description];

@@ -23,14 +23,17 @@
 }
 -(void) show
 {
-   ;
 #if DEBUG
     UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message: [NSString stringWithFormat:@"(%d)\n%@",self.code,self.message ] delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
 #else
     UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:self.message delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil, nil];
 #endif
-    
-    
     [alert show];
+}
+
+
+-(NSString*)description
+{
+    return [NSString stringWithFormat:@"%d--%@",_code,_message];
 }
 @end

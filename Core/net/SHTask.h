@@ -14,7 +14,7 @@ typedef enum
 {
     CacheTypeNone,
     CacheTypeKey,
-    CacheTimes//时间缓存
+    CacheTypeTimes//时间缓存
     
 }CacheType;
 
@@ -32,10 +32,13 @@ typedef enum
 
 @interface SHTask : NSObject
 {
-    @protected NSString * _realURL;
+    @protected
+    NSString * _realURL;
     Respinfo * _respinfo;
+    BOOL _isworking;
 }
 
+@property (nonatomic,assign,readonly) BOOL isworking;
 @property (nonatomic,strong,readonly) Respinfo * respinfo;
 @property (nonatomic,strong,readonly) NSObject* result;
 @property (nonatomic,weak) id<SHTaskDelegate>delegate;

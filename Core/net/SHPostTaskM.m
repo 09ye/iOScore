@@ -41,7 +41,7 @@
     }
     NSDictionary * identication = Identication.identication;
     [data setObject:identication forKey:@"identication"];
-    if(self.cachetype == CacheTimes){//时间类型缓存
+    if(self.cachetype == CacheTypeTimes){//时间类型缓存
         if([NSJSONSerialization isValidJSONObject:self.postArgs] == YES){
             NSArray * array = [SHCacheManager.instance fetchOdTime: [NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
             if([array count]>1){
@@ -99,10 +99,12 @@
         //_result  = [netreutrn objectForKey:@"data"];
         //NSLog(@"data:%@",[self.result description]);
         if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFinished:)]){
+            _isworking = NO;
             [self.delegate taskDidFinished:self];
         }
     }else{
         if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFailed:)]){
+            _isworking = NO;
             [self.delegate taskDidFailed:self];
         }
     }
@@ -111,7 +113,7 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     [SHAnalyzeFactory analyze:self Data:__data];
-    if(self.cachetype == CacheTimes){
+    if(self.cachetype == CacheTypeTimes){
         //NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:__data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:nil];
         //int code = [[netreutrn objectForKey:@"code"] integerValue];
         //NSDictionary * dicdata = [netreutrn objectForKey:@"data"];
@@ -148,6 +150,7 @@
     }
     _respinfo = [[Respinfo alloc]initWithCode:-1 message:@"网络连接失败."];
     if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFailed:)]){
+        _isworking = NO;
         [self.delegate taskDidFailed:self];
     }
 }

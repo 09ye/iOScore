@@ -13,7 +13,7 @@
 
 + (void) analyze:(SHTask*) task Data:(NSData*)data
 {
-    NSString* msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+    //NSString* msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     //NSLog(@"%@",msg);
     NSError * error ;
     NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:&error];
@@ -51,6 +51,10 @@
         IMP p = [task methodForSelector:resExtra];
         p (task,resExtra, mete);
     }
+    if(code == CODE_RELOGIN){//重新登录消息
+        [[NSNotificationCenter defaultCenter] postNotificationName:CORE_NOTIFICATION_LOGIN_RELOGIN object:nil];
+    }
+    
 }
 
 @end

@@ -25,3 +25,7 @@
 #import "IPAddress.h"
 
 #define CORE_NOTIFICATION_CONFIG_STATUS_CHANGED @"core_notification_config_status_changed"
+
+#define CORE_NOTIFICATION_LOGIN_RELOGIN @"core_notification_login_relogin"
+
+#define CODE_RELOGIN 10000

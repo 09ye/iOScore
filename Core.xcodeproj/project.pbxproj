@@ -23,6 +23,10 @@
 		E827F8E9181F8B7000389134 /* SHUser.h in Headers */ = {isa = PBXBuildFile; fileRef = E827F8E7181F8B7000389134 /* SHUser.h */; };
 		E827F8EA181F8B7000389134 /* SHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E827F8E8181F8B7000389134 /* SHUser.m */; };
 		E827F8EB181F8CE000389134 /* SHUser.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E827F8E7181F8B7000389134 /* SHUser.h */; };
+		E84AB7221855B680005538A5 /* SHPrivateAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E84AB7201855B680005538A5 /* SHPrivateAPI.h */; };
+		E84AB7231855B680005538A5 /* SHPrivateAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E84AB7211855B680005538A5 /* SHPrivateAPI.m */; };
+		E84AB7291855B8FF005538A5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84AB7281855B8FF005538A5 /* CoreTelephony.framework */; };
+		E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E84AB7201855B680005538A5 /* SHPrivateAPI.h */; };
 		E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6621803B28F0071DA24 /* SHConfigManager.h */; };
 		E858D6681803B28F0071DA24 /* SHVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6641803B28F0071DA24 /* SHVersion.h */; };
 		E858D6691803B28F0071DA24 /* SHVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E858D6651803B28F0071DA24 /* SHVersion.m */; };
@@ -84,6 +88,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files */,
 				E868402A1823818F00938464 /* IPAddress.h in Copy Files */,
 				E86840251823535200938464 /* SHTools.h in Copy Files */,
 				E827F8EB181F8CE000389134 /* SHUser.h in Copy Files */,
@@ -139,6 +144,9 @@
 		E81E442E18179A1000EA9090 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		E827F8E7181F8B7000389134 /* SHUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUser.h; sourceTree = "<group>"; };
 		E827F8E8181F8B7000389134 /* SHUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUser.m; sourceTree = "<group>"; };
+		E84AB7201855B680005538A5 /* SHPrivateAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHPrivateAPI.h; sourceTree = "<group>"; };
+		E84AB7211855B680005538A5 /* SHPrivateAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHPrivateAPI.m; sourceTree = "<group>"; };
+		E84AB7281855B8FF005538A5 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		E858D6621803B28F0071DA24 /* SHConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHConfigManager.h; sourceTree = "<group>"; };
 		E858D6631803B28F0071DA24 /* SHConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHConfigManager.m; sourceTree = "<group>"; };
 		E858D6641803B28F0071DA24 /* SHVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHVersion.h; sourceTree = "<group>"; };
@@ -182,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84AB7291855B8FF005538A5 /* CoreTelephony.framework in Frameworks */,
 				E8E03BDE17E6B4BB002546C3 /* libsqlite3.dylib in Frameworks */,
 				E87F0A1E17E2A623009E57E8 /* UIKit.framework in Frameworks */,
 				E8080DAD17BF84CE006B68EB /* Foundation.framework in Frameworks */,
@@ -212,6 +221,7 @@
 		E8080DAB17BF84CE006B68EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E84AB7281855B8FF005538A5 /* CoreTelephony.framework */,
 				E8E03BDD17E6B4BB002546C3 /* libsqlite3.dylib */,
 				E87F0A1D17E2A623009E57E8 /* UIKit.framework */,
 				E8080DAC17BF84CE006B68EB /* Foundation.framework */,
@@ -224,6 +234,7 @@
 		E8080DAE17BF84CE006B68EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				E84AB71F1855B64A005538A5 /* privateapi */,
 				E827F8E6181F8B5D00389134 /* user */,
 				E8080DB117BF84CE006B68EB /* Core.h */,
 				E858D6611803B28F0071DA24 /* update */,
@@ -360,6 +371,15 @@
 			path = user;
 			sourceTree = "<group>";
 		};
+		E84AB71F1855B64A005538A5 /* privateapi */ = {
+			isa = PBXGroup;
+			children = (
+				E84AB7201855B680005538A5 /* SHPrivateAPI.h */,
+				E84AB7211855B680005538A5 /* SHPrivateAPI.m */,
+			);
+			path = privateapi;
+			sourceTree = "<group>";
+		};
 		E858D6611803B28F0071DA24 /* update */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +449,7 @@
 				E887F78D17F284EE00871292 /* SHCrashManager.h in Headers */,
 				E8B41BB3180D0B1700069506 /* SHFuck.h in Headers */,
 				E86840281823810B00938464 /* IPAddress.h in Headers */,
+				E84AB7221855B680005538A5 /* SHPrivateAPI.h in Headers */,
 				E887F78717F1C88B00871292 /* Identication.h in Headers */,
 				E858D6681803B28F0071DA24 /* SHVersion.h in Headers */,
 				E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */,
@@ -493,6 +514,7 @@
 				E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */,
 				E81E443718179A1000EA9090 /* NSString+MD5.m in Sources */,
 				E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */,
+				E84AB7231855B680005538A5 /* SHPrivateAPI.m in Sources */,
 				E86840291823810B00938464 /* IPAddress.m in Sources */,
 				E858D6711803B6120071DA24 /* SHConfigManager.m in Sources */,
 				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,

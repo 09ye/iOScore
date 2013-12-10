@@ -20,6 +20,8 @@ static SHConfigManager * __instance;
 @synthesize listupdateurls = _listupdateurls;
 @synthesize result = _result;
 @synthesize status = _status;
+@synthesize configInfo = _configInfo;
+@synthesize updateInfo = _updateInfo;
 
 - (void)setURL:(NSString *)url_
 {
@@ -57,7 +59,9 @@ static SHConfigManager * __instance;
 - (void)taskDidFinished:(SHTask*) task
 {
     _result = (NSDictionary*)task.result;
-    [self dealUpdate :[self.result valueForKey:@"update"]];
+    _updateInfo = [self.result valueForKey:@"update"];
+    [self dealUpdate :_updateInfo];
+    _configInfo = [self.result valueForKey:@"config"];
     _status = SHConfigStatusSuccess;
      [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:self];
 }

@@ -9,5 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface SHTools : NSObject
+//是不是本周
++ (BOOL)isCurrentWeek:(NSString*) string;
+//是不是本月
++ (BOOL) isCurrentMonth:(NSString*) string;
+//是不是本季度
++ (BOOL) isCurrentQuarter:(NSString*)  string;
 
++ (BOOL) isCurrentMonthByNSDate:(NSDate *) date;
 @end

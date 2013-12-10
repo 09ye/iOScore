@@ -28,7 +28,9 @@ typedef enum  {
 @property (nonatomic,assign,readonly) BOOL isMaintenanceMode;
 @property (nonatomic,copy,readonly) NSString * pushNotice;
 @property (nonatomic,assign,readonly) SHConfigStatus status;
-
+//updateinfo
+@property (nonatomic,assign,readonly) NSDictionary* updateInfo;
+@property (nonatomic,assign,readonly) NSDictionary* configInfo;
 - (void) refresh;
 
 - (void) show;

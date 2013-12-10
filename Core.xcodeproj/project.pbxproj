@@ -124,6 +124,8 @@
 		E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2A17BF907E006B68EB /* SHPostTask.h */; };
 		E8C835B1180D0F8600F88A3E /* SHFuck.h in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
 		E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
+		E8D4E6D21857495B00CBB35A /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D4E6D01857495B00CBB35A /* Reachability.h */; };
+		E8D4E6D31857495B00CBB35A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D4E6D11857495B00CBB35A /* Reachability.m */; };
 		E8E03BD417E34A98002546C3 /* DatabaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD217E34A98002546C3 /* DatabaseOperation.h */; };
 		E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E03BD317E34A98002546C3 /* DatabaseOperation.m */; };
 		E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
@@ -279,6 +281,8 @@
 		E8B41BB2180D0B1700069506 /* SHFuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFuck.m; sourceTree = "<group>"; };
 		E8B8412117D6FB26006A0291 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
 		E8B8412317D6FB31006A0291 /* NVSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSkin.m; sourceTree = "<group>"; };
+		E8D4E6D01857495B00CBB35A /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E8D4E6D11857495B00CBB35A /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		E8E03BD217E34A98002546C3 /* DatabaseOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseOperation.h; sourceTree = "<group>"; };
 		E8E03BD317E34A98002546C3 /* DatabaseOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseOperation.m; sourceTree = "<group>"; };
 		E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCacheManager.h; sourceTree = "<group>"; };
@@ -412,6 +416,8 @@
 			isa = PBXGroup;
 			children = (
 				E81E442B18179A1000EA9090 /* NSData+AES.h */,
+				E8D4E6D01857495B00CBB35A /* Reachability.h */,
+				E8D4E6D11857495B00CBB35A /* Reachability.m */,
 				E81E442C18179A1000EA9090 /* NSData+AES.m */,
 				E81E442D18179A1000EA9090 /* NSString+MD5.h */,
 				E81E442E18179A1000EA9090 /* NSString+MD5.m */,
@@ -651,6 +657,7 @@
 				E8329DAE1855C80100D40DAF /* FileManager.h in Headers */,
 				E81E443418179A1000EA9090 /* NSData+AES.h in Headers */,
 				E8329DB61855C80100D40DAF /* SHCrashManager.h in Headers */,
+				E8D4E6D21857495B00CBB35A /* Reachability.h in Headers */,
 				E81E443618179A1000EA9090 /* NSString+MD5.h in Headers */,
 				E86840231823530C00938464 /* SHTools.h in Headers */,
 				E887F79917F422A000871292 /* Base64.h in Headers */,
@@ -751,6 +758,7 @@
 				E86840291823810B00938464 /* IPAddress.m in Sources */,
 				E858D6711803B6120071DA24 /* SHConfigManager.m in Sources */,
 				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,
+				E8D4E6D31857495B00CBB35A /* Reachability.m in Sources */,
 				E8B41BB0180CE7A500069506 /* SHAnalyzeFactory.m in Sources */,
 				E87F0A0A17E16757009E57E8 /* SHPostTaskM.m in Sources */,
 				E8B41BB4180D0B1700069506 /* SHFuck.m in Sources */,

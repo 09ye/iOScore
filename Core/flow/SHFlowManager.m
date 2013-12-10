@@ -146,11 +146,17 @@ static SHFlowManager * __instance;
         [self save];
     }
     NSDate * date = [NSDate date];
-    if([[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWWAN){
+    if(
+#if DEBUG
+     YES
+#else
+         [[Reachability reachabilityForInternetConnection] currentReachabilityStatus] == ReachableViaWWAN
+#endif
+       ){
     int timer = [date timeIntervalSinceDate:_lastdate];
     if(timer > 120){
         _lastdate = date;
-        if([SHTools isCurrentMonthByNSDate:_lastdate ]){
+        if(![SHTools isCurrentMonthByNSDate:_lastdate ]){
             [self clear];
         }
         

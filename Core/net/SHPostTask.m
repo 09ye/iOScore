@@ -32,6 +32,8 @@
     
     [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
+
+    [SHFlowManager.instance push:postData.length way:SHWayUp];
     NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self];
     NSLog(@"URL:%@",_realURL);
     if (conn)

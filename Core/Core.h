@@ -34,5 +34,5 @@
 #define CORE_NOTIFICATION_LOGIN_RELOGIN @"core_notification_login_relogin"
 
 //重新登录超时时间
-#define CODE_RELOGIN 10000
+#define CODE_RELOGIN -5
 

@@ -26,7 +26,7 @@
 #import "SHFlowManager.h"
 
 //流量表更新
-#define CORE_NOTIFICATION_FLOW_UPDATE SHFLOW_PUSH_UPDATE;
+#define CORE_NOTIFICATION_FLOW_UPDATE SHFLOW_PUSH_UPDATE
 
 //配置表更新
 #define CORE_NOTIFICATION_CONFIG_STATUS_CHANGED @"core_notification_config_status_changed"

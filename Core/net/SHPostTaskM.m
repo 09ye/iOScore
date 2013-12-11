@@ -73,7 +73,7 @@
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    
+   
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
@@ -81,6 +81,7 @@
     if(__data == nil){
         __data = [[NSMutableData alloc]init];
     }
+    [SHFlowManager.instance  push:data.length way:SHWayDown];
     [__data appendData:data];
     
    }

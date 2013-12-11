@@ -7,6 +7,7 @@
 //
 
 #import "Entironment.h"
+#import "SHPrivateAPI.h"
 
 static Entironment * _instance;
 @implementation Entironment
@@ -46,8 +47,8 @@ static Entironment * _instance;
 }
 - (NSString * )deviceid
 {
-    if(!_deviceid){
-        return @"";
+    if(_deviceid.length == 0){
+        _deviceid = SHPrivateAPI.guid;
     }
     return _deviceid;
 }

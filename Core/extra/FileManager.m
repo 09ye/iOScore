@@ -22,7 +22,7 @@
     //获取文件路径
     //[fileManager removeItemAtPath:@"username"error:nil];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:file];
-    NSLog(@"path=%@",path);
+    SHLog(@"path=%@",path);
     //创建数据缓冲
     NSFileHandle  *outFile;
     outFile = [NSFileHandle fileHandleForWritingAtPath:path];

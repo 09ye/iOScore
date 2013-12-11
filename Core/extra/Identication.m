@@ -14,7 +14,7 @@
 +(NSDictionary * )identication
 {
     NSMutableDictionary * identication = [[NSMutableDictionary alloc]init];
-    if(Entironment.instance.sessionid){
+    if(Entironment.instance.sessionid.length > 0){
         [identication setObject:@"session" forKey:@"type"];
         if(Entironment.instance.sessionid){
             [identication setObject:Entironment.instance.sessionid forKey:@"session_id"];

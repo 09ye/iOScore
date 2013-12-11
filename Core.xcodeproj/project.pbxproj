@@ -14,6 +14,9 @@
 		9E2EDD2D18580B1800F8F591 /* SHVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E858D6651803B28F0071DA24 /* SHVersion.m */; };
 		9E2EDD2E18580B2800F8F591 /* SHFuck.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BB2180D0B1700069506 /* SHFuck.m */; };
 		9E2EDD2F18580B2B00F8F591 /* SHFuck.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
+		9E33DB1818584F55008C61AC /* SHLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA09A1B185840BB0000A7A3 /* SHLogger.m */; };
+		9E33DB1918584F5B008C61AC /* SHLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EA09A1A185840BB0000A7A3 /* SHLogger.h */; };
+		9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EA09A1A185840BB0000A7A3 /* SHLogger.h */; };
 		E8080DAD17BF84CE006B68EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
 		E8080DB217BF84CE006B68EB /* Core.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080DB117BF84CE006B68EB /* Core.h */; };
 		E8080E2617BF8E99006B68EB /* SHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2517BF8E99006B68EB /* SHObject.m */; };
@@ -94,6 +97,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files */,
 				E83E17FF18570796001E29D3 /* SHFlowManager.h in Copy Files */,
 				E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files */,
 				E868402A1823818F00938464 /* IPAddress.h in Copy Files */,
@@ -123,12 +127,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9EA09A1A185840BB0000A7A3 /* SHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLogger.h; sourceTree = "<group>"; };
+		9EA09A1B185840BB0000A7A3 /* SHLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLogger.m; sourceTree = "<group>"; };
 		E8080DA917BF84CE006B68EB /* libCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8080DAC17BF84CE006B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E8080DB017BF84CE006B68EB /* Core-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Core-Prefix.pch"; sourceTree = "<group>"; };
 		E8080DB117BF84CE006B68EB /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		E8080DBB17BF84CE006B68EB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E8080DBD17BF84CE006B68EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E8080DC517BF84CE006B68EB /* CoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreTests-Info.plist"; sourceTree = "<group>"; };
 		E8080DC717BF84CE006B68EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E8080DC917BF84CE006B68EB /* CoreTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTests.h; sourceTree = "<group>"; };
@@ -213,6 +218,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9EA09A19185840AA0000A7A3 /* log */ = {
+			isa = PBXGroup;
+			children = (
+				9EA09A1A185840BB0000A7A3 /* SHLogger.h */,
+				9EA09A1B185840BB0000A7A3 /* SHLogger.m */,
+			);
+			path = log;
+			sourceTree = "<group>";
+		};
 		E8080DA017BF84CE006B68EB = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +254,6 @@
 				E87F0A1D17E2A623009E57E8 /* UIKit.framework */,
 				E8080DAC17BF84CE006B68EB /* Foundation.framework */,
 				E8080DBB17BF84CE006B68EB /* SenTestingKit.framework */,
-				E8080DBD17BF84CE006B68EB /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,8 +266,8 @@
 				E84AB71F1855B64A005538A5 /* privateapi */,
 				E827F8E6181F8B5D00389134 /* user */,
 				E858D6611803B28F0071DA24 /* update */,
+				9EA09A19185840AA0000A7A3 /* log */,
 				E887F78917F284CF00871292 /* crash */,
-				E887F78A17F284CF00871292 /* log */,
 				E8E03BD617E6B183002546C3 /* cache */,
 				E8E03BD117E34A87002546C3 /* database */,
 				E8080E2317BF8E74006B68EB /* obj */,
@@ -426,13 +439,6 @@
 			path = crash;
 			sourceTree = "<group>";
 		};
-		E887F78A17F284CF00871292 /* log */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = log;
-			sourceTree = "<group>";
-		};
 		E8E03BD117E34A87002546C3 /* database */ = {
 			isa = PBXGroup;
 			children = (
@@ -469,6 +475,7 @@
 				E8B41BAF180CE7A500069506 /* SHAnalyzeFactory.h in Headers */,
 				E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */,
 				E887F79317F2AD8500871292 /* FileManager.h in Headers */,
+				9E33DB1918584F5B008C61AC /* SHLogger.h in Headers */,
 				E81A41B01808F62200D9B399 /* GDataXMLNode.h in Headers */,
 				9E2EDD2F18580B2B00F8F591 /* SHFuck.h in Headers */,
 				E85F009117EE9A2200F9F02C /* SHIIOSVersion.h in Headers */,
@@ -542,6 +549,7 @@
 				E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */,
 				E81E443718179A1000EA9090 /* NSString+MD5.m in Sources */,
 				E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */,
+				9E33DB1818584F55008C61AC /* SHLogger.m in Sources */,
 				E86840291823810B00938464 /* IPAddress.m in Sources */,
 				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,
 				E8D4E6D31857495B00CBB35A /* Reachability.m in Sources */,

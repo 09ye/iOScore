@@ -62,9 +62,7 @@
             }
         }
     }
-#ifdef DEBUG
-    NSLog(@"%@",[data description]);
-#endif
+    SHLog(@"%@",[data description]);
     if([NSJSONSerialization isValidJSONObject:data] == YES){
         self.postData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:nil];
     }
@@ -109,6 +107,7 @@
             [self.delegate taskDidFailed:self];
         }
     }
+    SHLog(@"%@",[self.result description]);
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
@@ -131,7 +130,6 @@
     }else{
         [self processData];
     }
-
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error

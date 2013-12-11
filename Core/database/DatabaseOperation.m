@@ -63,7 +63,7 @@
     char *errorMsg;
     if (sqlite3_exec (self.m_sql, [sqlstr UTF8String],NULL,NULL, &errorMsg) != SQLITE_OK)
     {
-        NSLog(@"exec:%s",errorMsg);
+        SHLog(@"exec:%s",errorMsg);
         return NO;
     }
     //[self closeDatabase];

@@ -35,9 +35,8 @@
 
     [SHFlowManager.instance push:postData.length way:SHWayUp];
     NSURLConnection *conn=[[NSURLConnection alloc] initWithRequest:request delegate:self];
-    NSLog(@"URL:%@",_realURL);
-    if (conn)
-    {
+    SHLog(@"URL:%@",_realURL);
+    if (conn){
         NSLog(@"Connection success");
         //[conn start];
     }

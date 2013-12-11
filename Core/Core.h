@@ -24,7 +24,10 @@
 #import "SHTools.h"
 #import "IPAddress.h"
 #import "SHFlowManager.h"
+#import "SHLogger.h"
 
+//日志记录
+#define CORE_NOTIFICATION_LOG_RECORD LOG_RECORD
 //流量表更新
 #define CORE_NOTIFICATION_FLOW_UPDATE SHFLOW_PUSH_UPDATE
 
@@ -36,3 +39,9 @@
 //重新登录超时时间
 #define CODE_RELOGIN -5
 
+//#define SHLog(a) [NSString stringWithFormat:a]
+#define SHLog(a,b) [SHLogger Log:[NSString stringWithFormat:a,b]]
+
+//日志
+//void SHLogger(NSString *format, ...);
+//void SHLogger(NSString *log);

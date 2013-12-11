@@ -430,6 +430,9 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 
 + (NSString*) guid
 {
+#ifdef DEBUG
+    return @"-";
+#endif
     NSDictionary *dic    =   [[NSBundle mainBundle] infoDictionary];//获取info－plist
     NSString *appName  =   [dic objectForKey:@"CFBundleIdentifier"];//获取Bundle identifier
     CFUUIDRef    uuidObj = CFUUIDCreate(nil);//create a new UUID

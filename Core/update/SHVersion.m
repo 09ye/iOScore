@@ -9,7 +9,7 @@
 #import "SHVersion.h"
 #import <Foundation/NSObjCRuntime.h>
 
-#define MAX_VERSION_COUNT 5
+#define MAX_VERSION_COUNT 4
 #define MAX_SINGLE_VERSION_VALUE 1000
 
 @interface SHVersion ()

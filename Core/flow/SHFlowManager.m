@@ -75,18 +75,20 @@ static SHFlowManager * __instance;
     SHPostTaskM* task = [[SHPostTaskM alloc]init];
     if(_URL.length > 0){
         task.URL = _URL;
-        NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-        [params setValue:[[NSNumber alloc]initWithLongLong:mUp] forKey:@"up"];
-        [params setValue:[[NSNumber alloc]initWithLongLong:mDown] forKey:@"down"];
-        [params setValue:_lastdate forKey:@"date"];
-        [task.postArgs setValue:params forKey:@"data"];
+        //NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
+        [task.postArgs  setValue:[[NSNumber alloc]initWithLongLong:mUp] forKey:@"up"];
+        [task.postArgs  setValue:[[NSNumber alloc]initWithLongLong:mDown] forKey:@"down"];
+        NSDateFormatter * format = [[NSDateFormatter alloc]init];
+        [format setDateFormat:@"yyyy-MM-dd"];
+        [task.postArgs  setValue:[format stringFromDate:_lastdate] forKey:@"date"];
+        //[task.postArgs setValue:params forKey:@"data"];
         task.delegate = self;
         [task start];
     }
    
 }
 
-- (void)taskDidFinished:(SHTask*) task
+- (void)taskDidFailed:(SHTask*) task
 {
     NSDictionary * dic = (NSDictionary*)task.result;
     if([dic.allKeys containsObject:@"up"]){

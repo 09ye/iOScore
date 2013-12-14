@@ -88,16 +88,16 @@ static SHFlowManager * __instance;
    
 }
 
-- (void)taskDidFinished:(SHTask *)task{
-    NSDictionary * dic = (NSDictionary*)task.result;
-    if([dic.allKeys containsObject:@"up"]){
-        mUp += ((NSNumber*)[dic valueForKey:@"up"]).longLongValue;
-        mDown += ((NSNumber*)[dic valueForKey:@"down"]).longLongValue;
-        NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"yyyy-MM-dd"];
-        _lastdate = [formatter dateFromString:[dic valueForKey:@"date"]];
-        [self save];
-    }
+- (void)taskDidFailed:(SHTask *)task{
+//    NSDictionary * dic = (NSDictionary*)task.result;
+//    if([dic.allKeys containsObject:@"up"]){
+//        mUp = ((NSNumber*)[dic valueForKey:@"up"]).longLongValue;
+//        mDown = ((NSNumber*)[dic valueForKey:@"down"]).longLongValue;
+//        NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
+//        [formatter setDateFormat:@"yyyy-MM-dd"];
+//        _lastdate = [formatter dateFromString:[dic valueForKey:@"date"]];
+//        [self save];
+//    }
 }
 
 - (void) clear

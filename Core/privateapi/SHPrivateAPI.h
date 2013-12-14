@@ -26,4 +26,6 @@ struct CTResult
 + (BOOL) deleteItemForUsername: (NSString *) username andServiceName: (NSString *) serviceName error: (NSError **) error;
 
 + (NSString*) guid;
+
++ (void)clearguid;
 @end

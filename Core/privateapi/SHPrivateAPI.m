@@ -430,9 +430,9 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 
 + (NSString*) guid
 {
-#ifdef DEBUG
-    return @"-";
-#endif
+//#ifdef DEBUG
+//    return @"———-—";
+//#endif
     NSDictionary *dic    =   [[NSBundle mainBundle] infoDictionary];//获取info－plist
     NSString *appName  =   [dic objectForKey:@"CFBundleIdentifier"];//获取Bundle identifier
     CFUUIDRef    uuidObj = CFUUIDCreate(nil);//create a new UUID
@@ -442,6 +442,13 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
         [self storeUsername:@"guid" andPassword:guid forServiceName:appName updateExisting:YES error:nil];
     }
     return guid;
+}
+
++ (void)clearguid
+{
+    NSDictionary *dic    =   [[NSBundle mainBundle] infoDictionary];//获取info－plist
+    NSString *appName  =   [dic objectForKey:@"CFBundleIdentifier"];//获取Bundle identifier
+   [self storeUsername:@"guid" andPassword: @"" forServiceName:appName updateExisting:YES error:nil];
 }
 
 extern NSString* CTSettingCopyMyPhoneNumber();

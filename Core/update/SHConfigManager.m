@@ -101,7 +101,10 @@ static SHConfigManager * __instance;
 {
     if(buttonIndex == 0){
         if(self.listupdateurls.count > 0){
-            NSString * url = [self.listupdateurls objectAtIndex:0];
+           int index =  [SHTools randomNumber:0 to:self.listupdateurls.count -1];
+            NSString * url = [self.listupdateurls objectAtIndex:index];
+            SHLog(@"index:%d,",index);
+            SHLog(@"url:%@,",url);
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
         }
         exit(0);

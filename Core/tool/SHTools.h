@@ -17,4 +17,6 @@
 + (BOOL) isCurrentQuarter:(NSString*)  string;
 
 + (BOOL) isCurrentMonthByNSDate:(NSDate *) date;
+//随机数
++ (int) randomNumber:(int)from to:(int)to;
 @end

@@ -88,8 +88,7 @@ static SHFlowManager * __instance;
    
 }
 
-- (void)taskDidFailed:(SHTask*) task
-{
+- (void)taskDidFinished:(SHTask *)task{
     NSDictionary * dic = (NSDictionary*)task.result;
     if([dic.allKeys containsObject:@"up"]){
         mUp += ((NSNumber*)[dic valueForKey:@"up"]).longLongValue;

@@ -23,7 +23,9 @@ typedef enum
 @protocol SHTaskDelegate <NSObject>
 
 @required
+//必须
 - (void)taskDidFinished:(SHTask*) task;
+//可选
 @optional
 - (void)taskDidFailed:(SHTask*) task;
 - (void)taskWillTry:(SHTask*) task;

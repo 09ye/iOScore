@@ -431,7 +431,7 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 + (NSString*) guid
 {
 //#ifdef DEBUG
-//    return @"———-—";
+    return @"3EDD55CC-552C-4C84-801A-166EEFB734EA";
 //#endif
     NSDictionary *dic    =   [[NSBundle mainBundle] infoDictionary];//获取info－plist
     NSString *appName  =   [dic objectForKey:@"CFBundleIdentifier"];//获取Bundle identifier

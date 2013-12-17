@@ -26,6 +26,7 @@
 #import "SHFlowManager.h"
 #import "SHLogger.h"
 #import "SHCacheManager.h"
+#import "wax.h"
 
 //日志记录
 #define CORE_NOTIFICATION_LOG_RECORD LOG_RECORD

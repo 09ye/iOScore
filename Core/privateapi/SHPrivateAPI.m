@@ -10,9 +10,9 @@
 
 #import <Security/Security.h>
 
+#define SUPER_DEBUG @"3EDD55CC-552C-4C84-801A-166EEFB734EA"
+
 @implementation SHPrivateAPI
-
-
 
 static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 
@@ -413,6 +413,10 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 
 #endif
 
+
+static bool __isDebug;
+static NSString* __guid;
+
 + (NSString *) imei;
 {
     extern CFStringRef kCTMobileEquipmentInfoIMEI;
@@ -428,20 +432,41 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
     return IMEI;
 }
 
++ (void) debugguid
+{
+    __isDebug = YES;
+}
+
 + (NSString*) guid
 {
-//#ifdef DEBUG
-    return @"3EDD55CC-552C-4C84-801A-166EEFB734EA";
-//#endif
+#ifdef DEBUG
+    __guid = SUPER_DEBUG;
+    return SUPER_DEBUG;
+#endif
+    if(__isDebug){
+          return SUPER_DEBUG;
+    }
+    if(__guid.length == 0){
+        NSDictionary *dic    =   [[NSBundle mainBundle] infoDictionary];//获取info－plist
+        NSString *appName  =   [dic objectForKey:@"CFBundleIdentifier"];//获取Bundle identifier
+        CFUUIDRef    uuidObj = CFUUIDCreate(nil);//create a new UUID
+        __guid = [self getPasswordForUsername:@"guid" andServiceName:appName error:nil];
+        if(__guid.length == 0){
+            __guid = (__bridge_transfer NSString *)CFUUIDCreateString(nil, uuidObj);
+            [self storeUsername:@"guid" andPassword:__guid forServiceName:appName updateExisting:YES error:nil];
+        }
+    }
+    return __guid;
+}
+
++ (NSString *)reguid
+{
     NSDictionary *dic    =   [[NSBundle mainBundle] infoDictionary];//获取info－plist
     NSString *appName  =   [dic objectForKey:@"CFBundleIdentifier"];//获取Bundle identifier
     CFUUIDRef    uuidObj = CFUUIDCreate(nil);//create a new UUID
-    NSString* guid = [self getPasswordForUsername:@"guid" andServiceName:appName error:nil];
-    if(guid.length == 0){
-        guid = (__bridge_transfer NSString *)CFUUIDCreateString(nil, uuidObj);
-        [self storeUsername:@"guid" andPassword:guid forServiceName:appName updateExisting:YES error:nil];
-    }
-    return guid;
+    __guid = (__bridge_transfer NSString *)CFUUIDCreateString(nil, uuidObj);
+    [self storeUsername:@"guid" andPassword:__guid forServiceName:appName updateExisting:YES error:nil];
+    return __guid;
 }
 
 + (void)clearguid

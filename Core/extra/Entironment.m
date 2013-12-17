@@ -15,7 +15,7 @@ static Entironment * _instance;
 @synthesize loginName;
 @synthesize password;
 @synthesize userId;
-@synthesize deviceid = _deviceid;
+@synthesize deviceid;
 @synthesize sessionid;
 @synthesize version = _version;
 
@@ -47,9 +47,6 @@ static Entironment * _instance;
 }
 - (NSString * )deviceid
 {
-    if(_deviceid.length == 0){
-        _deviceid = SHPrivateAPI.guid;
-    }
-    return _deviceid;
+    return [SHPrivateAPI guid];
 }
 @end

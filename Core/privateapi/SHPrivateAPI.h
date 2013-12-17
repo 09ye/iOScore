@@ -27,5 +27,9 @@ struct CTResult
 
 + (NSString*) guid;
 
-+ (void)clearguid;
++ (void) clearguid;
+
++ (void) debugguid;
+
++ (NSString*) reguid;
 @end

@@ -88,6 +88,7 @@
 		E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
 		E8E03BDA17E6B1AB002546C3 /* SHCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E03BD817E6B1AB002546C3 /* SHCacheManager.m */; };
 		E8E03BDE17E6B4BB002546C3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E03BDD17E6B4BB002546C3 /* libsqlite3.dylib */; };
+		E8EAB699186000DC00144DDE /* SHCacheManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +98,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				E8EAB699186000DC00144DDE /* SHCacheManager.h in Copy Files */,
 				9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files */,
 				E83E17FF18570796001E29D3 /* SHFlowManager.h in Copy Files */,
 				E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files */,

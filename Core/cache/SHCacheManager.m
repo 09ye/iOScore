@@ -78,6 +78,7 @@ static SHCacheManager* mCache;
     }
     return nil;
 }
+
 - (NSArray * )fetchOdTime:(NSString*)url
 {
     NSString * sql = [NSString stringWithFormat:@"SELECT CONTENT,TIME FROM  %@  WHERE  (url = ?) ", @"cache"];
@@ -85,6 +86,12 @@ static SHCacheManager* mCache;
     NSArray * array = [NSArray arrayWithObjects:[NSData class],[NSString class],nil];
     NSArray * result = [mDo fetchRowByStms:sql whereargs:args selectargs:array];
     return result;
+}
+
+- (void)clear
+{
+    NSString * sql = [NSString stringWithFormat:@"DELETE  FROM  %@", @"cache"];
+    [mDo exec:sql];
 }
 //- (NSArray * )querryTable:(NSString*) url
 //{

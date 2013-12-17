@@ -25,6 +25,7 @@
 #import "IPAddress.h"
 #import "SHFlowManager.h"
 #import "SHLogger.h"
+#import "SHCacheManager.h"
 
 //日志记录
 #define CORE_NOTIFICATION_LOG_RECORD LOG_RECORD

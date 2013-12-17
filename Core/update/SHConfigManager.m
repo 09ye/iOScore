@@ -27,9 +27,9 @@ static SHConfigManager * __instance;
 {
     
     _url = url_;
-    if(_url){
-        [self refresh];
-    }
+//    if(_url){
+//        [self refresh];
+//    }
 }
 
 - (void)refresh
@@ -73,28 +73,38 @@ static SHConfigManager * __instance;
     [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_CONFIG_STATUS_CHANGED object:self];
 }
 
-- (void) show
+- (BOOL) show
 {
+    BOOL isShow = NO;
     if(_status == SHConfigStatusSuccess){
+        if(_hasPushNotice){
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_pushNotice delegate:nil cancelButtonTitle:@"确认" otherButtonTitles:nil];
+            [alert show];
+            
+        }
+        
         if([Entironment.instance.version compare :self.newversion] == NSOrderedAscending){
             if(_isMaintenanceMode){
                 UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:nil];
                 alert.delegate = self;
                 [alert show];
-                
+                isShow = YES;
             }else if ([Entironment.instance.version compare :self.minversion] == NSOrderedAscending){
-                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:@"取消",nil];
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:nil];
                 alert.delegate = self;
                 [alert show];
+                isShow = YES;
             }
             else{
                 UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:@"取消",nil];
                 alert.delegate = self;
                 [alert show];
+                isShow = YES;
             }
         }
         
     }
+    return isShow;
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

@@ -26,6 +26,8 @@
 #import "SHFlowManager.h"
 #import "SHLogger.h"
 #import "SHCacheManager.h"
+#import "SHPrivateAPI.h"
+#import "SHHttpTask.h"
 //#import "wax.h"
 
 //日志记录

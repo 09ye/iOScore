@@ -79,6 +79,12 @@
 		E8B8415617D70A58006A0291 /* NVSkin.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B8412117D6FB26006A0291 /* NVSkin.h */; };
 		E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2717BF8EAD006B68EB /* SHTask.h */; };
 		E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2A17BF907E006B68EB /* SHPostTask.h */; };
+		E8BDF6421863EC9600AC9B82 /* SHHttpTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E8BDF6401863EC9600AC9B82 /* SHHttpTask.h */; };
+		E8BDF6431863EC9600AC9B82 /* SHHttpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BDF6411863EC9600AC9B82 /* SHHttpTask.m */; };
+		E8BDF6461863ED0D00AC9B82 /* SHHttpTaskM.h in Headers */ = {isa = PBXBuildFile; fileRef = E8BDF6441863ED0D00AC9B82 /* SHHttpTaskM.h */; };
+		E8BDF6471863ED0D00AC9B82 /* SHHttpTaskM.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BDF6451863ED0D00AC9B82 /* SHHttpTaskM.m */; };
+		E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8BDF6401863EC9600AC9B82 /* SHHttpTask.h */; };
+		E8BDF6491863F01700AC9B82 /* SHHttpTaskM.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8BDF6441863ED0D00AC9B82 /* SHHttpTaskM.h */; };
 		E8C835B1180D0F8600F88A3E /* SHFuck.h in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
 		E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
 		E8D06FCC186043C100A8E788 /* wax_CGTransform.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D06F3C186043C100A8E788 /* wax_CGTransform.h */; };
@@ -205,6 +211,8 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files */,
+				E8BDF6491863F01700AC9B82 /* SHHttpTaskM.h in Copy Files */,
 				E8D07038186047D600A8E788 /* wax.h in Copy Files */,
 				E8EAB699186000DC00144DDE /* SHCacheManager.h in Copy Files */,
 				9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files */,
@@ -303,6 +311,10 @@
 		E8B41BB2180D0B1700069506 /* SHFuck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHFuck.m; sourceTree = "<group>"; };
 		E8B8412117D6FB26006A0291 /* NVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSkin.h; sourceTree = "<group>"; };
 		E8B8412317D6FB31006A0291 /* NVSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSkin.m; sourceTree = "<group>"; };
+		E8BDF6401863EC9600AC9B82 /* SHHttpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHttpTask.h; sourceTree = "<group>"; };
+		E8BDF6411863EC9600AC9B82 /* SHHttpTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHHttpTask.m; sourceTree = "<group>"; };
+		E8BDF6441863ED0D00AC9B82 /* SHHttpTaskM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHHttpTaskM.h; sourceTree = "<group>"; };
+		E8BDF6451863ED0D00AC9B82 /* SHHttpTaskM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHHttpTaskM.m; sourceTree = "<group>"; };
 		E8D06F37186043C100A8E788 /* compile-stdlib.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "compile-stdlib.sh"; sourceTree = "<group>"; };
 		E8D06F38186043C100A8E788 /* copy-scripts.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "copy-scripts.sh"; sourceTree = "<group>"; };
 		E8D06F39186043C100A8E788 /* luac.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = luac.lua; sourceTree = "<group>"; };
@@ -590,6 +602,10 @@
 				E8080E2B17BF907E006B68EB /* SHPostTask.m */,
 				E87F0A0717E16757009E57E8 /* SHPostTaskM.h */,
 				E87F0A0817E16757009E57E8 /* SHPostTaskM.m */,
+				E8BDF6401863EC9600AC9B82 /* SHHttpTask.h */,
+				E8BDF6411863EC9600AC9B82 /* SHHttpTask.m */,
+				E8BDF6441863ED0D00AC9B82 /* SHHttpTaskM.h */,
+				E8BDF6451863ED0D00AC9B82 /* SHHttpTaskM.m */,
 			);
 			path = net;
 			sourceTree = "<group>";
@@ -1000,6 +1016,7 @@
 				E887F79917F422A000871292 /* Base64.h in Headers */,
 				E8D06FE7186043C100A8E788 /* yajl_lex.h in Headers */,
 				E8D07006186043C100A8E788 /* llimits.h in Headers */,
+				E8BDF6421863EC9600AC9B82 /* SHHttpTask.h in Headers */,
 				E8D07013186043C100A8E788 /* lstate.h in Headers */,
 				E8D06FD4186043C100A8E788 /* wax_http_connection.h in Headers */,
 				E8D06FD9186043C100A8E788 /* yajl_gen.h in Headers */,
@@ -1009,6 +1026,7 @@
 				E8D0700C186043C100A8E788 /* lobject.h in Headers */,
 				E8D06FCC186043C100A8E788 /* wax_CGTransform.h in Headers */,
 				E8D070371860473C00A8E788 /* ProtocolLoader.h in Headers */,
+				E8BDF6461863ED0D00AC9B82 /* SHHttpTaskM.h in Headers */,
 				E8D06FFF186043C100A8E788 /* lfunc.h in Headers */,
 				E8D07009186043C100A8E788 /* lmem.h in Headers */,
 				E8D07028186043C100A8E788 /* wax_class.h in Headers */,
@@ -1175,11 +1193,13 @@
 				E887F78E17F284EE00871292 /* SHCrashManager.m in Sources */,
 				E8D07034186043C100A8E788 /* wax_struct.m in Sources */,
 				E8D06FE4186043C100A8E788 /* yajl_gen.c in Sources */,
+				E8BDF6471863ED0D00AC9B82 /* SHHttpTaskM.m in Sources */,
 				E8D0700B186043C100A8E788 /* lobject.c in Sources */,
 				9E2EDD2918580B0A00F8F591 /* SHFlowManager.m in Sources */,
 				E8D06FDC186043C100A8E788 /* yajl_alloc.c in Sources */,
 				E8D07027186043C100A8E788 /* wax.m in Sources */,
 				E86840241823530C00938464 /* SHTools.m in Sources */,
+				E8BDF6431863EC9600AC9B82 /* SHHttpTask.m in Sources */,
 				E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */,
 				E8D06FE9186043C100A8E788 /* yajl_parser.c in Sources */,
 				9E2EDD2C18580B1200F8F591 /* SHConfigManager.m in Sources */,
@@ -1215,6 +1235,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1245,6 +1266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -1267,7 +1289,7 @@
 		E8080DCF17BF84CE006B68EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/Core.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
@@ -1288,7 +1310,7 @@
 		E8080DD017BF84CE006B68EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/Core.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";

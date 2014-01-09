@@ -150,7 +150,6 @@ static void sqlite_push_column_value(sqlite3_stmt *statement, int columnIndex);
     lua_getfield(L, -1, WAX_SQLITE_CALLBACK_NAME);
         
     bool hasCallback = !lua_isnil(L, -1);
-
     wax_copyObject(operationLuaState, L, 1);
     lua_settop(operationLuaState, 0);
     

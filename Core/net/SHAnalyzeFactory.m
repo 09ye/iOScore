@@ -20,10 +20,14 @@
     int code = 0;
     NSString * message;
     if(netreutrn == nil){
-        code = -2;
+        code = CORE_NET_ERROR;
         message = @"服务器没有返回信息";
     }else{
-        code = [[netreutrn objectForKey:@"code"] integerValue];
+        if([[netreutrn allKeys] containsObject:@"code"]){
+            code = [[netreutrn objectForKey:@"code"] integerValue];
+        }else{
+            code = CORE_NET_FORMAT_ERROR;
+        }
         //NSLog("%@",netreutrn);
         message = [netreutrn objectForKey:@"message"];
 

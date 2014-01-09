@@ -19,4 +19,8 @@
 + (BOOL) isCurrentMonthByNSDate:(NSDate *) date;
 //随机数
 + (int) randomNumber:(int)from to:(int)to;
+//手机号码验证
++ (BOOL) isValidateMobile:(NSString *)mobile;
+//邮箱验证
++ (BOOL)isValidateEmail:(NSString *)email;
 @end

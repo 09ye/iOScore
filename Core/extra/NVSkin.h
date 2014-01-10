@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 
 
+@interface NVSkinValue :NSObject
+
++ (void)setColor:(NSString*) color ;
+
++ (NSString*) color;
+
+@end
+
+
 @protocol NVSkinloading <NSObject>
 
 - (void)loadSkin;
@@ -29,17 +38,6 @@ typedef  enum
     FontScaleMid,
     FontScaleLarge
 }FontScale;
-
-//typedef  enum
-//{
-//    ColorStyleMilkWhite,
-//    ColorStyleDark,//深色
-//    ColorStyleLight,//浅色
-//    ColorStyleBigTitle,
-//    ColorStyleCellBackGround,
-//    ColorStyleCellSelected,
-//    ColorStyleCellLightGry
-//}ColorStyle;
 
 @interface NVSkin : NSObject
 {

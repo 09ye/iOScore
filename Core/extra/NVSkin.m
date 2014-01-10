@@ -11,6 +11,23 @@
 
 #import <objc/runtime.h>
 
+
+@implementation NVSkinValue
+
+NSString * __color = @"color";
++ (void)setColor:(NSString *)color
+{
+    __color = color;
+}
+
++ (NSString*) color
+{
+    return __color;
+}
+
+@end
+
+
 @implementation NVSkin
 
 static NVSkin* _instance = nil;
@@ -49,7 +66,7 @@ static NVSkin* _instance = nil;
 }
 - (void) initColor{
  
-    GDataXMLDocument* doc = [self docForStyle:@"color"];
+    GDataXMLDocument* doc = [self docForStyle:NVSkinValue.color];
     NSArray * array = ((GDataXMLNode*)[[doc nodesForXPath:[NSString stringWithFormat:@"//Color"] error:nil] objectAtIndex:0]).children;
   
 

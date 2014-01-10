@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775A7FFC187116D600D190B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775A7FFB187116D600D190B4 /* SystemConfiguration.framework */; };
 		9E2EDD2918580B0A00F8F591 /* SHFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E17DE1856EA12001E29D3 /* SHFlowManager.m */; };
 		9E2EDD2A18580B0C00F8F591 /* SHPrivateAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E84AB7211855B680005538A5 /* SHPrivateAPI.m */; };
 		9E2EDD2B18580B0F00F8F591 /* SHUser.m in Sources */ = {isa = PBXBuildFile; fileRef = E827F8E8181F8B7000389134 /* SHUser.m */; };
@@ -245,6 +246,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		775A7FFB187116D600D190B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9EA09A1A185840BB0000A7A3 /* SHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLogger.h; sourceTree = "<group>"; };
 		9EA09A1B185840BB0000A7A3 /* SHLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLogger.m; sourceTree = "<group>"; };
 		E8080DA917BF84CE006B68EB /* libCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -464,6 +466,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775A7FFC187116D600D190B4 /* SystemConfiguration.framework in Frameworks */,
 				E8329E0C1855CD0C00D40DAF /* Security.framework in Frameworks */,
 				E84AB7291855B8FF005538A5 /* CoreTelephony.framework in Frameworks */,
 				E8E03BDE17E6B4BB002546C3 /* libsqlite3.dylib in Frameworks */,
@@ -505,6 +508,7 @@
 		E8080DAB17BF84CE006B68EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				775A7FFB187116D600D190B4 /* SystemConfiguration.framework */,
 				E8329E0B1855CD0C00D40DAF /* Security.framework */,
 				E84AB7281855B8FF005538A5 /* CoreTelephony.framework */,
 				E8E03BDD17E6B4BB002546C3 /* libsqlite3.dylib */,
@@ -1289,11 +1293,12 @@
 		E8080DCF17BF84CE006B68EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/Core.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/zywang/Documents/Build/Products/Debug-iphonesimulator",
@@ -1303,6 +1308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.0;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = Core;
 			};
 			name = Debug;
@@ -1310,11 +1316,12 @@
 		E8080DD017BF84CE006B68EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/Core.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/zywang/Documents/Build/Products/Debug-iphonesimulator",
@@ -1325,6 +1332,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.0;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 armv7";
 				WRAPPER_EXTENSION = Core;
 			};
 			name = Release;

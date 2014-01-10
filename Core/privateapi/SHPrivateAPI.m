@@ -10,8 +10,8 @@
 
 #import <Security/Security.h>
 
-#define SUPER_DEBUG @"3EDD55CC-552C-4C84-801A-166EEFB734EA"
-
+#define SUPER_DEBUG @"3EDD55CC-552C-4C84-801A-166EEFB734EA"// 万能
+//#define SUPER_DEBUG @"1431828C-192F-40F7-8933-1D4720A96B0E"
 @implementation SHPrivateAPI
 
 static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";

@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 zywang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface SHLogger : NSObject
-
-@end
+//#import <Foundation/Foundation.h>
+//
+//@interface SHLogger : NSObject
+//
+//@end

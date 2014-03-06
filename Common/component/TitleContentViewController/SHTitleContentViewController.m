@@ -16,6 +16,7 @@
 @synthesize utitle;
 @synthesize content;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -25,11 +26,24 @@
     return self;
 }
 
+- (BOOL)checkIntent:(NSString*)error
+{
+    if(self.intent){
+        self.utitle = [self.intent.args valueForKey:@"utitle"];
+        self.title = [self.intent.args valueForKey:@"title"];
+        self.content =  [self.intent.args valueForKey:@"content"];
+        return YES;
+    }else{
+        return NO;
+    }
+    
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.labTitle.text = self.utitle;
-
+    
     // Do any additional setup after loading the view from its nib.
 }
 

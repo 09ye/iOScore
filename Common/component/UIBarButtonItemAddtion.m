@@ -54,6 +54,26 @@
         return item;
     }
 }
+- (id)initWithImage:(UIImage *)image target:(id)target action:(SEL)action
+{
+    UIBarButtonItem * item =  [self init];
+    
+    [item setBackgroundImage:[UIImage imageNamed:@"button_item_bg"] forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
+    if(iOS7){
+        UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 40, 40 + 3)];
+        UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 3, 40, 40)];
+        [view addSubview:btn];
+        [btn setImage:image forState:UIControlStateNormal];
+        [btn addTarget:target action:action forControlEvents:(UIControlEvents)UIControlEventTouchUpInside];
+        item.customView = view;
+        return item;
+    }else{
+        item.target = target;
+        item.action = action;
+        item.image = image;
+        return item;
+    }
+}
 - (id)initWithSubmit:(id)target action:(SEL)action
 {
     return[self initWithImage:nil title:@"提交" target:target action:action];

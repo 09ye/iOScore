@@ -1310,7 +1310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.0;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = Core;
 			};
 			name = Debug;
@@ -1334,7 +1334,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.0;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "arm64 armv7";
+				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = Core;
 			};
 			name = Release;

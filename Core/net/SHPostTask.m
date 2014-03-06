@@ -43,8 +43,9 @@
 }
 - (BOOL)connection:(NSURLConnection *)connection canAuthenticateAgainstProtectionSpace:(NSURLProtectionSpace *)protectionSpace
 {
-    return [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
-}   
+    BOOL bo = [protectionSpace.authenticationMethod isEqualToString:NSURLAuthenticationMethodServerTrust];
+    return bo;
+}
 - (void)connection:(NSURLConnection *)connection didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge
 {
     if ([challenge previousFailureCount] ==0){

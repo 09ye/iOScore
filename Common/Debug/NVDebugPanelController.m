@@ -54,10 +54,10 @@ NVDebugPanelController * mDebugPanel;
 //    }
 //    
    // [self didRotate:nil];
-    self.view.frame = CGRectMake(1024, 0, 320, 768);
-    UIScrollView * scrollView = [SHAppDelegate topViewController].view;
-    scrollView.contentSize = CGSizeMake(1024 + 320, 768);
-    [[SHAppDelegate topViewController].view addSubview:self.view];
+//    self.view.frame = CGRectMake(1024, 0, 320, 768);
+//    UIScrollView * scrollView = [SHAppDelegate topViewController].view;
+//    scrollView.contentSize = CGSizeMake(1024 + 320, 768);
+//    [[SHAppDelegate topViewController].view addSubview:self.view];
 }
 //- (void)didRotate:(NSNotification*)notification
 //{

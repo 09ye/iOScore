@@ -16,8 +16,14 @@
 @end
 
 @implementation SHViewController
+
 @synthesize keybordView = _keybordView;
+
 @synthesize keybordheight;
+
+@synthesize delegate;
+
+@synthesize intent;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +32,15 @@
         // Custom initialization
     }
     return self;
+}
+
+- (BOOL)checkIntent
+{
+    if(self.intent){
+        return YES;
+    }else{
+        return NO;
+    }
 }
 
 - (void)viewDidLoad

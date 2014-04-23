@@ -18,6 +18,12 @@
 		9E33DB1818584F55008C61AC /* SHLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA09A1B185840BB0000A7A3 /* SHLogger.m */; };
 		9E33DB1918584F5B008C61AC /* SHLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EA09A1A185840BB0000A7A3 /* SHLogger.h */; };
 		9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EA09A1A185840BB0000A7A3 /* SHLogger.h */; };
+		9EC3270A19079F5500AE1567 /* SHModuleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC3270819079F5500AE1567 /* SHModuleHelper.h */; };
+		9EC3270B19079F5500AE1567 /* SHModuleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3270919079F5500AE1567 /* SHModuleHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9EC3270C19079F6800AE1567 /* SHModuleHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EC3270819079F5500AE1567 /* SHModuleHelper.h */; };
+		9EC327111907A39500AE1567 /* SHIntent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC3270D1907A39500AE1567 /* SHIntent.h */; };
+		9EC327121907A39500AE1567 /* SHIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3270E1907A39500AE1567 /* SHIntent.m */; };
+		9EC327151907A3BB00AE1567 /* SHIntent.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EC3270D1907A39500AE1567 /* SHIntent.h */; };
 		E8080DAD17BF84CE006B68EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
 		E8080DB217BF84CE006B68EB /* Core.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080DB117BF84CE006B68EB /* Core.h */; };
 		E8080E2617BF8E99006B68EB /* SHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2517BF8E99006B68EB /* SHObject.m */; };
@@ -212,6 +218,8 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				9EC327151907A3BB00AE1567 /* SHIntent.h in Copy Files */,
+				9EC3270C19079F6800AE1567 /* SHModuleHelper.h in Copy Files */,
 				E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files */,
 				E8BDF6491863F01700AC9B82 /* SHHttpTaskM.h in Copy Files */,
 				E8D07038186047D600A8E788 /* wax.h in Copy Files */,
@@ -249,6 +257,10 @@
 		775A7FFB187116D600D190B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9EA09A1A185840BB0000A7A3 /* SHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLogger.h; sourceTree = "<group>"; };
 		9EA09A1B185840BB0000A7A3 /* SHLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLogger.m; sourceTree = "<group>"; };
+		9EC3270819079F5500AE1567 /* SHModuleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHModuleHelper.h; sourceTree = "<group>"; };
+		9EC3270919079F5500AE1567 /* SHModuleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHModuleHelper.m; sourceTree = "<group>"; };
+		9EC3270D1907A39500AE1567 /* SHIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHIntent.h; sourceTree = "<group>"; };
+		9EC3270E1907A39500AE1567 /* SHIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHIntent.m; sourceTree = "<group>"; };
 		E8080DA917BF84CE006B68EB /* libCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8080DAC17BF84CE006B68EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E8080DB017BF84CE006B68EB /* Core-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Core-Prefix.pch"; sourceTree = "<group>"; };
@@ -487,6 +499,17 @@
 			path = log;
 			sourceTree = "<group>";
 		};
+		9EC3270719079F5500AE1567 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				9EC3270D1907A39500AE1567 /* SHIntent.h */,
+				9EC3270E1907A39500AE1567 /* SHIntent.m */,
+				9EC3270819079F5500AE1567 /* SHModuleHelper.h */,
+				9EC3270919079F5500AE1567 /* SHModuleHelper.m */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
 		E8080DA017BF84CE006B68EB = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				E8080DB117BF84CE006B68EB /* Core.h */,
+				9EC3270719079F5500AE1567 /* module */,
 				E8D06F35186043C100A8E788 /* wax */,
 				E83E17DC1856E9FC001E29D3 /* flow */,
 				E84AB71F1855B64A005538A5 /* privateapi */,
@@ -1055,7 +1079,9 @@
 				E8D07018186043C100A8E788 /* ltable.h in Headers */,
 				E8D06FFC186043C100A8E788 /* ldo.h in Headers */,
 				E8D07026186043C100A8E788 /* wax.h in Headers */,
+				9EC3270A19079F5500AE1567 /* SHModuleHelper.h in Headers */,
 				E8D07005186043C100A8E788 /* llex.h in Headers */,
+				9EC327111907A39500AE1567 /* SHIntent.h in Headers */,
 				E8D06FF2186043C100A8E788 /* lapi.h in Headers */,
 				E8D07024186043C100A8E788 /* lzio.h in Headers */,
 				E86840281823810B00938464 /* IPAddress.h in Headers */,
@@ -1209,12 +1235,14 @@
 				9E2EDD2C18580B1200F8F591 /* SHConfigManager.m in Sources */,
 				E8D06FF5186043C100A8E788 /* lbaselib.c in Sources */,
 				E8E03BDA17E6B1AB002546C3 /* SHCacheManager.m in Sources */,
+				9EC3270B19079F5500AE1567 /* SHModuleHelper.m in Sources */,
 				E8D07019186043C100A8E788 /* ltablib.c in Sources */,
 				E8D06FDE186043C100A8E788 /* yajl_buf.c in Sources */,
 				E8D06FF9186043C100A8E788 /* ldebug.c in Sources */,
 				E8D06FD5186043C100A8E788 /* wax_http_connection.m in Sources */,
 				E8D07012186043C100A8E788 /* lstate.c in Sources */,
 				E85F009217EE9A2200F9F02C /* SHIIOSVersion.m in Sources */,
+				9EC327121907A39500AE1567 /* SHIntent.m in Sources */,
 				E8D07023186043C100A8E788 /* lzio.c in Sources */,
 				9E2EDD2B18580B0F00F8F591 /* SHUser.m in Sources */,
 				E8D06FD1186043C100A8E788 /* wax_filesystem.m in Sources */,
@@ -1307,8 +1335,9 @@
 				);
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos7.1;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = Core;
@@ -1332,7 +1361,7 @@
 				MACH_O_TYPE = staticlib;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos7.0;
+				SDKROOT = iphoneos7.1;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = Core;

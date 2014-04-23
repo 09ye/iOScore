@@ -10,7 +10,7 @@
 
 @interface UIApplication(sheely)
 
-- (void) openURL:(NSString *)url;
+//- (void) openURL:(NSString *)url;
 
 - (void) open:(SHIntent *)intent;
 @end

@@ -34,7 +34,8 @@
     return self;
 }
 
-- (BOOL)checkIntent
+- (BOOL)checkIntent:(NSString*)error
+
 {
     if(self.intent){
         return YES;

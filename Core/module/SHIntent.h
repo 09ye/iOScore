@@ -10,15 +10,17 @@
 
 @interface SHIntent:NSObject
 
-@property (nonatomic) NSDictionary * args;
+@property (nonatomic,strong) NSDictionary * args;
 
-@property (nonatomic) NSString * target;
+@property (nonatomic,copy) NSString * target;
 
 @property (nonatomic, assign) id delegate;
 
 @property (nonatomic, strong) UIViewController * container;
 
-- (id)init:(NSString*)target_ delegate:(id)delegate_ containner:(id)container_;
+@property (nonatomic,copy) NSString * module;
 
-- (id)init:(NSString*)target_;
+- (id)init:(NSString*)module delegate:(id)delegate_ containner:(id)container_;
+
+- (id)init:(NSString*)module;
 @end

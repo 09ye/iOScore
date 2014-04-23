@@ -23,4 +23,6 @@
 + (BOOL) isValidateMobile:(NSString *)mobile;
 //邮箱验证
 + (BOOL)isValidateEmail:(NSString *)email;
+
++ (NSString *)filterHTML:(NSString *)html;
 @end

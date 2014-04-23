@@ -42,7 +42,6 @@
 #import "EGORefreshTableHeaderView.h"
 #import "WTStatusBar.h"
 #import "VRGCalendarView.h"
-#import "SHIntent.h"
 #import "UIApplicationAddtion.h"
 #import "SHIntentManager.h"
 

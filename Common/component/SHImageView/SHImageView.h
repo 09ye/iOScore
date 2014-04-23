@@ -13,7 +13,7 @@
 
 @protocol SHImageViewDelegate<NSObject>
 
-- (void) imageViewDidLoadFinished;
+- (void) imageViewDidLoadFinished:(SHImageView*) imageview;
 
 @end
 
@@ -26,4 +26,5 @@
 @property (nonatomic,copy) NSString * mark;
 
 - (void)setUrl:(NSString *)url_ args:(NSString*) idvalue;
+- (void)setUrl:(NSString *)url_;
 @end

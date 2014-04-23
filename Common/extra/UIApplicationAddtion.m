@@ -10,10 +10,10 @@
 
 @implementation UIApplication(sheely)
 
-- (void) openURL:(NSString *)url
-{
-   // [self openURL:(NSURL *)]
-}
+//- (void) openURL:(NSString *)url
+//{
+//   // [self openURL:(NSURL *)]
+//}
 
 - (void) open:(SHIntent *)intent
 {

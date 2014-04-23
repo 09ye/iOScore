@@ -28,6 +28,8 @@
 #import "SHCacheManager.h"
 #import "SHPrivateAPI.h"
 #import "SHHttpTask.h"
+#import "SHIntent.h"
+#import "SHModuleHelper.h"
 //#import "wax.h"
 
 //日志记录

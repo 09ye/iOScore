@@ -21,8 +21,10 @@
 - (id)initWithImage:(UIImage *)image title:(NSString*) title target:(id)target action:(SEL)action
 {
     UIBarButtonItem * item =  [self init];
-   
-    [item setBackgroundImage:[UIImage imageNamed:@"button_item_bg"] forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
+    UIImage * image_ = [UIImage imageNamed:@"button_item_bg"];
+    if(image_){
+    [item setBackgroundImage:image_ forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
+    }
     if(iOS7){
         //CGSize = [title ];
         UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 40, 40 + 3)];
@@ -39,7 +41,9 @@
         
         [btn setTitle:title forState:UIControlStateNormal];
         btn.userstyle = @"btnnavigation";
-        [btn setBackgroundImage:[NVSkin.instance stretchImage:@"button_item_bg"] forState:(UIControlState)UIControlStateNormal];
+        if(image_){
+            [btn setBackgroundImage:[NVSkin.instance stretchImage:@"button_item_bg"] forState:(UIControlState)UIControlStateNormal];
+        }
         [view addSubview:btn];
         view.backgroundColor = [UIColor clearColor];
         [btn setImage:image forState:UIControlStateNormal];
@@ -57,8 +61,11 @@
 - (id)initWithImage:(UIImage *)image target:(id)target action:(SEL)action
 {
     UIBarButtonItem * item =  [self init];
-    
-    [item setBackgroundImage:[UIImage imageNamed:@"button_item_bg"] forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
+    UIImage * image_ = [UIImage imageNamed:@"button_item_bg"];
+    if (image_) {
+        [item setBackgroundImage:[UIImage imageNamed:@"button_item_bg"] forState:(UIControlState)UIControlStateNormal barMetrics:(UIBarMetrics)UIBarMetricsDefault];
+        
+    }
     if(iOS7){
         UIView * view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 40, 40 + 3)];
         UIButton * btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 3, 40, 40)];

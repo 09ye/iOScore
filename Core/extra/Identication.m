@@ -36,6 +36,9 @@
         [identication setObject:Entironment.instance.deviceid forKey:@"imei"];
 #endif
     }
+//    if ( Entironment.instance.userId) {
+//        [identication setObject:Entironment.instance.userId forKey:@"shop"];
+//    }
     [identication setObject:Entironment.instance.deviceInfo forKey:@"info"];
     [identication setObject:Entironment.instance.version.description forKey:@"version"];
     return identication;

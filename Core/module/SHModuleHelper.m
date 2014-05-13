@@ -71,6 +71,7 @@ static SHModuleHelper * __instance;
     //[doc release];
 }
 
+
 - (NSString * )targetByModule:(NSString*) modulename
 {
     SHModule* module = [mDic valueForKey:modulename];
@@ -79,6 +80,16 @@ static SHModuleHelper * __instance;
     }else{
         return nil;
     }
+}
+
+- (NSString * )targeByPreAction:(NSString*) action
+{
+    for (SHModule * module in [mDic allValues]) {
+        if(module->pre_action != NULL && [module->pre_action isEqualToString:action]){
+            return module->target;
+        }
+    }
+    return nil;
 }
 
 - (GDataXMLDocument* )docForStyle:(NSString*)name{

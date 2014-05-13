@@ -12,5 +12,7 @@
 
 - (NSString * )targetByModule:(NSString*) modulename;
 
+- (NSString * )targeByPreAction:(NSString*) action;
+
 + (SHModuleHelper*) instance;
 @end

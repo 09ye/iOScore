@@ -16,9 +16,6 @@ struct CTResult
 @interface SHPrivateAPI : NSObject
 //imei
 
-+ (NSString *) imei;
-
-+ (NSString *) phoneNum;
 
 + (NSString *) getPasswordForUsername: (NSString *) username andServiceName: (NSString *) serviceName error: (NSError **) error;
 

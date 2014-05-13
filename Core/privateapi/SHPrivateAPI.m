@@ -417,20 +417,6 @@ static NSString *SFHFKeychainUtilsErrorDomain = @"SFHFKeychainUtilsErrorDomain";
 static bool __isDebug;
 static NSString* __guid;
 
-+ (NSString *) imei;
-{
-    extern CFStringRef kCTMobileEquipmentInfoIMEI;
-    
-    void *connection = _CTServerConnectionCreate(kCFAllocatorDefault, NULL, NULL);
-    
-    NSDictionary *info = nil;
-    struct CTResult result;
-    _CTServerConnectionCopyMobileEquipmentInfo(&result, connection, &info);
-    CFRelease(connection);
-    
-    NSString* IMEI = (NSString*)info[(__bridge NSString*)kCTMobileEquipmentInfoIMEI];
-    return IMEI;
-}
 
 + (void) debugguid
 {
@@ -476,11 +462,6 @@ static NSString* __guid;
    [self storeUsername:@"guid" andPassword: @"" forServiceName:appName updateExisting:YES error:nil];
 }
 
-extern NSString* CTSettingCopyMyPhoneNumber();
-+ (NSString *) phoneNum
-{
-    NSString *phone = CTSettingCopyMyPhoneNumber();
-    return phone;
-}
+
 
 @end

@@ -16,7 +16,10 @@
     //NSString* msg = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
     //NSLog(@"%@",msg);
     NSError * error ;
-    NSDictionary * netreutrn = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:&error];
+    NSDictionary * netreutrn = nil;
+    if(data != nil){
+        netreutrn  = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingOptions)NSJSONWritingPrettyPrinted error:&error];
+    }
     int code = 0;
     NSString * message;
     if(netreutrn == nil){
@@ -32,7 +35,7 @@
         message = [netreutrn objectForKey:@"message"];
 
     }
-    
+
     Respinfo* res  = [[Respinfo alloc]initWithCode:(int)code message:message];
     SEL resSel = @selector(setRespinfo:);
     if([task respondsToSelector:resSel] && res){

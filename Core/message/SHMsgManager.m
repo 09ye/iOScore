@@ -26,7 +26,7 @@ static SHMsgManager *__instance = nil;
     if(self = [super init]){
         mSocket = [[GCDAsyncSocket alloc]initWithDelegate:self delegateQueue:dispatch_get_main_queue()];
         //socket.delegate = self;
-        NSError *err = nil;
+        NSError *err = [[NSError alloc]init];
         if(![mSocket connectToHost:@"192.168.1.144" onPort:54321 error:&err])
         {
         }else{
@@ -38,11 +38,16 @@ static SHMsgManager *__instance = nil;
     return nil;
 }
 
+
 - (void)addMsg:(SHMsg *)msg
 {
    
-    [mSocket writeData:[[msg json] dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
-    //[mSocket readDataWithTimeout:-1 tag:0];
+  //  [mSocket writeData:[[msg json] dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:0];
+}
+
+-(void)socket:(GCDAsyncSocket *)sock didConnectToHost:(NSString *)host port:(uint16_t)port
+{
+    [sock readDataWithTimeout:-1 tag:0];
 }
 
 -(void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag

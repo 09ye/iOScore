@@ -5,22 +5,6 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E8080DA817BF84CE006B68EB"
-               BuildableName = "libCore.a"
-               BlueprintName = "Core"
-               ReferencedContainer = "container:Core.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -32,9 +16,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1A04E2AA1924BF7900B766D7"
-               BuildableName = "Core Tests.xctest"
-               BlueprintName = "Core Tests"
+               BlueprintIdentifier = "1A04E4FF1924C3B500B766D7"
+               BuildableName = "Core Tests Tcp.xctest"
+               BlueprintName = "Core Tests Tcp"
                ReferencedContainer = "container:Core.xcodeproj">
             </BuildableReference>
          </TestableReference>

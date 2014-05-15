@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A04E4C91924C26D00B766D7 /* Core Tests-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4C51924C26D00B766D7 /* Core Tests-Prefix.pch */; };
+		1A04E4CA1924C26D00B766D7 /* Core_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4C61924C26D00B766D7 /* Core_Tests.m */; };
+		1A04E4CC1924C29800B766D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A04E4CB1924C29800B766D7 /* XCTest.framework */; };
+		1A04E4D61924C2B000B766D7 /* SHMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4CE1924C2B000B766D7 /* SHMsg.h */; };
+		1A04E4D71924C2B000B766D7 /* SHMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4CF1924C2B000B766D7 /* SHMsg.m */; };
+		1A04E4D81924C2B000B766D7 /* SHMsgM.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4D01924C2B000B766D7 /* SHMsgM.h */; };
+		1A04E4D91924C2B000B766D7 /* SHMsgM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4D11924C2B000B766D7 /* SHMsgM.m */; };
+		1A04E4DA1924C2B000B766D7 /* SHMsgManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4D21924C2B000B766D7 /* SHMsgManager.h */; };
+		1A04E4DB1924C2B000B766D7 /* SHMsgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4D31924C2B000B766D7 /* SHMsgManager.m */; };
+		1A04E4DC1924C2B000B766D7 /* SHResMsgM.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4D41924C2B000B766D7 /* SHResMsgM.h */; };
+		1A04E4DD1924C2B000B766D7 /* SHResMsgM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4D51924C2B000B766D7 /* SHResMsgM.m */; };
+		1A04E4E21924C2BB00B766D7 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4DE1924C2BB00B766D7 /* GCDAsyncSocket.h */; };
+		1A04E4E31924C2BB00B766D7 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4DF1924C2BB00B766D7 /* GCDAsyncSocket.m */; };
+		1A04E4E41924C2BB00B766D7 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */; };
+		1A04E4E51924C2BB00B766D7 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4E11924C2BB00B766D7 /* GCDAsyncUdpSocket.m */; };
 		775A7FFC187116D600D190B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775A7FFB187116D600D190B4 /* SystemConfiguration.framework */; };
 		9E2EDD2918580B0A00F8F591 /* SHFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E17DE1856EA12001E29D3 /* SHFlowManager.m */; };
 		9E2EDD2A18580B0C00F8F591 /* SHPrivateAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E84AB7211855B680005538A5 /* SHPrivateAPI.m */; };
@@ -254,6 +269,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A04E4C41924C26D00B766D7 /* Core Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Core Tests-Info.plist"; sourceTree = "<group>"; };
+		1A04E4C51924C26D00B766D7 /* Core Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Core Tests-Prefix.pch"; sourceTree = "<group>"; };
+		1A04E4C61924C26D00B766D7 /* Core_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Core_Tests.m; sourceTree = "<group>"; };
+		1A04E4C81924C26D00B766D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A04E4CB1924C29800B766D7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1A04E4CE1924C2B000B766D7 /* SHMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMsg.h; sourceTree = "<group>"; };
+		1A04E4CF1924C2B000B766D7 /* SHMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMsg.m; sourceTree = "<group>"; };
+		1A04E4D01924C2B000B766D7 /* SHMsgM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMsgM.h; sourceTree = "<group>"; };
+		1A04E4D11924C2B000B766D7 /* SHMsgM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMsgM.m; sourceTree = "<group>"; };
+		1A04E4D21924C2B000B766D7 /* SHMsgManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMsgManager.h; sourceTree = "<group>"; };
+		1A04E4D31924C2B000B766D7 /* SHMsgManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMsgManager.m; sourceTree = "<group>"; };
+		1A04E4D41924C2B000B766D7 /* SHResMsgM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHResMsgM.h; sourceTree = "<group>"; };
+		1A04E4D51924C2B000B766D7 /* SHResMsgM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHResMsgM.m; sourceTree = "<group>"; };
+		1A04E4DE1924C2BB00B766D7 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		1A04E4DF1924C2BB00B766D7 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		1A04E4E11924C2BB00B766D7 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		775A7FFB187116D600D190B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9EA09A1A185840BB0000A7A3 /* SHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLogger.h; sourceTree = "<group>"; };
 		9EA09A1B185840BB0000A7A3 /* SHLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLogger.m; sourceTree = "<group>"; };
@@ -266,10 +298,6 @@
 		E8080DB017BF84CE006B68EB /* Core-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Core-Prefix.pch"; sourceTree = "<group>"; };
 		E8080DB117BF84CE006B68EB /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		E8080DBB17BF84CE006B68EB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		E8080DC517BF84CE006B68EB /* CoreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CoreTests-Info.plist"; sourceTree = "<group>"; };
-		E8080DC717BF84CE006B68EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E8080DC917BF84CE006B68EB /* CoreTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTests.h; sourceTree = "<group>"; };
-		E8080DCA17BF84CE006B68EB /* CoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTests.m; sourceTree = "<group>"; };
 		E8080E2417BF8E99006B68EB /* SHObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHObject.h; sourceTree = "<group>"; };
 		E8080E2517BF8E99006B68EB /* SHObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHObject.m; sourceTree = "<group>"; };
 		E8080E2717BF8EAD006B68EB /* SHTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHTask.h; sourceTree = "<group>"; };
@@ -478,6 +506,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A04E4CC1924C29800B766D7 /* XCTest.framework in Frameworks */,
 				775A7FFC187116D600D190B4 /* SystemConfiguration.framework in Frameworks */,
 				E8329E0C1855CD0C00D40DAF /* Security.framework in Frameworks */,
 				E84AB7291855B8FF005538A5 /* CoreTelephony.framework in Frameworks */,
@@ -490,6 +519,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A04E4C31924C26D00B766D7 /* Core Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1A04E4C41924C26D00B766D7 /* Core Tests-Info.plist */,
+				1A04E4C51924C26D00B766D7 /* Core Tests-Prefix.pch */,
+				1A04E4C61924C26D00B766D7 /* Core_Tests.m */,
+				1A04E4C71924C26D00B766D7 /* InfoPlist.strings */,
+			);
+			path = "Core Tests";
+			sourceTree = "<group>";
+		};
+		1A04E4CD1924C2B000B766D7 /* message */ = {
+			isa = PBXGroup;
+			children = (
+				1A04E4CE1924C2B000B766D7 /* SHMsg.h */,
+				1A04E4CF1924C2B000B766D7 /* SHMsg.m */,
+				1A04E4D01924C2B000B766D7 /* SHMsgM.h */,
+				1A04E4D11924C2B000B766D7 /* SHMsgM.m */,
+				1A04E4D21924C2B000B766D7 /* SHMsgManager.h */,
+				1A04E4D31924C2B000B766D7 /* SHMsgManager.m */,
+				1A04E4D41924C2B000B766D7 /* SHResMsgM.h */,
+				1A04E4D51924C2B000B766D7 /* SHResMsgM.m */,
+			);
+			path = message;
+			sourceTree = "<group>";
+		};
 		9EA09A19185840AA0000A7A3 /* log */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,8 +568,8 @@
 		E8080DA017BF84CE006B68EB = {
 			isa = PBXGroup;
 			children = (
+				1A04E4C31924C26D00B766D7 /* Core Tests */,
 				E8080DAE17BF84CE006B68EB /* Core */,
-				E8080DC317BF84CE006B68EB /* CoreTests */,
 				E8080DAB17BF84CE006B68EB /* Frameworks */,
 				E8080DAA17BF84CE006B68EB /* Products */,
 			);
@@ -531,6 +586,7 @@
 		E8080DAB17BF84CE006B68EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A04E4CB1924C29800B766D7 /* XCTest.framework */,
 				775A7FFB187116D600D190B4 /* SystemConfiguration.framework */,
 				E8329E0B1855CD0C00D40DAF /* Security.framework */,
 				E84AB7281855B8FF005538A5 /* CoreTelephony.framework */,
@@ -545,6 +601,7 @@
 		E8080DAE17BF84CE006B68EB /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1A04E4CD1924C2B000B766D7 /* message */,
 				E8080DB117BF84CE006B68EB /* Core.h */,
 				9EC3270719079F5500AE1567 /* module */,
 				E8D06F35186043C100A8E788 /* wax */,
@@ -569,25 +626,6 @@
 			isa = PBXGroup;
 			children = (
 				E8080DB017BF84CE006B68EB /* Core-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E8080DC317BF84CE006B68EB /* CoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				E8080DC917BF84CE006B68EB /* CoreTests.h */,
-				E8080DCA17BF84CE006B68EB /* CoreTests.m */,
-				E8080DC417BF84CE006B68EB /* Supporting Files */,
-			);
-			path = CoreTests;
-			sourceTree = "<group>";
-		};
-		E8080DC417BF84CE006B68EB /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E8080DC517BF84CE006B68EB /* CoreTests-Info.plist */,
-				E8080DC617BF84CE006B68EB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -622,6 +660,10 @@
 		E8080E2117BF8E5C006B68EB /* net */ = {
 			isa = PBXGroup;
 			children = (
+				1A04E4DE1924C2BB00B766D7 /* GCDAsyncSocket.h */,
+				1A04E4DF1924C2BB00B766D7 /* GCDAsyncSocket.m */,
+				1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */,
+				1A04E4E11924C2BB00B766D7 /* GCDAsyncUdpSocket.m */,
 				E8B41BAD180CE7A500069506 /* SHAnalyzeFactory.h */,
 				E8B41BAE180CE7A500069506 /* SHAnalyzeFactory.m */,
 				E8080E2717BF8EAD006B68EB /* SHTask.h */,
@@ -1028,6 +1070,7 @@
 				E8D06FED186043C100A8E788 /* wax_sqlite_operation.h in Headers */,
 				E8D0702E186043C100A8E788 /* wax_instance.h in Headers */,
 				E87F0A0917E16757009E57E8 /* SHPostTaskM.h in Headers */,
+				1A04E4DC1924C2B000B766D7 /* SHResMsgM.h in Headers */,
 				E827F8E9181F8B7000389134 /* SHUser.h in Headers */,
 				E81E443418179A1000EA9090 /* NSData+AES.h in Headers */,
 				E8D06FD7186043C100A8E788 /* wax_json.h in Headers */,
@@ -1055,12 +1098,14 @@
 				E8D06FCC186043C100A8E788 /* wax_CGTransform.h in Headers */,
 				E8D070371860473C00A8E788 /* ProtocolLoader.h in Headers */,
 				E8BDF6461863ED0D00AC9B82 /* SHHttpTaskM.h in Headers */,
+				1A04E4E21924C2BB00B766D7 /* GCDAsyncSocket.h in Headers */,
 				E8D06FFF186043C100A8E788 /* lfunc.h in Headers */,
 				E8D07009186043C100A8E788 /* lmem.h in Headers */,
 				E8D07028186043C100A8E788 /* wax_class.h in Headers */,
 				E8D07020186043C100A8E788 /* lundump.h in Headers */,
 				E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */,
 				E8D06FDD186043C100A8E788 /* yajl_alloc.h in Headers */,
+				1A04E4D61924C2B000B766D7 /* SHMsg.h in Headers */,
 				E8D06FDA186043C100A8E788 /* yajl_parse.h in Headers */,
 				E8D06FEF186043C100A8E788 /* wax_xml.h in Headers */,
 				E887F79317F2AD8500871292 /* FileManager.h in Headers */,
@@ -1068,6 +1113,7 @@
 				E8D07001186043C100A8E788 /* lgc.h in Headers */,
 				E8D06FE3186043C100A8E788 /* yajl_encode.h in Headers */,
 				E81A41B01808F62200D9B399 /* GDataXMLNode.h in Headers */,
+				1A04E4D81924C2B000B766D7 /* SHMsgM.h in Headers */,
 				9E2EDD2F18580B2B00F8F591 /* SHFuck.h in Headers */,
 				E8D06FD2186043C100A8E788 /* wax_http.h in Headers */,
 				E8D06FF4186043C100A8E788 /* lauxlib.h in Headers */,
@@ -1089,6 +1135,7 @@
 				E84AB7221855B680005538A5 /* SHPrivateAPI.h in Headers */,
 				E8D06FF7186043C100A8E788 /* lcode.h in Headers */,
 				E8D06FE5186043C100A8E788 /* yajl_gen.h in Headers */,
+				1A04E4DA1924C2B000B766D7 /* SHMsgManager.h in Headers */,
 				E8D06FDF186043C100A8E788 /* yajl_buf.h in Headers */,
 				E8D06FD8186043C100A8E788 /* yajl_common.h in Headers */,
 				E887F78717F1C88B00871292 /* Identication.h in Headers */,
@@ -1099,12 +1146,14 @@
 				E8D06FE1186043C100A8E788 /* yajl_common.h in Headers */,
 				E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */,
 				E83E17DF1856EA12001E29D3 /* SHFlowManager.h in Headers */,
+				1A04E4C91924C26D00B766D7 /* Core Tests-Prefix.pch in Headers */,
 				E8D07033186043C100A8E788 /* wax_struct.h in Headers */,
 				E8D0702A186043C100A8E788 /* wax_gc.h in Headers */,
 				E8D07011186043C100A8E788 /* lparser.h in Headers */,
 				E8D0702C186043C100A8E788 /* wax_helpers.h in Headers */,
 				E8D07015186043C100A8E788 /* lstring.h in Headers */,
 				E8D06FE0186043C100A8E788 /* yajl_bytestack.h in Headers */,
+				1A04E4E41924C2BB00B766D7 /* GCDAsyncUdpSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1164,6 +1213,7 @@
 				E8D06FFE186043C100A8E788 /* lfunc.c in Sources */,
 				E8D06FF6186043C100A8E788 /* lcode.c in Sources */,
 				E8D07004186043C100A8E788 /* llex.c in Sources */,
+				1A04E4D71924C2B000B766D7 /* SHMsg.m in Sources */,
 				E8D0700A186043C100A8E788 /* loadlib.c in Sources */,
 				E8D06FF3186043C100A8E788 /* lauxlib.c in Sources */,
 				E8D06FCF186043C100A8E788 /* wax_CGContext.m in Sources */,
@@ -1195,11 +1245,15 @@
 				E8D06FF8186043C100A8E788 /* ldblib.c in Sources */,
 				E8B8414117D70676006A0291 /* NVSkin.m in Sources */,
 				E8D06FCD186043C100A8E788 /* wax_CGTransform.m in Sources */,
+				1A04E4E31924C2BB00B766D7 /* GCDAsyncSocket.m in Sources */,
 				E8D4E6D31857495B00CBB35A /* Reachability.m in Sources */,
 				E8B41BB0180CE7A500069506 /* SHAnalyzeFactory.m in Sources */,
 				E8D0701F186043C100A8E788 /* lundump.c in Sources */,
 				E8D07000186043C100A8E788 /* lgc.c in Sources */,
 				E87F0A0A17E16757009E57E8 /* SHPostTaskM.m in Sources */,
+				1A04E4CA1924C26D00B766D7 /* Core_Tests.m in Sources */,
+				1A04E4DD1924C2B000B766D7 /* SHResMsgM.m in Sources */,
+				1A04E4DB1924C2B000B766D7 /* SHMsgManager.m in Sources */,
 				E8D0700F186043C100A8E788 /* loslib.c in Sources */,
 				E8D07002186043C100A8E788 /* linit.c in Sources */,
 				E887F79A17F422A000871292 /* Base64.m in Sources */,
@@ -1229,6 +1283,7 @@
 				E8D06FDC186043C100A8E788 /* yajl_alloc.c in Sources */,
 				E8D07027186043C100A8E788 /* wax.m in Sources */,
 				E86840241823530C00938464 /* SHTools.m in Sources */,
+				1A04E4D91924C2B000B766D7 /* SHMsgM.m in Sources */,
 				E8BDF6431863EC9600AC9B82 /* SHHttpTask.m in Sources */,
 				E8E03BD517E34A98002546C3 /* DatabaseOperation.m in Sources */,
 				E8D06FE9186043C100A8E788 /* yajl_parser.c in Sources */,
@@ -1236,6 +1291,7 @@
 				E8D06FF5186043C100A8E788 /* lbaselib.c in Sources */,
 				E8E03BDA17E6B1AB002546C3 /* SHCacheManager.m in Sources */,
 				9EC3270B19079F5500AE1567 /* SHModuleHelper.m in Sources */,
+				1A04E4E51924C2BB00B766D7 /* GCDAsyncUdpSocket.m in Sources */,
 				E8D07019186043C100A8E788 /* ltablib.c in Sources */,
 				E8D06FDE186043C100A8E788 /* yajl_buf.c in Sources */,
 				E8D06FF9186043C100A8E788 /* ldebug.c in Sources */,
@@ -1252,10 +1308,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E8080DC617BF84CE006B68EB /* InfoPlist.strings */ = {
+		1A04E4C71924C26D00B766D7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E8080DC717BF84CE006B68EB /* en */,
+				1A04E4C81924C26D00B766D7 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -1325,6 +1381,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/Core.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
@@ -1349,6 +1409,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/Core.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Core/Core-Prefix.pch";
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;

@@ -30,6 +30,13 @@
 #import "SHHttpTask.h"
 #import "SHIntent.h"
 #import "SHModuleHelper.h"
+#import "GCDAsyncSocket.h"
+#import "GCDAsyncUdpSocket.h"
+#import "SHMsg.h"
+#import "SHMsgManager.h"
+#import "SHMsgM.h"
+#import "SHResMsgM.h"
+
 //#import "wax.h"
 
 //日志记录

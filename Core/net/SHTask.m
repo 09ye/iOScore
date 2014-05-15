@@ -10,7 +10,7 @@
 
 @interface SHTask()
 {
-    
+  
 };
 @end
 
@@ -75,6 +75,12 @@ static const NSMutableDictionary * urlReplace;
     _isworking = YES;
 }
 
+- (void)start:(void(^)(SHTask *))taskfinished taskWillTry : (void(^)(SHTask *))tasktry  taskDidFailed : (void(^)(SHTask *))taskFailed
+{
+    __taskdidfinished = taskfinished;
+    __taskdidtaskFailed = taskFailed;
+    [self start];
+}
 - (void)cancel
 {
     _isworking = NO;

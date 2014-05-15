@@ -36,4 +36,5 @@ typedef enum  {
 - (BOOL) show;
 
 + (SHConfigManager*)instance;
+
 @end

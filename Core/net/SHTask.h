@@ -38,6 +38,8 @@ typedef enum
     NSString * _realURL;
     Respinfo * _respinfo;
     BOOL _isworking;
+    void(^ __taskdidfinished)(SHTask *);
+    void(^ __taskdidtaskFailed)(SHTask *);
 }
 
 @property (nonatomic,assign,readonly) BOOL isworking;
@@ -51,6 +53,9 @@ typedef enum
 @property (nonatomic,assign) int tag;
 
 - (void)start;
+
+- (void)start:(void(^)(SHTask *))taskfinished taskWillTry : (void(^)(SHTask *))tasktry  taskDidFailed : (void(^)(SHTask *))taskFailed;
+
 - (void)cancel;
 
 + (void)pull:(NSString*)url newUrl:(NSString*)newurl;

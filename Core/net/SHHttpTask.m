@@ -15,6 +15,13 @@
 @end
 
 @implementation SHHttpTask
+
+
+- (void)start:(void(^)(SHTask *))taskfinished taskWillTry : (void(^)(SHTask *))tasktry  taskDidFailed : (void(^)(SHTask *))taskFailed
+{
+    [super start:taskfinished taskWillTry:tasktry taskDidFailed:taskFailed];
+}
+
 -(void)start
 {
     
@@ -102,11 +109,15 @@
         if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFinished:)]){
             _isworking = NO;
             [self.delegate taskDidFinished:self];
+        }else if (__taskdidfinished){
+            __taskdidfinished(self);
         }
     }else{
         if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFailed:)]){
             _isworking = NO;
             [self.delegate taskDidFailed:self];
+        }else if (__taskdidtaskFailed){
+            __taskdidtaskFailed(self);
         }
     }
     //SHLog(@"%@",[self.result description]);
@@ -149,6 +160,8 @@
     if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFailed:)]){
         _isworking = NO;
         [self.delegate taskDidFailed:self];
+    }else if (__taskdidtaskFailed){
+        __taskdidtaskFailed(self);
     }
 }
 

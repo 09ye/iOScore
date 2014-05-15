@@ -15,7 +15,10 @@
 {
     [self doRequest];
 }
-
+- (void)start:(void(^)(SHTask *))taskfinished taskWillTry : (void(^)(SHTask *))tasktry  taskDidFailed : (void(^)(SHTask *))taskFailed
+{
+    [super start:taskfinished taskWillTry:tasktry taskDidFailed:taskFailed];
+}
 -(void)doRequest
 {
     NSString *postLength = [NSString stringWithFormat:@"%d", [self.postData length]];

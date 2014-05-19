@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SHMsgManager : NSObject
+@interface SHMsgManager : NSObject<GCDAsyncSocketDelegate>
 {
     GCDAsyncSocket * mSocket;
 }

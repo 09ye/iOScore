@@ -15,9 +15,9 @@
 
 @synthesize guid = _guid;
 
-- (NSString*) json
+- (NSData*) data
 {
-    return @"x";
+    return [[NSData alloc]init];
 }
 
 

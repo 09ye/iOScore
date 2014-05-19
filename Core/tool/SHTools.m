@@ -148,4 +148,55 @@
     //    html = [html stringByReplacingOccurrencesOfString:regEx withString:@""];
     return [html stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@""] ;
 }
+
+//低位在前
++(void) intToBytes:(int) value  byte:(Byte[])src start:(int)start
+{
+    src[3 + start] =  (Byte) ((value>>24) & 0xFF);
+    src[2 + start] =  (Byte) ((value>>16) & 0xFF);
+    src[1 + start] =  (Byte) ((value>>8) & 0xFF);
+    src[0 + start] =  (Byte) (value & 0xFF);
+    return;
+}
+/**
+ * 将int数值转换为占四个字节的byte数组，本方法适用于(高位在前，低位在后)的顺序。  和bytesToInt2（）配套使用
+ */
++(Byte*) intToBytes2:(int) value
+{
+    Byte *  src =  malloc(sizeof(int));
+    src[0] = (Byte) ((value>>24) & 0xFF);
+    src[1] = (Byte) ((value>>16)& 0xFF);
+    src[2] = (Byte) ((value>>8)&0xFF);
+    src[3] = (Byte) (value & 0xFF);
+    return src;
+}
+
+/** byte数组中取int数值，本方法适用于(低位在前，高位在后)的顺序，和和intToBytes（）配套使用
+*
+* @param src
+*            byte数组
+* @param offset
+*            从数组的第offset位开始
+* @return int数值
+*/
++ (int) bytesToInt: (Byte[]) src offser :(int) offset {
+    int value;
+    value = (int) ((src[offset] & 0xFF)
+                   | ((src[offset+1] & 0xFF)<<8)
+                   | ((src[offset+2] & 0xFF)<<16)
+                   | ((src[offset+3] & 0xFF)<<24));
+    return value;
+}
+
+/**
+ * byte数组中取int数值，本方法适用于(低位在后，高位在前)的顺序。和intToBytes2（）配套使用
+ */
++ (int) bytesToInt2: (Byte[]) src offser :(int) offset {
+    int value;
+    value = (int) ( ((src[offset] & 0xFF)<<24)
+                   |((src[offset+1] & 0xFF)<<16)
+                   |((src[offset+2] & 0xFF)<<8)
+                   |(src[offset+3] & 0xFF));
+    return value;
+}
 @end

@@ -1,18 +1,18 @@
 //
-//  Core_Tests_Tcp.m
-//  Core Tests Tcp
+//  Core_Tests.m
+//  Core Tests
 //
-//  Created by WSheely on 14-5-15.
+//  Created by WSheely on 14-5-16.
 //  Copyright (c) 2014年 zywang. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface Core_Tests_Tcp : XCTestCase
+@interface Core_Tests : XCTestCase
 
 @end
 
-@implementation Core_Tests_Tcp
+@implementation Core_Tests
 
 - (void)setUp
 {
@@ -27,17 +27,20 @@
 }
 
 - (void)testExample
-{    
- 
-    
-  NSThread* thread =   [[NSThread alloc]initWithTarget:self selector:@selector(thread:) object:nil];
+{
+    NSThread* thread =   [[NSThread alloc]initWithTarget:self selector:@selector(thread:) object:nil];
     [thread start];
     [NSThread sleepForTimeInterval:100005];
     
 }
 - (void)thread:(NSObject*)sender
 {
-    SHMsgM * msg = [[SHMsgM alloc]init];
-    [msg start];
+    while (true) {
+        SHMsgM * msg = [[SHMsgM alloc]init];
+        [msg start];
+        [NSThread sleepForTimeInterval:5];
+
+    }
 }
+
 @end

@@ -20,20 +20,18 @@
 		1A04E4E31924C2BB00B766D7 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4DF1924C2BB00B766D7 /* GCDAsyncSocket.m */; };
 		1A04E4E41924C2BB00B766D7 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */; };
 		1A04E4E51924C2BB00B766D7 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4E11924C2BB00B766D7 /* GCDAsyncUdpSocket.m */; };
-		1A04E4EB1924C34600B766D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A04E4CB1924C29800B766D7 /* XCTest.framework */; };
-		1A04E4EC1924C34600B766D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
-		1A04E4ED1924C34600B766D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F0A1D17E2A623009E57E8 /* UIKit.framework */; };
-		1A04E5011924C3B500B766D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A04E4CB1924C29800B766D7 /* XCTest.framework */; };
-		1A04E5021924C3B500B766D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
-		1A04E5031924C3B500B766D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F0A1D17E2A623009E57E8 /* UIKit.framework */; };
-		1A04E5091924C3B500B766D7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A04E5071924C3B500B766D7 /* InfoPlist.strings */; };
-		1A04E50B1924C3B500B766D7 /* Core_Tests_Tcp.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E50A1924C3B500B766D7 /* Core_Tests_Tcp.m */; };
-		1A04E5121924C51500B766D7 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4DF1924C2BB00B766D7 /* GCDAsyncSocket.m */; };
-		1A04E5131924C51500B766D7 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4E11924C2BB00B766D7 /* GCDAsyncUdpSocket.m */; };
-		1A04E5141924C52500B766D7 /* SHMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4CF1924C2B000B766D7 /* SHMsg.m */; };
-		1A04E5151924C52500B766D7 /* SHMsgM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4D11924C2B000B766D7 /* SHMsgM.m */; };
-		1A04E5161924C52500B766D7 /* SHMsgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4D31924C2B000B766D7 /* SHMsgManager.m */; };
-		1A04E5171924C52500B766D7 /* SHResMsgM.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4D51924C2B000B766D7 /* SHResMsgM.m */; };
+		1A04E51E1925B31800B766D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A04E4CB1924C29800B766D7 /* XCTest.framework */; };
+		1A04E51F1925B31800B766D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
+		1A04E5201925B31800B766D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F0A1D17E2A623009E57E8 /* UIKit.framework */; };
+		1A04E52F1925B44800B766D7 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DA917BF84CE006B68EB /* libCore.a */; };
+		1A04E5361925B47B00B766D7 /* Core Tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A04E5301925B47B00B766D7 /* Core Tests-Info.plist */; };
+		1A04E5371925B47B00B766D7 /* Core_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E5321925B47B00B766D7 /* Core_Tests.m */; };
+		1A8A57621929D59800F36695 /* GCDAsyncSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4DE1924C2BB00B766D7 /* GCDAsyncSocket.h */; };
+		1A8A57631929D59800F36695 /* GCDAsyncUdpSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */; };
+		1A8A57661929D67400F36695 /* SHMsg.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4CE1924C2B000B766D7 /* SHMsg.h */; };
+		1A8A57671929D67400F36695 /* SHMsgM.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4D01924C2B000B766D7 /* SHMsgM.h */; };
+		1A8A57681929D67400F36695 /* SHMsgManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4D21924C2B000B766D7 /* SHMsgManager.h */; };
+		1A8A57691929D67400F36695 /* SHResMsgM.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4D41924C2B000B766D7 /* SHResMsgM.h */; };
 		775A7FFC187116D600D190B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775A7FFB187116D600D190B4 /* SystemConfiguration.framework */; };
 		9E2EDD2918580B0A00F8F591 /* SHFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E17DE1856EA12001E29D3 /* SHFlowManager.m */; };
 		9E2EDD2A18580B0C00F8F591 /* SHPrivateAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E84AB7211855B680005538A5 /* SHPrivateAPI.m */; };
@@ -239,14 +237,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A04E4F71924C34600B766D7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E8080DA117BF84CE006B68EB /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E8080DA817BF84CE006B68EB;
-			remoteInfo = Core;
-		};
-		1A04E50D1924C3B500B766D7 /* PBXContainerItemProxy */ = {
+		1A04E52A1925B31800B766D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E8080DA117BF84CE006B68EB /* Project object */;
 			proxyType = 1;
@@ -262,6 +253,12 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
+				1A8A57661929D67400F36695 /* SHMsg.h in Copy Files */,
+				1A8A57671929D67400F36695 /* SHMsgM.h in Copy Files */,
+				1A8A57681929D67400F36695 /* SHMsgManager.h in Copy Files */,
+				1A8A57691929D67400F36695 /* SHResMsgM.h in Copy Files */,
+				1A8A57621929D59800F36695 /* GCDAsyncSocket.h in Copy Files */,
+				1A8A57631929D59800F36695 /* GCDAsyncUdpSocket.h in Copy Files */,
 				9EC327151907A3BB00AE1567 /* SHIntent.h in Copy Files */,
 				9EC3270C19079F6800AE1567 /* SHModuleHelper.h in Copy Files */,
 				E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files */,
@@ -311,12 +308,10 @@
 		1A04E4DF1924C2BB00B766D7 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		1A04E4E11924C2BB00B766D7 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		1A04E4EA1924C34600B766D7 /* Core Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A04E5001924C3B500B766D7 /* Core Tests Tcp.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core Tests Tcp.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A04E5061924C3B500B766D7 /* Core Tests Tcp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Core Tests Tcp-Info.plist"; sourceTree = "<group>"; };
-		1A04E5081924C3B500B766D7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1A04E50A1924C3B500B766D7 /* Core_Tests_Tcp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Core_Tests_Tcp.m; sourceTree = "<group>"; };
-		1A04E50C1924C3B500B766D7 /* Core Tests Tcp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Core Tests Tcp-Prefix.pch"; sourceTree = "<group>"; };
+		1A04E51D1925B31800B766D7 /* Core Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Core Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A04E5301925B47B00B766D7 /* Core Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Core Tests-Info.plist"; sourceTree = "<group>"; };
+		1A04E5311925B47B00B766D7 /* Core Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Core Tests-Prefix.pch"; sourceTree = "<group>"; };
+		1A04E5321925B47B00B766D7 /* Core_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Core_Tests.m; sourceTree = "<group>"; };
 		775A7FFB187116D600D190B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9EA09A1A185840BB0000A7A3 /* SHLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHLogger.h; sourceTree = "<group>"; };
 		9EA09A1B185840BB0000A7A3 /* SHLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHLogger.m; sourceTree = "<group>"; };
@@ -533,23 +528,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1A04E4E71924C34600B766D7 /* Frameworks */ = {
+		1A04E51A1925B31800B766D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A04E4EB1924C34600B766D7 /* XCTest.framework in Frameworks */,
-				1A04E4ED1924C34600B766D7 /* UIKit.framework in Frameworks */,
-				1A04E4EC1924C34600B766D7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A04E4FD1924C3B500B766D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A04E5011924C3B500B766D7 /* XCTest.framework in Frameworks */,
-				1A04E5031924C3B500B766D7 /* UIKit.framework in Frameworks */,
-				1A04E5021924C3B500B766D7 /* Foundation.framework in Frameworks */,
+				1A04E52F1925B44800B766D7 /* libCore.a in Frameworks */,
+				1A04E51E1925B31800B766D7 /* XCTest.framework in Frameworks */,
+				1A04E5201925B31800B766D7 /* UIKit.framework in Frameworks */,
+				1A04E51F1925B31800B766D7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,23 +571,14 @@
 			path = message;
 			sourceTree = "<group>";
 		};
-		1A04E5041924C3B500B766D7 /* Core Tests Tcp */ = {
+		1A04E5211925B31800B766D7 /* Core Tests */ = {
 			isa = PBXGroup;
 			children = (
-				1A04E50A1924C3B500B766D7 /* Core_Tests_Tcp.m */,
-				1A04E5051924C3B500B766D7 /* Supporting Files */,
+				1A04E5301925B47B00B766D7 /* Core Tests-Info.plist */,
+				1A04E5311925B47B00B766D7 /* Core Tests-Prefix.pch */,
+				1A04E5321925B47B00B766D7 /* Core_Tests.m */,
 			);
-			path = "Core Tests Tcp";
-			sourceTree = "<group>";
-		};
-		1A04E5051924C3B500B766D7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1A04E5061924C3B500B766D7 /* Core Tests Tcp-Info.plist */,
-				1A04E5071924C3B500B766D7 /* InfoPlist.strings */,
-				1A04E50C1924C3B500B766D7 /* Core Tests Tcp-Prefix.pch */,
-			);
-			name = "Supporting Files";
+			path = "Core Tests";
 			sourceTree = "<group>";
 		};
 		9EA09A19185840AA0000A7A3 /* log */ = {
@@ -628,7 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				E8080DAE17BF84CE006B68EB /* Core */,
-				1A04E5041924C3B500B766D7 /* Core Tests Tcp */,
+				1A04E5211925B31800B766D7 /* Core Tests */,
 				E8080DAB17BF84CE006B68EB /* Frameworks */,
 				E8080DAA17BF84CE006B68EB /* Products */,
 			);
@@ -638,8 +615,7 @@
 			isa = PBXGroup;
 			children = (
 				E8080DA917BF84CE006B68EB /* libCore.a */,
-				1A04E4EA1924C34600B766D7 /* Core Tests.xctest */,
-				1A04E5001924C3B500B766D7 /* Core Tests Tcp.xctest */,
+				1A04E51D1925B31800B766D7 /* Core Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1220,40 +1196,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1A04E4E91924C34600B766D7 /* Core Tests */ = {
+		1A04E51C1925B31800B766D7 /* Core Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A04E4F91924C34600B766D7 /* Build configuration list for PBXNativeTarget "Core Tests" */;
+			buildConfigurationList = 1A04E52C1925B31800B766D7 /* Build configuration list for PBXNativeTarget "Core Tests" */;
 			buildPhases = (
-				1A04E4E61924C34600B766D7 /* Sources */,
-				1A04E4E71924C34600B766D7 /* Frameworks */,
-				1A04E4E81924C34600B766D7 /* Resources */,
+				1A04E5191925B31800B766D7 /* Sources */,
+				1A04E51A1925B31800B766D7 /* Frameworks */,
+				1A04E51B1925B31800B766D7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1A04E4F81924C34600B766D7 /* PBXTargetDependency */,
+				1A04E52B1925B31800B766D7 /* PBXTargetDependency */,
 			);
 			name = "Core Tests";
 			productName = "Core Tests";
-			productReference = 1A04E4EA1924C34600B766D7 /* Core Tests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1A04E4FF1924C3B500B766D7 /* Core Tests Tcp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1A04E50F1924C3B500B766D7 /* Build configuration list for PBXNativeTarget "Core Tests Tcp" */;
-			buildPhases = (
-				1A04E4FC1924C3B500B766D7 /* Sources */,
-				1A04E4FD1924C3B500B766D7 /* Frameworks */,
-				1A04E4FE1924C3B500B766D7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1A04E50E1924C3B500B766D7 /* PBXTargetDependency */,
-			);
-			name = "Core Tests Tcp";
-			productName = "Core Tests Tcp";
-			productReference = 1A04E5001924C3B500B766D7 /* Core Tests Tcp.xctest */;
+			productReference = 1A04E51D1925B31800B766D7 /* Core Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E8080DA817BF84CE006B68EB /* Core */ = {
@@ -1283,10 +1241,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = zywang;
 				TargetAttributes = {
-					1A04E4E91924C34600B766D7 = {
-						TestTargetID = E8080DA817BF84CE006B68EB;
-					};
-					1A04E4FF1924C3B500B766D7 = {
+					1A04E51C1925B31800B766D7 = {
 						TestTargetID = E8080DA817BF84CE006B68EB;
 					};
 				};
@@ -1304,49 +1259,28 @@
 			projectRoot = "";
 			targets = (
 				E8080DA817BF84CE006B68EB /* Core */,
-				1A04E4E91924C34600B766D7 /* Core Tests */,
-				1A04E4FF1924C3B500B766D7 /* Core Tests Tcp */,
+				1A04E51C1925B31800B766D7 /* Core Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1A04E4E81924C34600B766D7 /* Resources */ = {
+		1A04E51B1925B31800B766D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A04E4FE1924C3B500B766D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A04E5091924C3B500B766D7 /* InfoPlist.strings in Resources */,
+				1A04E5361925B47B00B766D7 /* Core Tests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1A04E4E61924C34600B766D7 /* Sources */ = {
+		1A04E5191925B31800B766D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1A04E4FC1924C3B500B766D7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1A04E5171924C52500B766D7 /* SHResMsgM.m in Sources */,
-				1A04E5161924C52500B766D7 /* SHMsgManager.m in Sources */,
-				1A04E5151924C52500B766D7 /* SHMsgM.m in Sources */,
-				1A04E5141924C52500B766D7 /* SHMsg.m in Sources */,
-				1A04E5121924C51500B766D7 /* GCDAsyncSocket.m in Sources */,
-				1A04E5131924C51500B766D7 /* GCDAsyncUdpSocket.m in Sources */,
-				1A04E50B1924C3B500B766D7 /* Core_Tests_Tcp.m in Sources */,
+				1A04E5371925B47B00B766D7 /* Core_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1452,31 +1386,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1A04E4F81924C34600B766D7 /* PBXTargetDependency */ = {
+		1A04E52B1925B31800B766D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E8080DA817BF84CE006B68EB /* Core */;
-			targetProxy = 1A04E4F71924C34600B766D7 /* PBXContainerItemProxy */;
-		};
-		1A04E50E1924C3B500B766D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E8080DA817BF84CE006B68EB /* Core */;
-			targetProxy = 1A04E50D1924C3B500B766D7 /* PBXContainerItemProxy */;
+			targetProxy = 1A04E52A1925B31800B766D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		1A04E5071924C3B500B766D7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A04E5081924C3B500B766D7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		1A04E4FA1924C34600B766D7 /* Debug */ = {
+		1A04E52D1925B31800B766D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1506,7 +1424,7 @@
 			};
 			name = Debug;
 		};
-		1A04E4FB1924C34600B766D7 /* Release */ = {
+		1A04E52E1925B31800B766D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1527,63 +1445,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "Core Tests/Core Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-		1A04E5101924C3B500B766D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Core Tests Tcp/Core Tests Tcp-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Core Tests Tcp/Core Tests Tcp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		1A04E5111924C3B500B766D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				ENABLE_NS_ASSERTIONS = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Core Tests Tcp/Core Tests Tcp-Prefix.pch";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Core Tests Tcp/Core Tests Tcp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
@@ -1670,7 +1531,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.1;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = Core;
 			};
 			name = Debug;
@@ -1698,7 +1559,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos7.1;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = Core;
 			};
 			name = Release;
@@ -1706,21 +1567,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A04E4F91924C34600B766D7 /* Build configuration list for PBXNativeTarget "Core Tests" */ = {
+		1A04E52C1925B31800B766D7 /* Build configuration list for PBXNativeTarget "Core Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1A04E4FA1924C34600B766D7 /* Debug */,
-				1A04E4FB1924C34600B766D7 /* Release */,
+				1A04E52D1925B31800B766D7 /* Debug */,
+				1A04E52E1925B31800B766D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		1A04E50F1924C3B500B766D7 /* Build configuration list for PBXNativeTarget "Core Tests Tcp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1A04E5101924C3B500B766D7 /* Debug */,
-				1A04E5111924C3B500B766D7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8080DA417BF84CE006B68EB /* Build configuration list for PBXProject "Core" */ = {
 			isa = XCConfigurationList;

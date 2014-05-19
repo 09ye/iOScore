@@ -14,10 +14,6 @@
 
 @property (strong,nonatomic) NSString * msgid;
 
-
-
-
-
-- (NSString*) json;
+- (NSData*) data;
 
 @end

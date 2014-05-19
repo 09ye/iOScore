@@ -59,6 +59,17 @@
 //#define SHLog(a) [NSString stringWithFormat:a]
 #define SHLog(a,b) [SHLogger Log:[NSString stringWithFormat:a,b]]
 
+//TCP______________________________________________________________________________________________________________________
+//字节数目
+#define TCP_PACKET_HEAD_LENGTH_POS 16
+#define TCP_PACKET_HEAD_FLAG_POS 4
+#define TCP_PACKET_VERSION_POS 4
+#define TCP_PACKET_WHAT_POS 4
+#define TCP_PACTKT_LENGTH_POS 4
+
+#define TCP_PACKET_HEAD_FLAG ffff
+#define TCP_HOST 192.168.1.144
+#define TCP_PORT 54321
 //日志
 //void SHLogger(NSString *format, ...);
 //void SHLogger(NSString *log);

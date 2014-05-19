@@ -16,4 +16,10 @@
 {
     [SHMsgManager.instance addMsg:self];
 }
+
+- (NSData*) data
+{
+    return  [@"a1" dataUsingEncoding:4];
+}
+
 @end

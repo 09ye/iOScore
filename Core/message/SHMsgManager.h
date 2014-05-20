@@ -7,14 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SHResMsgM.h"
+#import "SHMsgM.h"
 
 @interface SHMsgManager : NSObject<GCDAsyncSocketDelegate>
 {
     GCDAsyncSocket * mSocket;
+    NSMutableDictionary *mStorage;
+    NSThread * mSenderThread;
+    NSMutableArray *mSenderList;
+    SHMsgM * msgHeart;
+    int mHeartTime;//间隔时间
 }
-
+@property (assign,nonatomic) BOOL isWorking;
 + (SHMsgManager*)instance;
 
-- (void) addMsg : (SHMsg*) msg;
+- (void) addMsg : (SHMsg*) msg taskDidFinished :(void(^)(SHResMsgM *))taskfinished taskWillTry : (void(^)(SHResMsgM *))tasktry  taskDidFailed : (void(^)(SHResMsgM *))taskFailed;
 
 @end

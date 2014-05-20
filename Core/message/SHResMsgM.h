@@ -14,4 +14,6 @@
 
 @property (strong,nonatomic) Respinfo * respinfo;
 
+@property (strong,nonatomic) NSString * target;
+
 @end

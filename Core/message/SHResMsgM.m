@@ -9,6 +9,11 @@
 #import "SHResMsgM.h"
 
 @implementation SHResMsgM
+
 @synthesize result;
+
 @synthesize respinfo;
+
+@synthesize target;
+
 @end

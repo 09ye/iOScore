@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface SHMsgM : SHMsg
+{
+}
+
+@property (strong,nonatomic) NSString * target;
 
 @property (strong,nonatomic) NSMutableDictionary* args;
 
-- (void) start;
+- (void)start:(void(^)(SHResMsgM *))taskfinished taskWillTry : (void(^)(SHResMsgM *))tasktry  taskDidFailed : (void(^)(SHResMsgM *))taskDidFailed;
 
 @end

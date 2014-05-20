@@ -27,7 +27,7 @@
         message = @"服务器没有返回信息";
     }else{
         if([[netreutrn allKeys] containsObject:@"code"]){
-            code = [[netreutrn objectForKey:@"code"] integerValue];
+            code = [[netreutrn objectForKey:@"code"] intValue];
         }else{
             code = CORE_NET_FORMAT_ERROR;
         }

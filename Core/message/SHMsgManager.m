@@ -131,7 +131,7 @@ static SHMsgManager *__instance = nil;
             guid = [netreutrn objectForKey:@"guid"];
             //NSLog("%@",netreutrn);
             message = [netreutrn objectForKey:@"message"];
-            target = [netreutrn objectForKey:@"target"];
+            target = [netreutrn objectForKey:@"response"];
             
         }
         Respinfo* res  = [[Respinfo alloc]initWithCode:(int)code message:message];

@@ -14,6 +14,6 @@
 
 @synthesize respinfo;
 
-@synthesize target;
+@synthesize response;
 
 @end

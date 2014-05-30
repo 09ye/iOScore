@@ -12,7 +12,7 @@
 
 @property (strong,nonatomic,readonly) NSString * guid   ;
 
-@property (strong,nonatomic) NSString * msgid;
+//@property (strong,nonatomic) NSString * msgid;
 
 - (NSData*) data;
 

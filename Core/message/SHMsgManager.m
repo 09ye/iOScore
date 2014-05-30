@@ -23,6 +23,8 @@ static SHMsgManager *__instance = nil;
     return __instance;
 }
 
+
+
 - (SHMsgManager*)init
 {
     if(self = [super init]){
@@ -34,7 +36,6 @@ static SHMsgManager *__instance = nil;
         mSenderList = [[NSMutableArray  alloc]init];
         msgHeart = [[SHMsgM alloc]init];
         msgHeart.target = @"heart";
-        [self connect];
         return self;
     }
     return nil;
@@ -43,12 +44,19 @@ static SHMsgManager *__instance = nil;
 - (void)connect
 {
     NSError *err = [[NSError alloc]init];
-    if(![mSocket connectToHost:@"192.168.1.144" onPort:54321 error:&err]){
+    if(![mSocket connectToHost:self.ipAddress onPort:self.port error:&err]){
         
     }else{
         NSLog(@"ok");
     }
 
+}
+
+- (void)connect : (NSString*) address port:(int) port
+{
+    self.port = port;
+    self.ipAddress = address;
+    [self connect];
 }
 
 - (void)senderThread:(NSObject*)object
@@ -79,7 +87,7 @@ static SHMsgManager *__instance = nil;
             bytes[13] = 0;
             bytes[14] = 0;
             bytes[15] = 0;//backup
-            
+            [SHTools intToBytes:1 byte:bytes start:4];//版本号
             [SHTools intToBytes:(int)[msg data].length byte:bytes start:8];
             [date appendBytes:&bytes length:TCP_PACKET_HEAD_LENGTH_POS];
             [date appendData:[msg data]];
@@ -128,7 +136,7 @@ static SHMsgManager *__instance = nil;
             }else{
                 code = CORE_NET_FORMAT_ERROR;
             }
-            guid = [netreutrn objectForKey:@"guid"];
+            guid = [netreutrn objectForKey:@"id"];
             //NSLog("%@",netreutrn);
             message = [netreutrn objectForKey:@"message"];
             target = [netreutrn objectForKey:@"response"];
@@ -138,6 +146,7 @@ static SHMsgManager *__instance = nil;
         SHResMsgM* msg = [[SHResMsgM alloc]init];
         msg.respinfo = res;
         msg.result = [netreutrn valueForKey:@"data"];
+        msg.response = target;
         if(msg.respinfo.code == 0){
             void(^ __taskdidfinished)(SHResMsgM *) = [mStorage valueForKey:guid] ;
             if (__taskdidfinished) {
@@ -161,7 +170,7 @@ static SHMsgManager *__instance = nil;
 -(void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
     
-    if(data && data.length > TCP_PACKET_HEAD_LENGTH_POS){
+    if(data && data.length > 16){
         NSMutableData *mdate = [[NSMutableData alloc]init];
         int version = 0;
         Byte p;
@@ -178,26 +187,28 @@ static SHMsgManager *__instance = nil;
                 if(j== 4){
                     j = 0;
                     start = 0;
-                    [self processMsg:version data:data];
+                    [self processMsg:version data:mdate];
                 }
                 j++;
                 if (j == 4) {//tou
-                    [mdate setData:nil];
+                    [mdate setData:nil];//清空
                     start = i;
+                    Byte bversion [4];
+                    NSRange rversion;
+                    rversion.length = 4;
+                    rversion.location = start+1;
+                    [data getBytes:bversion range:rversion];
+                    version = [SHTools bytesToInt:bversion offser:0];
                 }
                 continue;
             }
-            if(j == 4 && i - start > 12){//起始标示
-                Byte bversion [4];
-                NSRange rversion;
-                rversion.length = 4;
-                rversion.location = start + 4;
-                [data getBytes:bversion range:rversion];
-                version = [SHTools bytesToInt:bversion offser:0];
+            
+            else if(j == 4 && i - start > 12){//起始标示
+                
                 [mdate appendBytes:&p length:1];
             }
         }
-        [self processMsg:version data:data];
+        [self processMsg:version data:mdate];
     }
     [sock readDataWithTimeout:-1 tag:0];
 }

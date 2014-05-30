@@ -20,6 +20,13 @@
     int mHeartTime;//间隔时间
 }
 @property (assign,nonatomic) BOOL isWorking;
+
+@property (copy,nonatomic) NSString* ipAddress;
+
+@property (assign,nonatomic) int port;
+
+- (void)connect : (NSString*) address port:(int) port;
+
 + (SHMsgManager*)instance;
 
 - (void) addMsg : (SHMsg*) msg taskDidFinished :(void(^)(SHResMsgM *))taskfinished taskWillTry : (void(^)(SHResMsgM *))tasktry  taskDidFailed : (void(^)(SHResMsgM *))taskFailed;

@@ -11,7 +11,7 @@
 
 @implementation SHMsg
 
-@synthesize msgid;
+//@synthesize msgid;
 
 @synthesize guid = _guid;
 

@@ -28,6 +28,12 @@
 
 - (void)testExample
 {
+    [[SHMsgManager instance]connect:@"192.168.1.131" port:54321];
+    SHMsgM * msg = [[SHMsgM alloc]init];
+    msg.target  = @"login";
+    [msg.args setValue:@"user" forKey:@"15821406685"];
+    //[msg.args setValue:@"a" forKey:@"content"];
+
     NSThread* thread =   [[NSThread alloc]initWithTarget:self selector:@selector(thread:) object:nil];
     [thread start];
     [NSThread sleepForTimeInterval:100005];
@@ -36,8 +42,18 @@
 - (void)thread:(NSObject*)sender
 {
     while (true) {
+       
         SHMsgM * msg = [[SHMsgM alloc]init];
-        [msg start];
+        msg.target  = @"send_message";
+        [msg.args setValue:@"user" forKey:@"15821406685"];
+        [msg.args setValue:@"a" forKey:@"content"];
+        [msg start:^(SHResMsgM *rmsg) {
+            
+        } taskWillTry:^(SHResMsgM *rmsg) {
+            
+        } taskDidFailed:^(SHResMsgM *rmsg) {
+            [rmsg.respinfo show];
+        }];
         [NSThread sleepForTimeInterval:5];
 
     }

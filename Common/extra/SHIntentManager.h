@@ -12,5 +12,5 @@
 @interface SHIntentManager : NSObject
 //启动器
 + (void)open:(SHIntent*) intent;
-
++ (void)clear;
 @end

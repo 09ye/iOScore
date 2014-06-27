@@ -29,7 +29,7 @@
     mIndicatorview = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:(UIActivityIndicatorViewStyle)UIActivityIndicatorViewStyleWhite];
     [self addSubview:mIndicatorview];
     mIndicatorview.hidesWhenStopped = YES;
-    mIndicatorview.center = self.center;
+    mIndicatorview.frame = CGRectMake(self.frame.size.width/2  - 10, self.frame.size.height/2 - 10, 20, 20);
     mIndicatorview.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
 }
 
@@ -77,13 +77,17 @@
             [self.delegate imageViewDidLoadFinished:self];
         }
     }else if ([task.result isKindOfClass:[NSDate class]] || [task.result isKindOfClass:[NSMutableData class]]){
-        self.image = [[UIImage alloc]initWithData:task.result];
+        
+  
+        
+        self.image = [[UIImage alloc]initWithData:(NSData *)task.result];
+        
         if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished:)]) {
             [self.delegate imageViewDidLoadFinished:self];
         }
     }else{
         @try{
-            self.image = [[UIImage alloc]initWithData:task.result];
+            self.image = [[UIImage alloc]initWithData:(NSData *)task.result];
             if (self.delegate && [self.delegate respondsToSelector:@selector(imageViewDidLoadFinished:)]) {
                 [self.delegate imageViewDidLoadFinished:self];
             }
@@ -94,5 +98,8 @@
     }
     [mIndicatorview stopAnimating];
 }
-
+- (void) taskDidFailed:(SHTask *)task
+{
+    [mIndicatorview stopAnimating];
+}
 @end

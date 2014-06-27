@@ -9,7 +9,37 @@
 #import "SHIntentManager.h"
 
 @implementation SHIntentManager
+static UINavigationController * __NAVIGATION__;
 
++ (void)btnCancel:(UIBarButtonItem*) btn
+{
+    [UIView setAnimationDuration:1];
+    [UIView animateWithDuration:1 animations:^{
+        CGRect rect = __NAVIGATION__.view.frame;
+        rect.origin.y = [UIApplication sharedApplication].keyWindow.frame.size.height - rect.origin.y;
+        __NAVIGATION__.view.frame = rect;
+    } completion:^(BOOL finished) {
+        [__NAVIGATION__.view removeFromSuperview];
+        [__NAVIGATION__ popToRootViewControllerAnimated:NO];
+        __NAVIGATION__ = nil;
+    }];
+   
+}
+
++ (void)clear
+{
+    [UIView animateWithDuration:1 animations:^{
+        CGRect rect = __NAVIGATION__.view.frame;
+        rect.origin.y = [UIApplication sharedApplication].keyWindow.frame.size.height - rect.origin.y;
+        __NAVIGATION__.view.frame = rect;
+    } completion:^(BOOL finished) {
+        [__NAVIGATION__.view removeFromSuperview];
+        [__NAVIGATION__ popToRootViewControllerAnimated:NO];
+        __NAVIGATION__ = nil;
+    }];
+
+    
+}
 + (void)open:(SHIntent *)intent
 {
     if(intent.target){
@@ -31,7 +61,34 @@
                         [naviController pushViewController:controller animated:YES];
                     }
                 }else{
-                    [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:controller.view];
+                    controller.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCancel:self action:@selector(btnCancel:)];
+                    __NAVIGATION__ = [[UINavigationController alloc]initWithRootViewController:controller];
+                    
+                    __NAVIGATION__.view.frame = [[UIScreen mainScreen]bounds];
+                    NSDictionary *attributes=[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil];
+                    [__NAVIGATION__.navigationBar setTitleTextAttributes:attributes];
+                    __NAVIGATION__.navigationBar.translucent = NO;
+                    
+                    __NAVIGATION__.navigationBar.tintColor = [UIColor whiteColor];
+                    if(!iOS7){
+                        __NAVIGATION__.navigationBar.clipsToBounds = YES;
+                    }
+                    if([NVSkin.instance colorOfStyle:@"ColorBase"]!= nil){
+                        __NAVIGATION__.navigationBar.barTintColor = [NVSkin.instance colorOfStyle:@"ColorBase"];
+                    }
+                    [[UIApplication sharedApplication].keyWindow addSubview:__NAVIGATION__.view];
+                    __NAVIGATION__.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCancel:self action:@selector(btnCancel:)];
+                    CGRect rect = __NAVIGATION__.view.frame;
+                    rect.origin.y = [UIApplication sharedApplication].keyWindow.frame.size.height;
+                    __NAVIGATION__.view.frame = rect;
+                    
+                    [UIView animateWithDuration:1 animations:^{
+                        CGRect rect__=   rect;
+                        rect__.origin.y = 0;
+                        __NAVIGATION__.view.frame = rect__;
+                    } completion:^(BOOL finished) {
+                        
+                    }];
                 }
             }else{
                 SHContentViewController * errorController = [[SHContentViewController alloc]init];

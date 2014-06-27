@@ -32,8 +32,16 @@
             }else{
                 code = CORE_NET_FORMAT_ERROR;
             }
-            //NSLog("%@",netreutrn);
-            message = [netreutrn objectForKey:@"message"];
+#ifdef DEBUG
+            NSLog(@"%@",netreutrn);
+#endif
+            if([netreutrn valueForKey:@"msg"]){
+                message = [netreutrn objectForKey:@"msg"];
+
+            }else{
+                message = [netreutrn objectForKey:@"message"];
+
+            }
             
         }
         
@@ -62,7 +70,11 @@
                     NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
                     [dic setValue: obj forKey:@"number"];
                     p (task,resData, dic);
-                }else{
+                }
+                else if([obj isKindOfClass:[NSNull class]]){
+                    p (task,resData, [[NSObject alloc]init]);
+                }
+                else{
                     p (task,resData, obj);
                 }
                 

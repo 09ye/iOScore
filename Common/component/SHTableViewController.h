@@ -21,11 +21,17 @@
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+@property (assign, nonatomic) BOOL showTitle;
+
+- (void)loadNext;
+
 - (SHTableViewGeneralCell *)dequeueReusableGeneralCell;
 
-- (SHTableViewGeneralCell*)dequeueReusableTitleContentCell;
+- (SHTableViewTitleContentCell*)dequeueReusableTitleContentCell;
 
 - (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell;
+
+- (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell2;
 
 - (SHTableViewGeneralCell*)dequeueReusableTitleCustomCell:(NSString*)nibName identifier:(NSString*)identifier;
 
@@ -34,5 +40,9 @@
 - (SHTableViewUnReadNumberCell*) dequeueReusableunReadNumberCell;
 
 - (SHNoneViewCell*)dequeueReusableNoneViewCell;
+
+- (UITableViewCell*) tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)tableView:(UITableView *)tableView heightForGeneralRowAtIndexPath:(NSIndexPath *)indexPath;
+
 @end
 

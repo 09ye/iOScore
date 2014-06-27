@@ -12,4 +12,5 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *txtContent;
 
-@property (strong,nonatomic) NSString * content;    @end
+@property (strong,nonatomic) NSString * content;
+@end

@@ -37,6 +37,8 @@
 
 - (void)showWaitDialogForNetWorkDismissBySelf;
 
+- (void)dismissWaitDialogSuccess:(NSString*) title;
+
 - (void)alertViewCancelOnClick;
 
 - (void)alertViewEnSureOnClick;
@@ -53,5 +55,5 @@
 
 - (void)dismiss;
 
-
+- (void)btnBack:(NSObject*)sender;
 @end

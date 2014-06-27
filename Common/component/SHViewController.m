@@ -58,6 +58,9 @@
         self.navigationItem.leftBarButtonItem = barbutton;
     }
     [self loadSkin];
+    
+   
+    
     //NVSkin * skin = [[NVSkin alloc]init];
 }
 
@@ -104,6 +107,8 @@
 {
     [self showAlertDialog:content button:button otherButton:otherbutton tag:0];
 }
+
+
 - (void)showAlertDialog:(NSString*)content button:(NSString*)button otherButton:(NSString*)otherbutton tag:(int)tag
 {
     UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:content delegate:self cancelButtonTitle: otherbutton otherButtonTitles :button, nil];
@@ -138,11 +143,23 @@
 }
 -(void)showWaitDialogForNetWork
 {
+//    dispatch_async(dispatch_get_main_queue(), ^{
+        [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
+        [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleNone];
+        [MMProgressHUD showWithTitle:@"请求数据..." status:@"请稍候..."];
 
-    [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
-    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleNone];
-    [MMProgressHUD showWithTitle:@"请求数据..." status:@"请稍候..."];
+//    });
+   
+    //[self performSelector:@selector(showWaitDialogForWait) withObject:nil afterDelay:0.001];
 }
+//- (void)showWaitDialogForWait
+//{
+//    
+//    [MMProgressHUD setDisplayStyle:MMProgressHUDDisplayStylePlain];
+//    [MMProgressHUD setPresentationStyle:MMProgressHUDPresentationStyleNone];
+//    [MMProgressHUD showWithTitle:@"请求数据..." status:@"请稍候..."];
+//
+//}
 -(void)showWaitDialogForNetWorkDismissBySelf
 {
     [self showWaitDialogForNetWork];
@@ -153,6 +170,7 @@
     });
 
 }
+
 -(void)dismissWaitDialog:(NSString*)msg
 {
     [MMProgressHUD dismissWithSuccess:msg];
@@ -161,13 +179,19 @@
 
 -(void)dismissWaitDialog
 {
-    [MMProgressHUD dismiss];
-    
-}
 
+    [MMProgressHUD dismiss];
+
+}
 -(void)dismissWaitDialogSuccess
 {
     [MMProgressHUD dismissWithSuccess:@"完成"];
+    
+}
+
+-(void)dismissWaitDialogSuccess:(NSString*) title
+{
+    [MMProgressHUD dismissWithSuccess:title];
     
 }
 

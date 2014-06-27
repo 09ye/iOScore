@@ -13,7 +13,14 @@
 @implementation MMProgressHUDViewController
 
 - (void)setView:(UIView *)view{
-    [super setView:view];
+    @try {
+        [super setView:view];
+
+    }
+    @catch (NSException *exception) {
+    }
+    @finally {
+    }
     
     //this line is important. this tells the view controller to not resize
     //  the view to display the status bar.

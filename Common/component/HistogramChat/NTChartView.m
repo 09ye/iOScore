@@ -164,9 +164,9 @@ static const CGFloat colorLookupTable[10][3] =
     label.textColor = [UIColor whiteColor];    //设置文本的颜色
     label.shadowColor = [UIColor colorWithWhite:0.6f alpha:0.8f];    //设置文本的阴影色彩和透明度。
     label.shadowOffset = CGSizeMake(2.0f, 2.0f);     //设置阴影的倾斜角度。
-    label.textAlignment = UITextAlignmentCenter;     //设置文本在label中显示的位置，这里为居中。
+    label.textAlignment = NSTextAlignmentCenter;     //设置文本在label中显示的位置，这里为居中。
     //换行技巧：如下换行可实现多行显示，但要求label有足够的宽度。
-    label.lineBreakMode = UILineBreakModeWordWrap;     //指定换行模式
+    label.lineBreakMode = NSLineBreakByCharWrapping;     //指定换行模式
     label.numberOfLines = 1;    // 指定label的行数
     
     UILabel *label2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 30, _rect.size.width, 35)];   //声明UIlbel并指定其位置和长宽
@@ -175,7 +175,7 @@ static const CGFloat colorLookupTable[10][3] =
     //    label.transform = CGAffineTransformMakeRotation(0.1);     //设置label的旋转角度
     label2.text = [chartTitle objectAtIndex:1];   //设置label所显示的文本
     label2.textColor = [UIColor grayColor];    //设置文本的颜色
-    label2.textAlignment = UITextAlignmentCenter;     //设置文本在label中显示的位置，这里为居中。
+    label2.textAlignment = NSTextAlignmentCenter;     //设置文本在label中显示的位置，这里为居中。
     
     [self addSubview:label2];
     [self addSubview:label];
@@ -193,7 +193,7 @@ static const CGFloat colorLookupTable[10][3] =
     CGContextSetShadow (context, myShadowOffset, 2); 
     CGContextFillRect(context, CGRectMake(MARGIN_LEFT, _rect.size.height - 40.0, _rect.size.width - MARGIN_LEFT*2, 24.0));
     
-    int legendCount = [groupTitle count];
+    NSInteger legendCount = [groupTitle count];
     int stepWidth = MARGIN_LEFT+5;
     
     for (int i = 0; i < legendCount; i++) {
@@ -213,7 +213,7 @@ static const CGFloat colorLookupTable[10][3] =
         //    label.transform = CGAffineTransformMakeRotation(0.1);     //设置label的旋转角度
         label2.text = [groupTitle objectAtIndex:i];   //设置label所显示的文本
         label2.textColor = [UIColor grayColor];    //设置文本的颜色
-        label2.textAlignment = UITextAlignmentLeft;     //设置文本在label中显示的位置，这里为居中。
+        label2.textAlignment = NSTextAlignmentLeft;     //设置文本在label中显示的位置，这里为居中。
         [self addSubview:label2];
         //[label2 release];
         
@@ -262,9 +262,13 @@ static const CGFloat colorLookupTable[10][3] =
 	points2[1] = CGPointMake(MARGIN_LEFT -10+MARGIN_SCALE_BETWEEN, _rect.size.height - MARGIN_BOTTOM + 1-MARGIN_SCALE_BETWEEN);
 	points2[2] = CGPointMake(_rect.size.width - 10+MARGIN_SCALE_BETWEEN, _rect.size.height - MARGIN_BOTTOM + 1-MARGIN_SCALE_BETWEEN);
     
-    float partren[] = {2,3};
+    CGFloat partren[] = {2,3};
     
-    CGContextSetLineDash(context, 0,partren , 2);
+ //   CGContextSetLineDash(context, 0 ,partren, 2);
+    CGContextSetLineDash(context, 0.0f, partren, 2);
+    
+ 
+    
     CGContextAddLines(context, points2, 3);
     CGContextSetAllowsAntialiasing(context, NO);
     CGContextDrawPath(context, kCGPathStroke);
@@ -292,8 +296,10 @@ static const CGFloat colorLookupTable[10][3] =
 		CGPoint points3[2];
 		points3[0] = CGPointMake(MARGIN_LEFT - 10, y);
 		points3[1] = CGPointMake(MARGIN_LEFT - 10+MARGIN_SCALE_BETWEEN, y-MARGIN_SCALE_BETWEEN);
-		float partren[] = {2,3};
         
+		//float partren[] = {2,3};
+        CGFloat partren[] = {2,3};
+
 		CGContextSetLineDash(context, 0,partren , 2);
 		CGContextAddLines(context, points3, 2);
 		CGContextDrawPath(context, kCGPathStroke);
@@ -320,7 +326,7 @@ static const CGFloat colorLookupTable[10][3] =
             label2.text = [xAxisLabel objectAtIndex:i];   //设置label所显示的文本
         }
         label2.textColor = [UIColor blackColor];    //设置文本的颜色
-        label2.textAlignment = UITextAlignmentLeft;     //设置文本在label中显示的位置，这里为居中。
+        label2.textAlignment = NSTextAlignmentLeft;     //设置文本在label中显示的位置，这里为居中。
         [self addSubview:label2];
         //[label2 release];
         
@@ -434,7 +440,7 @@ static const CGFloat colorLookupTable[10][3] =
 #pragma mark - 
 
 -(void)calcScales:(CGRect)_rect{
-	int columnCount = 0;
+	NSInteger columnCount = 0;
 	for(NSArray *g in groupData){
         if (!columnCount) {
             columnCount = [g count];

@@ -49,7 +49,7 @@
     SHTableViewTitleImageCell * cell = (SHTableViewTitleImageCell*)[super dequeueReusableTitleImageCell];
     NSObject * obj = [self.list objectAtIndex:indexPath.row];
     if([obj isKindOfClass:[NSString class]] == YES){
-        cell.labTitle.text = obj;
+        cell.labTitle.text = (NSString  *)obj;
     }
     return cell;
 }

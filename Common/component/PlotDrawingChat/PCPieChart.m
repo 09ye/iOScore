@@ -204,7 +204,7 @@
 				NSString *percentageText = [NSString stringWithFormat:@"%.1f%%", component.value/total*100];
 				CGSize optimumSize = [percentageText sizeWithFont:self.percentageFont constrainedToSize:CGSizeMake(max_text_width,100)];
 				CGRect percFrame = CGRectMake(5, left_label_y,  max_text_width, optimumSize.height);
-				[percentageText drawInRect:percFrame withFont:self.percentageFont lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentRight];
+				[percentageText drawInRect:percFrame withFont:self.percentageFont lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentRight];
 				
 				if (self.showArrow)
 				{
@@ -312,7 +312,7 @@
 				left_label_y += optimumSize.height - 4;
 				optimumSize = [component.title sizeWithFont:self.titleFont constrainedToSize:CGSizeMake(max_text_width,100)];
 				CGRect titleFrame = CGRectMake(5, left_label_y, max_text_width, optimumSize.height);
-				[component.title drawInRect:titleFrame withFont:self.titleFont lineBreakMode:UILineBreakModeWordWrap alignment:UITextAlignmentRight];
+				[component.title drawInRect:titleFrame withFont:self.titleFont lineBreakMode:NSLineBreakByWordWrapping alignment:NSTextAlignmentRight];
 				left_label_y += optimumSize.height + 10;
 			}
 			else 

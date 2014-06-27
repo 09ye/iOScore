@@ -16,6 +16,8 @@
 
 @implementation SHTableViewController
 
+@synthesize showTitle;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -30,6 +32,19 @@
     return 0;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (mIsEnd) {
+        if(mList.count == 0){
+            return 1;
+        }else{
+            return mList.count;
+        }
+    }else{
+        return mList.count + 1;
+    }
+}
+
 - (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, self.view.frame.size.width - 20, 44)];
@@ -39,6 +54,19 @@
     label.textAlignment = NSTextAlignmentCenter;
     return label;
 }
+
+- (void)loadSkin
+{
+    [super loadSkin];
+    if(self.showTitle){
+        UIImage * img = [NVSkin.instance image:@"icon-top.png"];
+        UIImageView * imgView =[[UIImageView alloc]initWithImage: img];
+        imgView.frame = CGRectMake(self.tableView.frame.size.width/2 - img.size.width/2, -img.size.height - 10, img.size.width, img.size.height);
+        [self.tableView addSubview:imgView];
+    }
+    
+}
+
 
 - (void)viewDidLoad
 {
@@ -69,7 +97,7 @@
     return [self.tableView dequeueReusableGeneralCell];
 }
 
-- (SHTableViewGeneralCell*)dequeueReusableTitleContentCell
+- (SHTableViewTitleContentCell*)dequeueReusableTitleContentCell
 {
     
     return [self.tableView dequeueReusableTitleContentCell];
@@ -85,6 +113,12 @@
 {
     
     return [self.tableView dequeueReusableTitleImageCell];
+}
+
+- (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell2
+{
+    
+    return [self.tableView dequeueReusableTitleImageCell2];
 }
 
 - (SHTableViewTitleContentBottomCell*)dequeueReusableTitleContentBottomCell
@@ -105,19 +139,45 @@
     return [self.tableView dequeueReusableNoneViewCell];
 }
 
+- (SHLoadingViewCell*)dequeueReusableLoadingCell
+{
+    
+    return [self.tableView dequeueReusableLoadingCell];
+}
+
+-(UITableViewCell*) tableView:(UITableView *)tableView dequeueReusableStandardCellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.row >= mList.count || mList.count == 0 ){
+        return 44;
+    }else{
+        return [self tableView:self.tableView heightForGeneralRowAtIndexPath:indexPath];
+    }
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForGeneralRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 44;
+}
+
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row >= mList.count && mList.count == 0 ){
+    if(indexPath.row >= mList.count || mList.count == 0 ){
         SHNoneViewCell * cell;
         if(mIsEnd){
-             cell = [self dequeueReusableNoneViewCell];
-             cell.labContent.text = @"暂无相关讯息...";
+            cell = [self dequeueReusableNoneViewCell];
+            cell.labContent.text = @"暂无相关讯息...";
         }else{
-             cell = [self dequeueReusableNoneViewCell];
-             cell.labContent.text = @"正在加载数据...";
+            cell = [self dequeueReusableLoadingCell];
+            [self loadNext];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
+    }else{
+        return [self tableView:tableView dequeueReusableStandardCellForRowAtIndexPath:indexPath];
     }
     return nil;
 }

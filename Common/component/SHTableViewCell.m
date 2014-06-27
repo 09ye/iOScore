@@ -38,8 +38,7 @@
 -(void)loadSkin
 {
     self.selectedBackgroundView.backgroundColor = [NVSkin.instance colorOfStyle:@"ColorStyleCellSelected"];
-    self.backgroundColor = [UIColor clearColor];
-
+    self.backgroundColor =  [NVSkin.instance colorOfStyle:@"ColorBackGround"];
 }
 
 - (void) alternate :(NSIndexPath*) indexpath

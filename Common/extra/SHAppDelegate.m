@@ -22,7 +22,7 @@
     self.viewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    [NSThread sleepForTimeInterval:3];
+    [NSThread sleepForTimeInterval:1];
     return YES;
 }
 
@@ -55,16 +55,7 @@
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
     //NSLog(@"%@", [url absoluteString]);
-    NSArray * args = [[url query] componentsSeparatedByString:@"&"];
-    SHIntent * intent = [[SHIntent alloc]init];
-    intent.target = [url host];
-    for (NSString* arg  in args) {
-        NSArray* a =[arg componentsSeparatedByString:@"="];
-        if(a.count > 1) {
-            [intent.args setValue:[a objectAtIndex:1] forKey:[a objectAtIndex:0]];
-        }
-    }
-    [[UIApplication sharedApplication]open:intent];
-    return YES;
+    [[UIApplication sharedApplication] openURL2:url];
+      return YES;
 }
 @end

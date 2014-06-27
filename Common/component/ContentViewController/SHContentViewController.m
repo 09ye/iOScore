@@ -23,6 +23,17 @@
     return self;
 }
 
+- (BOOL)checkIntent:(NSString*)error
+{
+    if(self.intent){
+        self.title = [self.intent.args valueForKey:@"title"];
+        self.content =  [self.intent.args valueForKey:@"content"];
+        return YES;
+    }else{
+        return NO;
+    }
+    
+}
 - (void)loadSkin
 {
     [super loadSkin];

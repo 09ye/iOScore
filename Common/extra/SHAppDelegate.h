@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 MobilityChina. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "MainViewController.h"
 
 @interface SHAppDelegate :UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) UIViewController *viewController;
+@property (strong, nonatomic) MainViewController *viewController;
 
 @end

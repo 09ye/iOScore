@@ -552,6 +552,31 @@
 }
 
 #pragma mark - Init
+- (void)awakeFromNib
+{
+    CGRect frame = self.frame;
+    frame.size.width = kVRGCalendarViewWidth;
+    self.frame = frame;
+    if (self) {
+        self.contentMode = UIViewContentModeTop;
+        self.clipsToBounds=YES;
+        
+        isAnimating=NO;
+        self.labelCurrentMonth = [[UILabel alloc] initWithFrame:CGRectMake(34, 0, kVRGCalendarViewWidth-68, 40)];
+        [self addSubview:labelCurrentMonth];
+        labelCurrentMonth.backgroundColor=[UIColor whiteColor];
+        labelCurrentMonth.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:17];
+        labelCurrentMonth.textColor = [UIColor colorWithHexString:@"0x383838"];
+        labelCurrentMonth.textAlignment = UITextAlignmentCenter;
+        
+        [self performSelector:@selector(reset) withObject:nil afterDelay:0.1]; //so delegate can be set after init and still get called on init
+        //        [self reset];
+    }
+    self.layer.cornerRadius = 5;
+    self.layer.masksToBounds = YES;
+
+}
+
 -(id)init {
     self = [super initWithFrame:CGRectMake(0, 0, kVRGCalendarViewWidth, 0)];
     if (self) {
@@ -570,6 +595,8 @@
         //        [self reset];
     }
     return self;
+    self.layer.cornerRadius = 5;
+    self.layer.masksToBounds = YES;
 }
 
 -(void)dealloc {

@@ -13,4 +13,9 @@
 //- (void) openURL:(NSString *)url;
 
 - (void) open:(SHIntent *)intent;
+
+- (void) openStr :(NSString*) url;
+
+- (void) openURL2 :(NSURL*) url;
+
 @end

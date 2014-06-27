@@ -7,14 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "SHLoadingViewCell.h"
 @interface UITableView(Addition)
 
 - (SHTableViewGeneralCell *)dequeueReusableGeneralCell;
 
-- (SHTableViewGeneralCell*)dequeueReusableTitleContentCell;
+- (SHTableViewTitleContentCell*)dequeueReusableTitleContentCell;
 
 - (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell;
+
+- (SHTableViewTitleImageCell*)dequeueReusableTitleImageCell2;
 
 - (SHTableViewGeneralCell*)dequeueReusableTitleCustomCell:(NSString*)nibName identifier:(NSString*)identifier;
 
@@ -24,4 +26,5 @@
 
 - (SHNoneViewCell*)dequeueReusableNoneViewCell;
 
+- (SHLoadingViewCell*)dequeueReusableLoadingCell;
 @end

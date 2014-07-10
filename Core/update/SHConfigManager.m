@@ -83,13 +83,13 @@ static SHConfigManager * __instance;
             
         }
         
-        if([Entironment.instance.version compare :self.newversion] == NSOrderedAscending){
+        if([SHEntironment.instance.version compare :self.newversion] == NSOrderedAscending){
             if(_isMaintenanceMode){
                 UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:nil];
                 alert.delegate = self;
                 [alert show];
                 isShow = YES;
-            }else if ([Entironment.instance.version compare :self.minversion] == NSOrderedAscending){
+            }else if ([SHEntironment.instance.version compare :self.minversion] == NSOrderedAscending){
                 UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"提示" message:_content delegate:self cancelButtonTitle:@"升级" otherButtonTitles:nil];
                 alert.delegate = self;
                 [alert show];

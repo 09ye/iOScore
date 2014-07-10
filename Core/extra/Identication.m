@@ -7,40 +7,40 @@
 //
 
 #import "Identication.h"
-#import "Entironment.h"
+#import "SHEntironment.h"
 
 @implementation Identication
 
 +(NSDictionary * )identication
 {
     NSMutableDictionary * identication = [[NSMutableDictionary alloc]init];
-    if(Entironment.instance.sessionid.length > 0){
+    if(SHEntironment.instance.sessionid.length > 0){
         [identication setObject:@"session" forKey:@"type"];
-        if(Entironment.instance.sessionid){
-            [identication setObject:Entironment.instance.sessionid forKey:@"session_id"];
+        if(SHEntironment.instance.sessionid){
+            [identication setObject:SHEntironment.instance.sessionid forKey:@"session_id"];
         }
     }else{
         [identication setObject:@"basic" forKey:@"type"];
-        if(Entironment.instance.loginName && Entironment.instance.password){
-            [identication setObject:Entironment.instance.loginName forKey:@"username"];
-            [identication setObject:Entironment.instance.password forKey:@"password"];
+        if(SHEntironment.instance.loginName && SHEntironment.instance.password){
+            [identication setObject:SHEntironment.instance.loginName forKey:@"username"];
+            [identication setObject:SHEntironment.instance.password forKey:@"password"];
         }
 #if DEBUG
-        if(Entironment.instance.deviceid.length == 0){
+        if(SHEntironment.instance.deviceid.length == 0){
             [identication setObject:@"111111" forKey:@"imei"];
         }else{
-            [identication setObject:Entironment.instance.deviceid forKey:@"imei"];
+            [identication setObject:SHEntironment.instance.deviceid forKey:@"imei"];
         }
        
 #else
-        [identication setObject:Entironment.instance.deviceid forKey:@"imei"];
+        [identication setObject:SHEntironment.instance.deviceid forKey:@"imei"];
 #endif
     }
 //    if ( Entironment.instance.userId) {
 //        [identication setObject:Entironment.instance.userId forKey:@"shop"];
 //    }
-    [identication setObject:Entironment.instance.deviceInfo forKey:@"info"];
-    [identication setObject:Entironment.instance.version.description forKey:@"version"];
+    [identication setObject:SHEntironment.instance.deviceInfo forKey:@"info"];
+    [identication setObject:SHEntironment.instance.version.description forKey:@"version"];
     return identication;
 }
 @end

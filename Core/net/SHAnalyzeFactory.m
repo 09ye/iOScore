@@ -61,7 +61,7 @@
             if([obj isKindOfClass:[NSDictionary class]]){
                 NSDictionary * d = (NSDictionary*)obj;
                 if([[d allKeys] containsObject:@"session_id"]){
-                    Entironment.instance.sessionid = [d valueForKey:@"session_id"];
+                    SHEntironment.instance.sessionid = [d valueForKey:@"session_id"];
                 }
             }
             

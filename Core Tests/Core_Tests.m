@@ -28,6 +28,7 @@
 
 - (void)testExample
 {
+    [SHTools encodeToPercentEscapeString:@"http://ass"];
     [[SHMsgManager instance]connect:@"192.168.1.131" port:54321];
     SHMsgM * msg = [[SHMsgM alloc]init];
     msg.target  = @"login";

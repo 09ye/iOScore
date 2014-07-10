@@ -8,6 +8,6 @@
 
 #import "SHTask.h"
 
-@interface SHHttpTaskM : SHTask
+@interface SHHttpTaskM : SHHttpTask
 
 @end

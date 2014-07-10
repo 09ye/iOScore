@@ -42,10 +42,7 @@
                 [self processData];
                 return;
             }
-            
-            
         }
-      
     }
       [self doRequest];
 }

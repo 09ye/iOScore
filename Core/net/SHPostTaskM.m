@@ -7,7 +7,7 @@
 //
 
 #import "SHPostTaskM.h"
-#import "Entironment.h"
+#import "SHEntironment.h"
 #import "SHCacheManager.h"
 #import "Identication.h"
 #import "SHAnalyzeFactory.h"
@@ -61,7 +61,7 @@
                 if(times < 60 * 60 * 24){
                     self.isCache = YES;
                     __data = [array objectAtIndex:0];
-                    [self processData];
+                    [self performSelector:@selector(processData) withObject:nil afterDelay:0.1];
                     return;
                 }
             }

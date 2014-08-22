@@ -9,8 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "SHTask.h"
 
+@interface SHAnalyzeFactoryExtension <NSObject>
+
+-(BOOL) analyzeDate:(SHTask *) task Data:(NSData*)data;
+
+@end
+
 @interface SHAnalyzeFactory : NSObject
 
 + (void) analyze:(SHTask *) task Data:(NSData*)data;
 
++ (void) setAnalyExtension:(SHAnalyzeFactoryExtension *) delegate;
 @end

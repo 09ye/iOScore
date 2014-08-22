@@ -26,12 +26,13 @@
 		1A04E52F1925B44800B766D7 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DA917BF84CE006B68EB /* libCore.a */; };
 		1A04E5361925B47B00B766D7 /* Core Tests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A04E5301925B47B00B766D7 /* Core Tests-Info.plist */; };
 		1A04E5371925B47B00B766D7 /* Core_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E5321925B47B00B766D7 /* Core_Tests.m */; };
-		1A8A57621929D59800F36695 /* GCDAsyncSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4DE1924C2BB00B766D7 /* GCDAsyncSocket.h */; };
-		1A8A57631929D59800F36695 /* GCDAsyncUdpSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */; };
-		1A8A57661929D67400F36695 /* SHMsg.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4CE1924C2B000B766D7 /* SHMsg.h */; };
-		1A8A57671929D67400F36695 /* SHMsgM.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4D01924C2B000B766D7 /* SHMsgM.h */; };
-		1A8A57681929D67400F36695 /* SHMsgManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4D21924C2B000B766D7 /* SHMsgManager.h */; };
-		1A8A57691929D67400F36695 /* SHResMsgM.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 1A04E4D41924C2B000B766D7 /* SHResMsgM.h */; };
+		1A1F09DB19A75644000D7568 /* SHAnalyzeFactory.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8B41BAD180CE7A500069506 /* SHAnalyzeFactory.h */; };
+		1A8A57621929D59800F36695 /* GCDAsyncSocket.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 1A04E4DE1924C2BB00B766D7 /* GCDAsyncSocket.h */; };
+		1A8A57631929D59800F36695 /* GCDAsyncUdpSocket.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */; };
+		1A8A57661929D67400F36695 /* SHMsg.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 1A04E4CE1924C2B000B766D7 /* SHMsg.h */; };
+		1A8A57671929D67400F36695 /* SHMsgM.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 1A04E4D01924C2B000B766D7 /* SHMsgM.h */; };
+		1A8A57681929D67400F36695 /* SHMsgManager.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 1A04E4D21924C2B000B766D7 /* SHMsgManager.h */; };
+		1A8A57691929D67400F36695 /* SHResMsgM.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 1A04E4D41924C2B000B766D7 /* SHResMsgM.h */; };
 		775A7FFC187116D600D190B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775A7FFB187116D600D190B4 /* SystemConfiguration.framework */; };
 		9E2EDD2918580B0A00F8F591 /* SHFlowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E83E17DE1856EA12001E29D3 /* SHFlowManager.m */; };
 		9E2EDD2A18580B0C00F8F591 /* SHPrivateAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E84AB7211855B680005538A5 /* SHPrivateAPI.m */; };
@@ -42,15 +43,15 @@
 		9E2EDD2F18580B2B00F8F591 /* SHFuck.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
 		9E33DB1818584F55008C61AC /* SHLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA09A1B185840BB0000A7A3 /* SHLogger.m */; };
 		9E33DB1918584F5B008C61AC /* SHLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EA09A1A185840BB0000A7A3 /* SHLogger.h */; };
-		9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EA09A1A185840BB0000A7A3 /* SHLogger.h */; };
+		9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 9EA09A1A185840BB0000A7A3 /* SHLogger.h */; };
 		9EC3270A19079F5500AE1567 /* SHModuleHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC3270819079F5500AE1567 /* SHModuleHelper.h */; };
 		9EC3270B19079F5500AE1567 /* SHModuleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3270919079F5500AE1567 /* SHModuleHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9EC3270C19079F6800AE1567 /* SHModuleHelper.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EC3270819079F5500AE1567 /* SHModuleHelper.h */; };
+		9EC3270C19079F6800AE1567 /* SHModuleHelper.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 9EC3270819079F5500AE1567 /* SHModuleHelper.h */; };
 		9EC327111907A39500AE1567 /* SHIntent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EC3270D1907A39500AE1567 /* SHIntent.h */; };
 		9EC327121907A39500AE1567 /* SHIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC3270E1907A39500AE1567 /* SHIntent.m */; };
-		9EC327151907A3BB00AE1567 /* SHIntent.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9EC3270D1907A39500AE1567 /* SHIntent.h */; };
+		9EC327151907A3BB00AE1567 /* SHIntent.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = 9EC3270D1907A39500AE1567 /* SHIntent.h */; };
 		E8080DAD17BF84CE006B68EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
-		E8080DB217BF84CE006B68EB /* Core.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080DB117BF84CE006B68EB /* Core.h */; };
+		E8080DB217BF84CE006B68EB /* Core.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8080DB117BF84CE006B68EB /* Core.h */; };
 		E8080E2617BF8E99006B68EB /* SHObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2517BF8E99006B68EB /* SHObject.m */; };
 		E8080E2917BF8EAD006B68EB /* SHTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2817BF8EAD006B68EB /* SHTask.m */; };
 		E8080E2C17BF907E006B68EB /* SHPostTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8080E2B17BF907E006B68EB /* SHPostTask.m */; };
@@ -60,65 +61,65 @@
 		E81E443518179A1000EA9090 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = E81E442C18179A1000EA9090 /* NSData+AES.m */; };
 		E81E443618179A1000EA9090 /* NSString+MD5.h in Headers */ = {isa = PBXBuildFile; fileRef = E81E442D18179A1000EA9090 /* NSString+MD5.h */; };
 		E81E443718179A1000EA9090 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = E81E442E18179A1000EA9090 /* NSString+MD5.m */; };
-		E81E443D18179B2C00EA9090 /* NSData+AES.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E81E442B18179A1000EA9090 /* NSData+AES.h */; };
-		E81E443E18179B2C00EA9090 /* NSString+MD5.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E81E442D18179A1000EA9090 /* NSString+MD5.h */; };
+		E81E443D18179B2C00EA9090 /* NSData+AES.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E81E442B18179A1000EA9090 /* NSData+AES.h */; };
+		E81E443E18179B2C00EA9090 /* NSString+MD5.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E81E442D18179A1000EA9090 /* NSString+MD5.h */; };
 		E827F8E9181F8B7000389134 /* SHUser.h in Headers */ = {isa = PBXBuildFile; fileRef = E827F8E7181F8B7000389134 /* SHUser.h */; };
-		E827F8EB181F8CE000389134 /* SHUser.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E827F8E7181F8B7000389134 /* SHUser.h */; };
+		E827F8EB181F8CE000389134 /* SHUser.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E827F8E7181F8B7000389134 /* SHUser.h */; };
 		E8329E0C1855CD0C00D40DAF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8329E0B1855CD0C00D40DAF /* Security.framework */; };
 		E83E17DF1856EA12001E29D3 /* SHFlowManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E83E17DD1856EA12001E29D3 /* SHFlowManager.h */; };
-		E83E17FF18570796001E29D3 /* SHFlowManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E83E17DD1856EA12001E29D3 /* SHFlowManager.h */; };
+		E83E17FF18570796001E29D3 /* SHFlowManager.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E83E17DD1856EA12001E29D3 /* SHFlowManager.h */; };
 		E84AB7221855B680005538A5 /* SHPrivateAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E84AB7201855B680005538A5 /* SHPrivateAPI.h */; };
 		E84AB7291855B8FF005538A5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E84AB7281855B8FF005538A5 /* CoreTelephony.framework */; };
-		E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E84AB7201855B680005538A5 /* SHPrivateAPI.h */; };
+		E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E84AB7201855B680005538A5 /* SHPrivateAPI.h */; };
 		E858D6661803B28F0071DA24 /* SHConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6621803B28F0071DA24 /* SHConfigManager.h */; };
 		E858D6681803B28F0071DA24 /* SHVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E858D6641803B28F0071DA24 /* SHVersion.h */; };
-		E858D66F1803B43D0071DA24 /* SHConfigManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E858D6621803B28F0071DA24 /* SHConfigManager.h */; };
-		E858D6701803B43D0071DA24 /* SHVersion.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E858D6641803B28F0071DA24 /* SHVersion.h */; };
+		E858D66F1803B43D0071DA24 /* SHConfigManager.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E858D6621803B28F0071DA24 /* SHConfigManager.h */; };
+		E858D6701803B43D0071DA24 /* SHVersion.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E858D6641803B28F0071DA24 /* SHVersion.h */; };
 		E85F009117EE9A2200F9F02C /* SHIIOSVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = E85F008F17EE9A2200F9F02C /* SHIIOSVersion.h */; };
 		E85F009217EE9A2200F9F02C /* SHIIOSVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = E85F009017EE9A2200F9F02C /* SHIIOSVersion.m */; };
 		E86840231823530C00938464 /* SHTools.h in Headers */ = {isa = PBXBuildFile; fileRef = E86840211823530C00938464 /* SHTools.h */; };
 		E86840241823530C00938464 /* SHTools.m in Sources */ = {isa = PBXBuildFile; fileRef = E86840221823530C00938464 /* SHTools.m */; };
-		E86840251823535200938464 /* SHTools.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E86840211823530C00938464 /* SHTools.h */; };
+		E86840251823535200938464 /* SHTools.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E86840211823530C00938464 /* SHTools.h */; };
 		E86840281823810B00938464 /* IPAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = E86840261823810B00938464 /* IPAddress.h */; };
 		E86840291823810B00938464 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = E86840271823810B00938464 /* IPAddress.m */; };
-		E868402A1823818F00938464 /* IPAddress.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E86840261823810B00938464 /* IPAddress.h */; };
-		E876E9EE17EEACA3005D8361 /* SHIIOSVersion.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E85F008F17EE9A2200F9F02C /* SHIIOSVersion.h */; };
+		E868402A1823818F00938464 /* IPAddress.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E86840261823810B00938464 /* IPAddress.h */; };
+		E876E9EE17EEACA3005D8361 /* SHIIOSVersion.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E85F008F17EE9A2200F9F02C /* SHIIOSVersion.h */; };
 		E87F0A0917E16757009E57E8 /* SHPostTaskM.h in Headers */ = {isa = PBXBuildFile; fileRef = E87F0A0717E16757009E57E8 /* SHPostTaskM.h */; };
 		E87F0A0A17E16757009E57E8 /* SHPostTaskM.m in Sources */ = {isa = PBXBuildFile; fileRef = E87F0A0817E16757009E57E8 /* SHPostTaskM.m */; };
-		E87F0A0B17E1F412009E57E8 /* SHPostTaskM.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E87F0A0717E16757009E57E8 /* SHPostTaskM.h */; };
+		E87F0A0B17E1F412009E57E8 /* SHPostTaskM.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E87F0A0717E16757009E57E8 /* SHPostTaskM.h */; };
 		E87F0A0F17E1FEF4009E57E8 /* SHEntironment.h in Headers */ = {isa = PBXBuildFile; fileRef = E87F0A0D17E1FEF3009E57E8 /* SHEntironment.h */; };
 		E87F0A1017E1FEF4009E57E8 /* SHEntironment.m in Sources */ = {isa = PBXBuildFile; fileRef = E87F0A0E17E1FEF3009E57E8 /* SHEntironment.m */; };
-		E87F0A1117E203D2009E57E8 /* SHEntironment.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E87F0A0D17E1FEF3009E57E8 /* SHEntironment.h */; };
+		E87F0A1117E203D2009E57E8 /* SHEntironment.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E87F0A0D17E1FEF3009E57E8 /* SHEntironment.h */; };
 		E87F0A1917E2A3DC009E57E8 /* Respinfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E87F0A1717E2A3DB009E57E8 /* Respinfo.h */; };
 		E87F0A1A17E2A3DC009E57E8 /* Respinfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E87F0A1817E2A3DB009E57E8 /* Respinfo.m */; };
-		E87F0A1B17E2A448009E57E8 /* Respinfo.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E87F0A1717E2A3DB009E57E8 /* Respinfo.h */; };
+		E87F0A1B17E2A448009E57E8 /* Respinfo.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E87F0A1717E2A3DB009E57E8 /* Respinfo.h */; };
 		E87F0A1E17E2A623009E57E8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F0A1D17E2A623009E57E8 /* UIKit.framework */; };
 		E887F78717F1C88B00871292 /* Identication.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F78517F1C88B00871292 /* Identication.h */; };
 		E887F78817F1C88B00871292 /* Identication.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F78617F1C88B00871292 /* Identication.m */; };
 		E887F78D17F284EE00871292 /* SHCrashManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F78B17F284EE00871292 /* SHCrashManager.h */; };
 		E887F78E17F284EE00871292 /* SHCrashManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F78C17F284EE00871292 /* SHCrashManager.m */; };
-		E887F78F17F287F300871292 /* SHCrashManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F78B17F284EE00871292 /* SHCrashManager.h */; };
+		E887F78F17F287F300871292 /* SHCrashManager.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E887F78B17F284EE00871292 /* SHCrashManager.h */; };
 		E887F79317F2AD8500871292 /* FileManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F79117F2AD8500871292 /* FileManager.h */; };
 		E887F79417F2AD8500871292 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F79217F2AD8500871292 /* FileManager.m */; };
-		E887F79517F2AE8900871292 /* FileManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F79117F2AD8500871292 /* FileManager.h */; };
+		E887F79517F2AE8900871292 /* FileManager.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E887F79117F2AD8500871292 /* FileManager.h */; };
 		E887F79917F422A000871292 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
 		E887F79A17F422A000871292 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E887F79817F422A000871292 /* Base64.m */; };
-		E887F79B17F422AC00871292 /* Base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
+		E887F79B17F422AC00871292 /* Base64.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E887F79717F422A000871292 /* Base64.h */; };
 		E8B41BAF180CE7A500069506 /* SHAnalyzeFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = E8B41BAD180CE7A500069506 /* SHAnalyzeFactory.h */; };
 		E8B41BB0180CE7A500069506 /* SHAnalyzeFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BAE180CE7A500069506 /* SHAnalyzeFactory.m */; };
 		E8B8414117D70676006A0291 /* SHSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8412317D6FB31006A0291 /* SHSkin.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		E8B8415517D70A58006A0291 /* SHObject.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2417BF8E99006B68EB /* SHObject.h */; };
-		E8B8415617D70A58006A0291 /* SHSkin.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B8412117D6FB26006A0291 /* SHSkin.h */; };
-		E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2717BF8EAD006B68EB /* SHTask.h */; };
-		E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8080E2A17BF907E006B68EB /* SHPostTask.h */; };
+		E8B8415517D70A58006A0291 /* SHObject.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8080E2417BF8E99006B68EB /* SHObject.h */; };
+		E8B8415617D70A58006A0291 /* SHSkin.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8B8412117D6FB26006A0291 /* SHSkin.h */; };
+		E8B8415717D70A58006A0291 /* SHTask.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8080E2717BF8EAD006B68EB /* SHTask.h */; };
+		E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8080E2A17BF907E006B68EB /* SHPostTask.h */; };
 		E8BDF6421863EC9600AC9B82 /* SHHttpTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E8BDF6401863EC9600AC9B82 /* SHHttpTask.h */; };
 		E8BDF6431863EC9600AC9B82 /* SHHttpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BDF6411863EC9600AC9B82 /* SHHttpTask.m */; };
 		E8BDF6461863ED0D00AC9B82 /* SHHttpTaskM.h in Headers */ = {isa = PBXBuildFile; fileRef = E8BDF6441863ED0D00AC9B82 /* SHHttpTaskM.h */; };
 		E8BDF6471863ED0D00AC9B82 /* SHHttpTaskM.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BDF6451863ED0D00AC9B82 /* SHHttpTaskM.m */; };
-		E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8BDF6401863EC9600AC9B82 /* SHHttpTask.h */; };
-		E8BDF6491863F01700AC9B82 /* SHHttpTaskM.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8BDF6441863ED0D00AC9B82 /* SHHttpTaskM.h */; };
+		E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8BDF6401863EC9600AC9B82 /* SHHttpTask.h */; };
+		E8BDF6491863F01700AC9B82 /* SHHttpTaskM.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8BDF6441863ED0D00AC9B82 /* SHHttpTaskM.h */; };
 		E8C835B1180D0F8600F88A3E /* SHFuck.h in Sources */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
-		E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
+		E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8B41BB1180D0B1700069506 /* SHFuck.h */; };
 		E8D4E6D21857495B00CBB35A /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D4E6D01857495B00CBB35A /* Reachability.h */; };
 		E8D4E6D31857495B00CBB35A /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D4E6D11857495B00CBB35A /* Reachability.m */; };
 		E8E03BD417E34A98002546C3 /* DatabaseOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD217E34A98002546C3 /* DatabaseOperation.h */; };
@@ -126,7 +127,7 @@
 		E8E03BD917E6B1AB002546C3 /* SHCacheManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
 		E8E03BDA17E6B1AB002546C3 /* SHCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E03BD817E6B1AB002546C3 /* SHCacheManager.m */; };
 		E8E03BDE17E6B4BB002546C3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E8E03BDD17E6B4BB002546C3 /* libsqlite3.dylib */; };
-		E8EAB699186000DC00144DDE /* SHCacheManager.h in Copy Files */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
+		E8EAB699186000DC00144DDE /* SHCacheManager.h in Copy Files (35 items) */ = {isa = PBXBuildFile; fileRef = E8E03BD717E6B1AB002546C3 /* SHCacheManager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,48 +141,49 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E8080DA717BF84CE006B68EB /* Copy Files */ = {
+		E8080DA717BF84CE006B68EB /* Copy Files (35 items) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 12;
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 11;
 			files = (
-				1A8A57661929D67400F36695 /* SHMsg.h in Copy Files */,
-				1A8A57671929D67400F36695 /* SHMsgM.h in Copy Files */,
-				1A8A57681929D67400F36695 /* SHMsgManager.h in Copy Files */,
-				1A8A57691929D67400F36695 /* SHResMsgM.h in Copy Files */,
-				1A8A57621929D59800F36695 /* GCDAsyncSocket.h in Copy Files */,
-				1A8A57631929D59800F36695 /* GCDAsyncUdpSocket.h in Copy Files */,
-				9EC327151907A3BB00AE1567 /* SHIntent.h in Copy Files */,
-				9EC3270C19079F6800AE1567 /* SHModuleHelper.h in Copy Files */,
-				E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files */,
-				E8BDF6491863F01700AC9B82 /* SHHttpTaskM.h in Copy Files */,
-				E8EAB699186000DC00144DDE /* SHCacheManager.h in Copy Files */,
-				9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files */,
-				E83E17FF18570796001E29D3 /* SHFlowManager.h in Copy Files */,
-				E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files */,
-				E868402A1823818F00938464 /* IPAddress.h in Copy Files */,
-				E86840251823535200938464 /* SHTools.h in Copy Files */,
-				E827F8EB181F8CE000389134 /* SHUser.h in Copy Files */,
-				E81E443D18179B2C00EA9090 /* NSData+AES.h in Copy Files */,
-				E81E443E18179B2C00EA9090 /* NSString+MD5.h in Copy Files */,
-				E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files */,
-				E858D66F1803B43D0071DA24 /* SHConfigManager.h in Copy Files */,
-				E858D6701803B43D0071DA24 /* SHVersion.h in Copy Files */,
-				E887F79B17F422AC00871292 /* Base64.h in Copy Files */,
-				E887F79517F2AE8900871292 /* FileManager.h in Copy Files */,
-				E887F78F17F287F300871292 /* SHCrashManager.h in Copy Files */,
-				E876E9EE17EEACA3005D8361 /* SHIIOSVersion.h in Copy Files */,
-				E87F0A1B17E2A448009E57E8 /* Respinfo.h in Copy Files */,
-				E87F0A1117E203D2009E57E8 /* SHEntironment.h in Copy Files */,
-				E87F0A0B17E1F412009E57E8 /* SHPostTaskM.h in Copy Files */,
-				E8B8415517D70A58006A0291 /* SHObject.h in Copy Files */,
-				E8B8415617D70A58006A0291 /* SHSkin.h in Copy Files */,
-				E8B8415717D70A58006A0291 /* SHTask.h in Copy Files */,
-				E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files */,
-				E8080DB217BF84CE006B68EB /* Core.h in Copy Files */,
+				1A1F09DB19A75644000D7568 /* SHAnalyzeFactory.h in Copy Files (35 items) */,
+				1A8A57661929D67400F36695 /* SHMsg.h in Copy Files (35 items) */,
+				1A8A57671929D67400F36695 /* SHMsgM.h in Copy Files (35 items) */,
+				1A8A57681929D67400F36695 /* SHMsgManager.h in Copy Files (35 items) */,
+				1A8A57691929D67400F36695 /* SHResMsgM.h in Copy Files (35 items) */,
+				1A8A57621929D59800F36695 /* GCDAsyncSocket.h in Copy Files (35 items) */,
+				1A8A57631929D59800F36695 /* GCDAsyncUdpSocket.h in Copy Files (35 items) */,
+				9EC327151907A3BB00AE1567 /* SHIntent.h in Copy Files (35 items) */,
+				9EC3270C19079F6800AE1567 /* SHModuleHelper.h in Copy Files (35 items) */,
+				E8BDF6481863F01700AC9B82 /* SHHttpTask.h in Copy Files (35 items) */,
+				E8BDF6491863F01700AC9B82 /* SHHttpTaskM.h in Copy Files (35 items) */,
+				E8EAB699186000DC00144DDE /* SHCacheManager.h in Copy Files (35 items) */,
+				9E33DB1A18585098008C61AC /* SHLogger.h in Copy Files (35 items) */,
+				E83E17FF18570796001E29D3 /* SHFlowManager.h in Copy Files (35 items) */,
+				E84AB72A1855BB70005538A5 /* SHPrivateAPI.h in Copy Files (35 items) */,
+				E868402A1823818F00938464 /* IPAddress.h in Copy Files (35 items) */,
+				E86840251823535200938464 /* SHTools.h in Copy Files (35 items) */,
+				E827F8EB181F8CE000389134 /* SHUser.h in Copy Files (35 items) */,
+				E81E443D18179B2C00EA9090 /* NSData+AES.h in Copy Files (35 items) */,
+				E81E443E18179B2C00EA9090 /* NSString+MD5.h in Copy Files (35 items) */,
+				E8C835B2180D0FD200F88A3E /* SHFuck.h in Copy Files (35 items) */,
+				E858D66F1803B43D0071DA24 /* SHConfigManager.h in Copy Files (35 items) */,
+				E858D6701803B43D0071DA24 /* SHVersion.h in Copy Files (35 items) */,
+				E887F79B17F422AC00871292 /* Base64.h in Copy Files (35 items) */,
+				E887F79517F2AE8900871292 /* FileManager.h in Copy Files (35 items) */,
+				E887F78F17F287F300871292 /* SHCrashManager.h in Copy Files (35 items) */,
+				E876E9EE17EEACA3005D8361 /* SHIIOSVersion.h in Copy Files (35 items) */,
+				E87F0A1B17E2A448009E57E8 /* Respinfo.h in Copy Files (35 items) */,
+				E87F0A1117E203D2009E57E8 /* SHEntironment.h in Copy Files (35 items) */,
+				E87F0A0B17E1F412009E57E8 /* SHPostTaskM.h in Copy Files (35 items) */,
+				E8B8415517D70A58006A0291 /* SHObject.h in Copy Files (35 items) */,
+				E8B8415617D70A58006A0291 /* SHSkin.h in Copy Files (35 items) */,
+				E8B8415717D70A58006A0291 /* SHTask.h in Copy Files (35 items) */,
+				E8B8415817D70A58006A0291 /* SHPostTask.h in Copy Files (35 items) */,
+				E8080DB217BF84CE006B68EB /* Core.h in Copy Files (35 items) */,
 			);
-			name = "Copy Files";
+			name = "Copy Files (35 items)";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -653,7 +655,7 @@
 			buildPhases = (
 				E8080DA517BF84CE006B68EB /* Sources */,
 				E8080DA617BF84CE006B68EB /* Frameworks */,
-				E8080DA717BF84CE006B68EB /* Copy Files */,
+				E8080DA717BF84CE006B68EB /* Copy Files (35 items) */,
 				E804CEC717D60EF600184538 /* Headers */,
 			);
 			buildRules = (

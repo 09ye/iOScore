@@ -153,7 +153,7 @@
             return;
         }
     }
-    _respinfo = [[Respinfo alloc]initWithCode:-1 message:@"网络连接失败."];
+    _respinfo = [[Respinfo alloc]initWithCode:-1 message:error.description];
     if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFailed:)]){
         _isworking = NO;
         [self.delegate taskDidFailed:self];

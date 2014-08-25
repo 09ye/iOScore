@@ -10,6 +10,10 @@
 #import "Respinfo.h"
 
 @implementation SHAnalyzeFactoryExtension 
+-(BOOL) analyzeDate:(SHTask *) task Data:(NSData*)data
+{
+    return NO; 
+}
 
 @end
 
@@ -17,7 +21,7 @@
 
 static SHAnalyzeFactoryExtension* deleagte;
 
-- (void) setAnalyExtension:(SHAnalyzeFactoryExtension *) delegate_
++ (void) setAnalyExtension:(SHAnalyzeFactoryExtension *) delegate_
 {
     deleagte = delegate_;
 }
@@ -35,14 +39,22 @@ static SHAnalyzeFactoryExtension* deleagte;
         int code = 0;
         NSString * message;
         if(netreutrn == nil){
-            code = CORE_NET_ERROR;
-            message = @"服务器没有返回信息";
+            //返回结果无法转换成json
+            if (deleagte && [deleagte respondsToSelector:@selector(analyzeDate:Data:)]) {
+                if ([deleagte analyzeDate: task Data:data]) {
+                    //流程结束
+                    return;
+                }else{
+                    code = CORE_NET_ERROR;
+                    message = [error localizedDescription];
+                }
+            }
         }else{
             
             if([[netreutrn allKeys] containsObject:@"code"]){
                 code = [[netreutrn objectForKey:@"code"] intValue];
             }else{
-            
+                //特异流程
                 if (deleagte && [deleagte respondsToSelector:@selector(analyzeDate:Data:)]) {
                     if ([deleagte analyzeDate: task Data:data]) {
                         //流程结束

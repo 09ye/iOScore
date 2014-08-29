@@ -135,6 +135,8 @@
                 __data = [cache mutableCopy];
                 [self processData];
             }
+        }else{
+              [self processData];
         }
     }else{
         [self processData];

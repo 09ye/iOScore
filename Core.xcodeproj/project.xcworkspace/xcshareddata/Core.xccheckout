@@ -10,29 +10,29 @@
 	<string>Core</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1DA7AF2A-F7CF-42D9-B500-153B6D421761</key>
+		<key>56D64853D1B9E1507B4DFAF089972DAD3091D1BB</key>
 		<string>http://gitlab.eroadsoftware.com/common-framework-library/platform_ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Core.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1DA7AF2A-F7CF-42D9-B500-153B6D421761</key>
+		<key>56D64853D1B9E1507B4DFAF089972DAD3091D1BB</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>http://gitlab.eroadsoftware.com/common-framework-library/platform_ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1DA7AF2A-F7CF-42D9-B500-153B6D421761</string>
+	<string>56D64853D1B9E1507B4DFAF089972DAD3091D1BB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1DA7AF2A-F7CF-42D9-B500-153B6D421761</string>
+			<string>56D64853D1B9E1507B4DFAF089972DAD3091D1BB</string>
 			<key>IDESourceControlWCCName</key>
 			<string>core</string>
 		</dict>

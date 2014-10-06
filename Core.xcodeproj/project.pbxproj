@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A04E4CC1924C29800B766D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A04E4CB1924C29800B766D7 /* XCTest.framework */; };
 		1A04E4D61924C2B000B766D7 /* SHMsg.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4CE1924C2B000B766D7 /* SHMsg.h */; };
 		1A04E4D71924C2B000B766D7 /* SHMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4CF1924C2B000B766D7 /* SHMsg.m */; };
 		1A04E4D81924C2B000B766D7 /* SHMsgM.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4D01924C2B000B766D7 /* SHMsgM.h */; };
@@ -20,7 +19,6 @@
 		1A04E4E31924C2BB00B766D7 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4DF1924C2BB00B766D7 /* GCDAsyncSocket.m */; };
 		1A04E4E41924C2BB00B766D7 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A04E4E01924C2BB00B766D7 /* GCDAsyncUdpSocket.h */; };
 		1A04E4E51924C2BB00B766D7 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A04E4E11924C2BB00B766D7 /* GCDAsyncUdpSocket.m */; };
-		1A04E51E1925B31800B766D7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A04E4CB1924C29800B766D7 /* XCTest.framework */; };
 		1A04E51F1925B31800B766D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DAC17BF84CE006B68EB /* Foundation.framework */; };
 		1A04E5201925B31800B766D7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E87F0A1D17E2A623009E57E8 /* UIKit.framework */; };
 		1A04E52F1925B44800B766D7 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8080DA917BF84CE006B68EB /* libCore.a */; };
@@ -189,7 +187,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1A04E4CB1924C29800B766D7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1A04E4CE1924C2B000B766D7 /* SHMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMsg.h; sourceTree = "<group>"; };
 		1A04E4CF1924C2B000B766D7 /* SHMsg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHMsg.m; sourceTree = "<group>"; };
 		1A04E4D01924C2B000B766D7 /* SHMsgM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHMsgM.h; sourceTree = "<group>"; };
@@ -292,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A04E52F1925B44800B766D7 /* libCore.a in Frameworks */,
-				1A04E51E1925B31800B766D7 /* XCTest.framework in Frameworks */,
 				1A04E5201925B31800B766D7 /* UIKit.framework in Frameworks */,
 				1A04E51F1925B31800B766D7 /* Foundation.framework in Frameworks */,
 			);
@@ -302,7 +298,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A04E4CC1924C29800B766D7 /* XCTest.framework in Frameworks */,
 				775A7FFC187116D600D190B4 /* SystemConfiguration.framework in Frameworks */,
 				E8329E0C1855CD0C00D40DAF /* Security.framework in Frameworks */,
 				E84AB7291855B8FF005538A5 /* CoreTelephony.framework in Frameworks */,
@@ -382,7 +377,6 @@
 		E8080DAB17BF84CE006B68EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A04E4CB1924C29800B766D7 /* XCTest.framework */,
 				775A7FFB187116D600D190B4 /* SystemConfiguration.framework */,
 				E8329E0B1855CD0C00D40DAF /* Security.framework */,
 				E84AB7281855B8FF005538A5 /* CoreTelephony.framework */,

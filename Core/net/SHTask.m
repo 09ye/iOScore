@@ -79,7 +79,7 @@ static const NSMutableDictionary * urlReplace;
 {
     __taskdidfinished = taskfinished;
     __taskdidtaskFailed = taskFailed;
-    [self start];
+    [self start];.
 }
 - (void)cancel
 {

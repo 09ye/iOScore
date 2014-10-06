@@ -97,7 +97,9 @@
     if(self.respinfo.code == 0){
         if(self.isCache == NO){//不是缓存模式时添加缓存
                 if([NSJSONSerialization isValidJSONObject:self.postArgs] == YES){
-                    [SHCacheManager.instance push:__data forKey:[NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
+                    if(__data != nil){
+                        [SHCacheManager.instance push:__data forKey:[NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
+                    }
                 }
         }
         //_result  = [netreutrn objectForKey:@"data"];

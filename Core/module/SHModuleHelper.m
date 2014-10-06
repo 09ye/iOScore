@@ -8,22 +8,6 @@
 
 #import "SHModuleHelper.h"
 #import "GDataXMLNode.h"
-//<module
-//name="login"
-//need_pre_action ="intent_pre_action_login"
-//pre_action ="intent_pre_action_schoolcareer"
-//target="SHLoginViewController" />
-
-
-@interface  SHModule :NSObject{
-    @public
-    NSString * name;
-    NSString * need_pre_action;
-    NSString * pre_action;
-    NSString * target ;
-}
-@end
-
 
 @implementation SHModule
 
@@ -34,6 +18,7 @@
 @interface SHModuleHelper()
 {
     NSMutableDictionary * mDic;
+    NSMutableArray * mList;
 }
 @end
 
@@ -47,6 +32,7 @@ static SHModuleHelper * __instance;
     if(self = [super init]){
         [self initmodule];
     }
+    
     return self;
 }
 
@@ -55,7 +41,7 @@ static SHModuleHelper * __instance;
     GDataXMLDocument* doc = [self docForStyle:@"module"];
     NSArray * array = ((GDataXMLNode*)[[doc nodesForXPath:[NSString stringWithFormat:@"//root"] error:nil] objectAtIndex:0]).children;
     
-    
+    mList = [[NSMutableArray alloc ]init];
     mDic = [[NSMutableDictionary alloc ]init];
     for (GDataXMLElement* ele in array) {
         NSString * name = [ele attributeForName:@"name"].stringValue;
@@ -64,14 +50,20 @@ static SHModuleHelper * __instance;
         module->name = [ele attributeForName:@"name"].stringValue;
         module->need_pre_action = [ele attributeForName:@"need_pre_action"].stringValue;
         module->pre_action = [ele attributeForName:@"pre_action"].stringValue;
-        module->target = [ele attributeForName:@"target"].stringValue;
+        module->target = [zhele attributeForName:@"target"].stringValue;
+        module->type = [ele attributeForName:@"type"].stringValue;
+        module->icon = [ele attributeForName:@"icon"].stringValue;
+        module->title = [ele attributeForName:@"title"].stringValue;
         [mDic setObject:module forKey:name];
-
+        [mList addObject:module];
     }
     //[doc release];
 }
 
-
+- (NSArray * )modulelist
+{
+    return mList;
+}
 - (NSString * )targetByModule:(NSString*) modulename
 {
     SHModule* module = [mDic valueForKey:modulename];

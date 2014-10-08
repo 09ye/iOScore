@@ -50,7 +50,7 @@ static SHModuleHelper * __instance;
         module->name = [ele attributeForName:@"name"].stringValue;
         module->need_pre_action = [ele attributeForName:@"need_pre_action"].stringValue;
         module->pre_action = [ele attributeForName:@"pre_action"].stringValue;
-        module->target = [zhele attributeForName:@"target"].stringValue;
+        module->target = [ele attributeForName:@"target"].stringValue;
         module->type = [ele attributeForName:@"type"].stringValue;
         module->icon = [ele attributeForName:@"icon"].stringValue;
         module->title = [ele attributeForName:@"title"].stringValue;

@@ -35,7 +35,7 @@
     [request setHTTPMethod:@"POST"];
     [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"text/HTML" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPBody:postData];
 
     [SHFlowManager.instance push:postData.length way:SHWayUp];

@@ -7,6 +7,7 @@
 //
 
 #import "NSString+MD5.h"
+#import "SHTools.h"
 
 @implementation NSString (MD5)
 

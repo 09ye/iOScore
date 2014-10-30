@@ -16,5 +16,6 @@
 @synthesize heading;
 @synthesize title;
 @synthesize subtitle;
+@synthesize source;
 
 @end

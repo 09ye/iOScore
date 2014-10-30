@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>56D64853D1B9E1507B4DFAF089972DAD3091D1BB</key>
-		<string>http://gitlab.eroadsoftware.com/common-framework-library/platform_ios.git</string>
+		<string>gitlab.eroadsoftware.com:common-framework-library/platform_ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Core.xcodeproj/project.xcworkspace</string>
+	<string>Core.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>56D64853D1B9E1507B4DFAF089972DAD3091D1BB</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://gitlab.eroadsoftware.com/common-framework-library/platform_ios.git</string>
+	<string>gitlab.eroadsoftware.com:common-framework-library/platform_ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

@@ -9,7 +9,7 @@
 #include <execinfo.h>
 #import "SHCrashManager.h"
 #import "FileManager.h"
-#import "Base64.h"
+#import "SHBase64.h"
 
 static const NSString * UncaughtExceptionHandlerSignalKey = @"UncaughtExceptionHandlerSignalKey";
 static const NSString * SingalExceptionHandlerAddressesKey = @"SingalExceptionHandlerAddressesKey";
@@ -54,7 +54,7 @@ static int  count = 0;
     task.URL = URL_;
     NSString* data1 = [FileManager readFile:@"crash.txt"];
     NSData* dataObj = [data1 dataUsingEncoding:NSUTF8StringEncoding];
-    NSString * data = [Base64 encode:dataObj];
+    NSString * data = [SHBase64 encode:dataObj];
     if(data.length > 0){
         [task.postArgs setValue:data forKey:@"crash"];
         task.delegate = self;

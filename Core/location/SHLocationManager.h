@@ -19,5 +19,9 @@
 
 @property (strong,nonatomic) SHUserLocation* userlocation;
 
+- (void)startUserLocationService;
+
+- (void)stopUserLocationService;
+
 + (SHLocationManager*)instance;
 @end

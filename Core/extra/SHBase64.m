@@ -6,17 +6,17 @@
 //  Copyright 2010 ObjectGraph LLC. All rights reserved.
 //
 
-#import "Base64.h"
+#import "SHBase64.h"
 
 
-@implementation Base64
+@implementation SHBase64
 #define ArrayLength(x) (sizeof(x)/sizeof(*(x)))
 
 static char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 static char decodingTable[128];
 
 + (void) initialize {
-	if (self == [Base64 class]) {
+	if (self == [SHBase64 class]) {
 		memset(decodingTable, 0, ArrayLength(decodingTable));
 		for (NSInteger i = 0; i < ArrayLength(encodingTable); i++) {
 			decodingTable[encodingTable[i]] = i;

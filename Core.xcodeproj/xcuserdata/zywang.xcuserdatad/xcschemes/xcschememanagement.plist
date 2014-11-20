@@ -4,6 +4,18 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Core Tests New.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Core Tests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Core.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +25,8 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -28,6 +42,11 @@
 			<true/>
 		</dict>
 		<key>1A04E51C1925B31800B766D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E731FDC1A023EC500DCFB50</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -12,7 +12,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Base64 : NSObject {
+@interface SHBase64 : NSObject {
 
 }
 

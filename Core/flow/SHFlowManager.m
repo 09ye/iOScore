@@ -41,7 +41,7 @@ static SHFlowManager * __instance;
         @try {
             NSString* base64 = [SHPrivateAPI getPasswordForUsername:@"flow_core" andServiceName:[SHPrivateAPI guid] error:nil];
             if(base64.length > 0){
-                NSData * data = [Base64 decode:base64];
+                NSData * data = [SHBase64 decode:base64];
                 NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
                 NSDictionary *myDictionary = [unarchiver decodeObjectForKey:@"flow_core"];
                 [unarchiver finishDecoding];
@@ -123,7 +123,7 @@ static SHFlowManager * __instance;
         NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
         [archiver encodeObject:params forKey:@"flow_core"];
         [archiver finishEncoding];
-        NSString* base64 = [Base64 encode:data];
+        NSString* base64 = [SHBase64 encode:data];
         [SHPrivateAPI storeUsername:@"flow_core" andPassword:base64 forServiceName:[SHPrivateAPI guid] updateExisting:YES error:nil];
     }
     @catch (NSException *exception) {

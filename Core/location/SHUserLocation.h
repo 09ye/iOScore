@@ -18,6 +18,8 @@ typedef enum
 
 @interface SHUserLocation : NSObject
 
+
+@property (nonatomic,strong) NSObject* source;
 /// 位置更新状态，如果正在更新位置信息，则该值为YES
 
 @property (assign,nonatomic) GPSType gpstype;

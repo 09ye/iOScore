@@ -297,4 +297,28 @@
     BOOL result = [fileManager fileExistsAtPath:filePath];
     return result;
 }
+
+//Base64编码
++ (NSString*) encode:(const uint8_t*) input length:(NSInteger) length
+{
+    [SHBase64 encode:input length:length];
+}
+//Base64编码
++ (NSString*) encode:(NSData*) rawBytes
+{
+    [SHBase64 encode:rawBytes];
+}
+//Base64编码
++ (NSData*) decode:(const char*) string length:(NSInteger) inputLength
+{
+    [SHBase64 decode:string length:inputLength];
+}
+//Base64编码
++ (NSData*) decode:(NSString*) string
+{
+    [SHBase64 decode:string];
+
+}
+
+
 @end

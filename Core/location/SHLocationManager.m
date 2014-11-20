@@ -31,6 +31,17 @@ static SHLocationManager * __instance;
     return self;
 }
 
+- (void)startUserLocationService
+{
+    [_bmkservice startUserLocationService];
+}
+
+- (void)stopUserLocationService
+{
+    [_bmkservice stopUserLocationService];
+}
+
+
 + (SHLocationManager*)instance
 {
     if(__instance ==nil){
@@ -64,6 +75,7 @@ static SHLocationManager * __instance;
     SHUserLocation * location = [[SHUserLocation alloc]init];
     location.location = userLocation.location;
     location.heading = userLocation.heading;
+    location.source = userLocation;
     self.userlocation = location;
     [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_LOCATION_UPDATE_USERLOCATION object:self.userlocation];
     
@@ -78,6 +90,7 @@ static SHLocationManager * __instance;
     SHUserLocation * location = [[SHUserLocation alloc]init];
     location.location = userLocation.location;
     location.heading = userLocation.heading;
+    location.source = userLocation;
     self.userlocation = location;
     [[NSNotificationCenter defaultCenter]postNotificationName:CORE_NOTIFICATION_LOCATION_UPDATE_USERHEAD object:self.userlocation];
 

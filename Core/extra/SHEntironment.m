@@ -24,6 +24,9 @@ static SHEntironment * _instance;
     if(_version == nil){
         NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];
         NSString* versionNum =[infoDict objectForKey:@"CFBundleVersion"];
+        if(versionNum.length == 0){
+            versionNum = @"0.0.0";
+        }
         _version = [[SHVersion alloc]initWithString:versionNum];
     }
     return _version;

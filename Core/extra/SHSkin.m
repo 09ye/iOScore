@@ -92,7 +92,7 @@ static SHSkin* _instance = nil;
         NSString* r = [ele attributeForName:@"value"].stringValue;
         [_stringDic setValue:r forKey:name];
     }
-    [doc release];
+    //[doc release];
 }
 
 
@@ -105,7 +105,7 @@ static SHSkin* _instance = nil;
         int r = [ele attributeForName:@"size"].stringValue.integerValue;
         [_fontDic setValue:[UIFont systemFontOfSize:r] forKey:name];
     }
-    [doc release];
+    //[doc release];
 }
 
 - (void) initStyle{

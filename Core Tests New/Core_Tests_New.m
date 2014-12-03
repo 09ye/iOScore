@@ -24,12 +24,31 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
     [super tearDown];
 }
-
+NSThread * t;
 - (void)testExample {
     // This is an example of a functional test case.
+    t = [[NSThread alloc]initWithTarget:self selector:@selector(a:) object:nil];
+    [t start];
+    [NSThread sleepForTimeInterval:1000];
+  }
+
+- (void)a:(NSObject*)a
+{
     XCTAssert(YES, @"Pass");
-    NSData * date = [[NSData alloc]init];
-    [SHBase64 encode:date];
+    [SHPrivateAPI debugguid];
+    SHPostTaskM * post = [[SHPostTaskM alloc]init];
+    SHEntironment.instance.loginName = @"14227";
+    SHEntironment.instance.password = @"301236";
+    post.URL = @"http://zambon-prod.mobilitychina.com:8091/get_config";
+
+    [post start:^(SHTask *t) {
+        XCTAssert(YES, @"Pass");
+        
+    } taskWillTry:^(SHTask *t) {
+    } taskDidFailed:^(SHTask *t) {
+        XCTAssert(NO, @"No_Pass");
+        
+    }];
 
 }
 

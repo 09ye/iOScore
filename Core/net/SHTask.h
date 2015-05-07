@@ -52,6 +52,12 @@ typedef enum
 @property (nonatomic,strong,readonly) NSDictionary* extra;
 @property (nonatomic,assign) int tag;
 
+- (void)setResult:(NSObject *)result;
+
+- (void)setExtra:(NSDictionary *)extra;
+
+- (void)setRespinfo:(Respinfo *)respinfo;
+
 - (void)start;
 
 - (void)start:(void(^)(SHTask *))taskfinished taskWillTry : (void(^)(SHTask *))tasktry  taskDidFailed : (void(^)(SHTask *))taskFailed;

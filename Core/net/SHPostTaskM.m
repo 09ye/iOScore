@@ -68,7 +68,7 @@
         }
     }
     SHLog(@"%@",[data description]);
-    if([NSJSONSerialization isValidJSONObject:data] == YES){
+    if(!self.postData && [NSJSONSerialization isValidJSONObject:data] == YES){
         self.postData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:nil];
     }
     [super start];
@@ -156,7 +156,7 @@
             return;
         }
     }
-    _respinfo = [[Respinfo alloc]initWithCode:-1 message:error.description];
+    _respinfo = [[Respinfo alloc]initWithCode:CORE_HTTP_ERROR message:CORE_HTTP_ERROR_MESSAGE];
     if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFailed:)]){
         _isworking = NO;
         [self.delegate taskDidFailed:self];

@@ -53,9 +53,12 @@
 #define CODE_RELOGIN -5
 //标准异常类型
 #define CORE_NET_OK  0
+
 #define CORE_NET_ERROR -100000//无返回值
 #define CORE_NET_FORMAT_ERROR -100001//格式错误
 #define CORE_NET_ANALYZE_ERROR - 100002//解析错误
+#define CORE_HTTP_ERROR -100003//http链接错误
+#define CORE_HTTP_ERROR_MESSAGE @"您的网络不给力，请稍后重试"
 //#define SHLog(a) [NSString stringWithFormat:a]
 #define SHLog(a,b) [SHLogger Log:[NSString stringWithFormat:a,b]]
 

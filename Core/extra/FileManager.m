@@ -14,8 +14,7 @@
 {
     //创建文件管理器
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];//去处需要的路径
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/"];;//去处需要的路径
 
     [fileManager changeCurrentDirectoryPath:[documentsDirectory stringByExpandingTildeInPath]];
     //创建文件fileName文件名称，contents文件的内容，如果开始没有内容可以设置为nil，attributes文件的属性，初始为nil
@@ -45,8 +44,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     //获取路径
     //参数NSDocumentDirectory要获取那种路径
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];//去处需要的路径
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/"];;//去处需要的路径
     //更改到待操作的目录下
     [fileManager changeCurrentDirectoryPath:[documentsDirectory stringByExpandingTildeInPath]];
     //获取文件路径
@@ -59,10 +57,10 @@
 + (BOOL)deleteFile :(NSString*) file
 {
     NSFileManager* fileManager=[NSFileManager defaultManager];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+
     
     //文件名
-    NSString *uniquePath=[[paths objectAtIndex:0] stringByAppendingPathComponent:file];
+    NSString *uniquePath=[[NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/"]stringByAppendingPathComponent:file];
     BOOL blHave=[[NSFileManager defaultManager] fileExistsAtPath:uniquePath];
     if (!blHave) {
         NSLog(@"no  have");

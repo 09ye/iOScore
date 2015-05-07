@@ -228,40 +228,30 @@ static SHSkin* _instance = nil;
             if(resouce != nil){
                 NSArray* args = nil;
                 NSArray* types = nil;
-                if(externType.stringValue.length > 0 && externValue.stringValue.length > 0 ){
-                    types =[NSArray arrayWithObject:externType.stringValue];
-                    args = [NSArray arrayWithObject:externValue.stringValue];
-                }
-                [self sendMsg:sel object:view arg:resouce types:types args: args];
+                //if(externType.stringValue.length > 0 && externValue.stringValue.length > 0 ){
+                    types =[NSArray arrayWithObjects:type.stringValue ,externType.stringValue,nil];
+                    args = [NSArray arrayWithObjects:resouce,externValue.stringValue,nil];
+               // }
+                [self sendMsg:sel object:view types:types args: args];
             }
         }
     }
    
 }
-- (void) sendMsg :(SEL)sel object:(NSObject*) obj arg:(id)arg types:(NSArray*)types args:(NSArray*)args{
-    IMP p = [obj methodForSelector:sel];
-//    Method m = class_getInstanceMethod([obj class], sel);
-//    method_getNumberOfArguments(m);
-    if( arg == nil){
-        p(obj,sel);
-    }else if (args.count == 0){
-        if([arg isKindOfClass: [NSNumber class]] == YES){
-            p(obj,sel,((NSNumber*)arg).integerValue);
+- (void) sendMsg :(SEL)sel object:(NSObject*) obj types:(NSArray*)types args:(NSArray*)args{
+    NSInvocation * invocate = [NSInvocation invocationWithMethodSignature:[obj methodSignatureForSelector:sel ]];
+    [invocate setSelector:sel];
+    for (int i = 0 ; i < args.count; i++) {
+        //NSLog(@"%@,%@",[[types objectAtIndex:i] description],[[args objectAtIndex:i] description]);
+        if([[types objectAtIndex:i ] caseInsensitiveCompare:@"int" ] == NSOrderedSame){
+            NSInteger value = ((NSString*)[args objectAtIndex:i]).integerValue;
+            [invocate setArgument:&value atIndex:i+2];
         }else{
-            p(obj,sel,arg);
+            NSObject * o = [args objectAtIndex:i];
+            [invocate setArgument:&o atIndex:i+2];
         }
-    }else if(args.count == 1){
-        
-        if([[types objectAtIndex:0 ] caseInsensitiveCompare:@"int" ] == NSOrderedSame){
-            int perId = ((NSString*)[args objectAtIndex:0]).integerValue;
-            p(obj,sel,arg,perId);
-        }else{
-            p(obj,sel,arg, [args objectAtIndex:0]);
-        }
-    }else if (args.count == 2){
-        p(obj,sel,[args objectAtIndex:0],[args objectAtIndex:1]);
     }
-   
+    [invocate invokeWithTarget:obj];
 }
 
 -(id)resource: (NSString*) type  key:(NSString *) key{

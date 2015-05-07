@@ -36,8 +36,8 @@
         [identication setObject:SHEntironment.instance.deviceid forKey:@"imei"];
 #endif
     }
-//    if ( Entironment.instance.userId) {
-//        [identication setObject:Entironment.instance.userId forKey:@"shop"];
+//    if ( SHEntironment.instance.userId) {
+//        [identication setObject:SHEntironment.instance.userId forKey:@"shop"];
 //    }
     [identication setObject:SHEntironment.instance.deviceInfo forKey:@"info"];
     [identication setObject:SHEntironment.instance.version.description forKey:@"version"];

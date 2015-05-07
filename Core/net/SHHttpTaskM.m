@@ -146,7 +146,7 @@
             return;
         }
     }
-    _respinfo = [[Respinfo alloc]initWithCode:-1 message:error.description];
+    _respinfo = [[Respinfo alloc]initWithCode:CORE_HTTP_ERROR message:error.description];
     if(self.delegate && [self.delegate respondsToSelector:@selector(taskDidFailed:)]){
         _isworking = NO;
         [self.delegate taskDidFailed:self];

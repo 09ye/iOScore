@@ -80,7 +80,8 @@ static SHAnalyzeFactoryExtension* deleagte;
             SEL resSel = @selector(setRespinfo:);
             if([task respondsToSelector:resSel] && res){
                 IMP p = [task methodForSelector:resSel];
-                p (task,resSel,res);
+                //p (task,resSel,res);
+                [task setRespinfo:res];
             }
             SEL resData = @selector(setResult:);
             if([task respondsToSelector:resData]){
@@ -100,17 +101,21 @@ static SHAnalyzeFactoryExtension* deleagte;
                     if([obj isKindOfClass:[NSNumber class]]){
                         NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
                         [dic setValue: obj forKey:@"number"];
-                        p (task,resData, dic);
+                        //p (task,resData, dic);
+                        [task setResult:dic];
                     }
                     else if([obj isKindOfClass:[NSNull class]]){
-                        p (task,resData, [[NSObject alloc]init]);
+//                        p (task,resData, [[NSObject alloc]init]);
+                        [task setResult:[[NSObject alloc]init]];
                     }
                     else{
-                        p (task,resData, obj);
+                        //p (task,resData, obj);
+                        [task setResult:obj];
                     }
                     
                 }else{
-                    p (task,resData,[[NSObject alloc]init]);
+                    //p (task,resData,[[NSObject alloc]init]);
+                    [task setResult:[[NSObject alloc]init]];
                 }
             }
             NSDictionary * mete = [netreutrn valueForKey:@"meta"];
@@ -118,7 +123,8 @@ static SHAnalyzeFactoryExtension* deleagte;
                 //NSDictionary * dc
                 SEL resExtra = @selector(setExtra:);
                 IMP p = [task methodForSelector:resExtra];
-                p (task,resExtra, mete);
+                //p (task,resExtra, mete);
+                [task setExtra:mete];
             }
             if(code == CODE_RELOGIN){//重新登录消息
                 [[NSNotificationCenter defaultCenter] postNotificationName:CORE_NOTIFICATION_LOGIN_RELOGIN object:nil];

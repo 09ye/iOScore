@@ -48,8 +48,8 @@
 
 {
     self.m_dbName = dbName;
-    NSArray *path =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
-    NSString *documentsDirectory = [path objectAtIndex:0];
+
+    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Library/Caches/"];
     if(sqlite3_open([[documentsDirectory stringByAppendingPathComponent:dbName]UTF8String],&m_sql) !=SQLITE_OK)
     {
         NSLog(@"创建数据库失败");

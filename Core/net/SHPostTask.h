@@ -11,4 +11,5 @@
 
 @interface SHPostTask : SHTask
 @property (nonatomic,strong)NSData *postData;
+@property (nonatomic,strong) NSMutableDictionary* postHeader;
 @end

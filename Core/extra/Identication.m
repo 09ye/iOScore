@@ -25,16 +25,11 @@
             [identication setObject:SHEntironment.instance.loginName forKey:@"username"];
             [identication setObject:SHEntironment.instance.password forKey:@"password"];
         }
-#if DEBUG
-        if(SHEntironment.instance.deviceid.length == 0){
-            [identication setObject:@"111111" forKey:@"imei"];
-        }else{
-            [identication setObject:SHEntironment.instance.deviceid forKey:@"imei"];
-        }
-       
-#else
+    }
+    if(SHEntironment.instance.deviceid.length == 0){
+        [identication setObject:@"111111" forKey:@"imei"];
+    }else{
         [identication setObject:SHEntironment.instance.deviceid forKey:@"imei"];
-#endif
     }
 //    if ( SHEntironment.instance.userId) {
 //        [identication setObject:SHEntironment.instance.userId forKey:@"shop"];

@@ -37,15 +37,16 @@
 
 - (void)start
 {
+    NSDictionary * identication = Identication.identication;
     NSMutableDictionary * data = [[NSMutableDictionary alloc]init];
     NSMutableDictionary * pargs = [self.postArgs mutableCopy];
-    if(self.postArgs.count > 0){
-        [data setObject:pargs forKey:@"data"];
-    }else{
-        [data setObject:[[NSDictionary alloc]init] forKey:@"data"];
+    if(!pargs || self.postArgs.count == 0){
+        pargs = [[NSMutableDictionary alloc]init];
     }
-    NSDictionary * identication = Identication.identication;
-    [data setObject:identication forKey:@"identication"];
+    [pargs setObject:identication forKey:@"identication"];
+    [data setObject:pargs forKey:@"data"];
+    
+//    [data setObject:identication forKey:@"identication"];
     if(self.cachetype == CacheTypeTimes){//时间类型缓存
         if([NSJSONSerialization isValidJSONObject:self.postArgs] == YES){
             NSArray * array = [SHCacheManager.instance fetchOdTime: [NSString stringWithFormat:@"%@/%@",_realURL,[self.postArgs description]]];
